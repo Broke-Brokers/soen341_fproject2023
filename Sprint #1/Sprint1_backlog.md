@@ -27,3 +27,11 @@ TASK ID | TASK NAME | SPRINT # | SPRINT WEEK | DEPENDENCY | START | FINISH | STO
 
 
 ***
+
+Story points rationale
+
+  *  Story points have creating the repositroy as reference : 1 point = clicking and waiting for system to respond
+  *  2 points = navigating folders and verifications
+  *  3 point = drafting
+  *  4 points = reasearch and composing
+
