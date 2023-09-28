@@ -4,7 +4,7 @@
 
 TASK ID | TASK NAME | SPRINT # | SPRINT WEEK | DEPENDENCY | START | FINISH | STORY | PRIORITY | STATUS | STORY POINTS
 -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | --
-  | Sprint   2 Start : User stories #1 -2 - 6 | Sprint   2 |   |   |   |   |   |   |   |  
+  | Sprint   2 Start : User stories #1 -2 - 3-4-5-6 | Sprint   2 |   |   |   |   |   |   |   |  
 22 | Web   app mockup | 2 | 1 |   | 2023-09-29 | 2023-10-27 |   | High |   | 1
 23 | Property   databases to search from created and populated | 2 | 1 | Task   12 | 2023-09-29 | 2023-10-27 | 1 | Medium |   | 2
 24 | Broker's   database created and populated | 2 | 1 |   | 2023-09-29 | 2023-10-27 | 3 | Medium |   | 2
