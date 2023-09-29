@@ -12,7 +12,7 @@ We learned that our repository was not correctly set up on 2023-09-28
 
 It also came to our attention from the prof's updates on the sprint #2 planning presented in class yesterday that we did not introduce the backlog and sprints backlog in the correct manner. We did not know we could use the "project"  and "issue" tab to do this. 
 
-We will transfer all the information from external files and internal .md files and wiki to the project tab and create issues from the tasks. 
+We will transfer all the information from external files and internal .md files and wiki to the project tab and create issues from the tasks for sprint #2. 
 
 _For sprint #1 the files can be found here_:
 
