@@ -3,7 +3,7 @@
 ## Important notes and Updates
 
 ***
-2023-09-29
+### 2023-09-29
 We learned that our repository was not correctly set up on 2023-09-28
 We have created an organization : https://github.com/Broke-Brokers
 And a team : https://github.com/orgs/Broke-Brokers/teams/broke-brokers
@@ -12,16 +12,15 @@ And cloned our old repository here.
 It also came to our attention from the prof's updates on the sprint #2 planning that we did not intorduce the backlog and sprints backlog in the correct manner. We did not know we could use the "project"  and "issue" tab to do this. 
 We will transfer all the information from external files and internal .md files and wiki to the project tab and create issues from the tasks. 
 
-For sprint #1 
-the files can be found here :  
+_For sprint #1 the files can be found here_:
 
 * [Project backlog](https://github.com/Broke-Brokers/soen341_fproject2023/wiki/Project-Backlog#broke-brokers-project-backlog)
 * [sprint #1 backlog](https://github.com/Broke-Brokers/soen341_fproject2023/wiki/Project-Backlog#sprint-1)
-* [sprint #1 task breakdown](Sprint #1/Sprint1_TaskBreakdown.md) 
-* [sprint #2 backlog](Sprint #2/Sprint2_Backlog.md)
-* [sprint #2 task breakdown](Sprint #2/Sprint 2Task_ Breakdown.xlsx)
+* [sprint #1 task breakdown](https://github.com/Broke-Brokers/soen341_fproject2023/blob/main/Sprint%20%231/Sprint1_TaskBreakdown.md)
+* [sprint #2 backlog](https://github.com/Broke-Brokers/soen341_fproject2023/blob/main/Sprint%20%232/Sprint2_Backlog.md)
+* [sprint #2 task breakdown](https://github.com/Broke-Brokers/soen341_fproject2023/blob/main/Sprint%20%232/Sprint%202Task_%20Breakdown.xlsx)
 * [descriptive plan for sprint #2](https://github.com/Broke-Brokers/soen341_fproject2023/wiki#plan-for-sprint-2)
-* 
+  
 ***
 
 ## 1. PROJECT DESCRIPTION 
