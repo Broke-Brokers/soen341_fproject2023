@@ -4,12 +4,14 @@
 
 ***
 ### 2023-09-29
+
 We learned that our repository was not correctly set up on 2023-09-28
-We have created an organization : https://github.com/Broke-Brokers
-And a team : https://github.com/orgs/Broke-Brokers/teams/broke-brokers
-And cloned our old repository here.
+* We have created an organization : https://github.com/Broke-Brokers
+* And a team : https://github.com/orgs/Broke-Brokers/teams/broke-brokers
+* And cloned our old repository here.
 
 It also came to our attention from the prof's updates on the sprint #2 planning that we did not intorduce the backlog and sprints backlog in the correct manner. We did not know we could use the "project"  and "issue" tab to do this. 
+
 We will transfer all the information from external files and internal .md files and wiki to the project tab and create issues from the tasks. 
 
 _For sprint #1 the files can be found here_:
