@@ -32,6 +32,8 @@ The project duration is 12 weeks and comprises 4 incremental sprints.
 The web application allows users to search for properties, save favourites, 
 request property visits, and perform CRUD operations (Create, read, update, delete) on property listings. 
 Brokers can submit offers, manage property listings, match properties with buyers, and oversee visits.
+[See information on project approach and choice of Agile method here](https://github.com/Broke-Brokers/soen341_fproject2023/wiki#project-approach----agile-scrum-framework)
+
 
 ## 2. TEAM MEMBERS AND ROLES
 
@@ -94,5 +96,3 @@ You Are Notified of The Collection Of Your Information By This Privacy Notice
 -	How to fix any errors in the information that you find.
 
    	
-## 8. 	References to the wiki
-    Coming soon.
