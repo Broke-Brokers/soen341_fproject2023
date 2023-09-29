@@ -52,7 +52,7 @@ Brokers can submit offers, manage property listings, match properties with buyer
 
 
 ## 4. APPROACH AND TECHNOLOGY
-[See project approach and tehcnology section in the Wiki!](https://github.com/isaisa002/BrokeBrokers-SOEN341-ProjectF2023/wiki#project-technologies---technology-stack)
+[See project approach and tehcnology section in the Wiki!](https://github.com/Broke-Brokers/soen341_fproject2023/wiki#project-technologies---technology-stack)
 *  Agile Approach for methodology 
 *	mySQL with Node.js for Brokers database and property database
 *  React and Javascript for functionalities
