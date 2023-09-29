@@ -1,6 +1,7 @@
 # README
 
-##Important notes and Updates
+## Important notes and Updates
+
 ***
 2023-09-29
 We learned that our repository was not correctly set up on 2023-09-28
@@ -20,6 +21,7 @@ the files can be found here :
 * [sprint #2 backlog](Sprint #2/Sprint2_Backlog.md)
 * [sprint #2 task breakdown](Sprint #2/Sprint 2Task_ Breakdown.xlsx)
 * [descriptive plan for sprint #2](https://github.com/Broke-Brokers/soen341_fproject2023/wiki#plan-for-sprint-2)
+* 
 ***
 
 ## 1. PROJECT DESCRIPTION 
