@@ -1,0 +1,93 @@
+
+import './App.css';
+import { useState, useEffect} from 'react';
+
+
+const Person =(props)=> {
+  return(
+    <>
+    <h1> Name : {props.name} </h1>
+    <h2> Last Name: {props.lastName} </h2>
+    <h2> Age : {props.age} </h2>
+    
+    </>
+  )
+}
+
+
+const App = () => {
+
+  const name ='jane';
+  const isNameShowing =false;
+  const isUserLoggedin= false;
+  // State
+
+  const [counter,setCounter] = useState(0); // function that start with us is called a hook in react
+    //   variable  , setter funtion
+
+    useEffect(()=>{
+      alert("You change the counter to "+ counter)
+     setCounter(100);
+    }, []);  // dpendency array is empty so code only happens initially / once
+  return (
+    <div className="App">
+
+<button onClick={() => setCounter(counter-1)}>-</button>
+
+<h1>{counter}</h1>
+<button onClick={() => setCounter ((prevCount)=>prevCount+1 )}>+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <Person 
+        name={'John'}
+       lastName={'Duffus'} 
+       age={'32'}/> 
+
+      <Person 
+      name ="jane" 
+      lastName="Jim" 
+      age={2+34}/> 
+   
+      
+
+  <h1>Hello , react ! {isNameShowing ? name : 'someone'}{5+5} </h1>
+
+ {/* {name ? ( <> {name} </>):(<> <h1> test</h1>  <h2>Thest is no name</h2> </>) } 
+
+  */}
+  {name ? (
+     <> {name} </>
+
+     ):(
+     <> 
+      <h1> test</h1> 
+      <h2>Thest is no name</h2> 
+
+      </>
+
+      ) } 
+
+
+    </div>
+  );
+}
+
+export default App;
