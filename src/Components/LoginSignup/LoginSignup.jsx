@@ -68,3 +68,15 @@ const LogingSignup =() => {
 export default LogingSignup
 
 //https://www.youtube.com/watch?v=8QgQKRcAUvM
+
+// colors
+/*
+
+E1CFCA
+D2D2D2
+FECECC
+EDBCCF
+F2F2F2
+EE7EA0
+
+*/

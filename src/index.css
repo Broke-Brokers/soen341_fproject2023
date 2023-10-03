@@ -7,10 +7,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   height: 100vh;
-  background: linear-gradient(#2A00B7,#42006C);
+  background: linear-gradient(#FECECC,#EDBCCF);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
