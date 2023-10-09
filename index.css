@@ -1,22 +1,7 @@
-*-------------------------- Whole website styles ------------------------*/
+*--------------------------Broke Brokers styles ------------------------*/
 body{
 background-color: #Ffffff;
 font-family: 'Quicksand', sans-serif;
 margin: 0px;
-}
-
-a{
-
-    color: #FFFF83;
-}
-
-.testimonialHeader{
-    color : #EE7EAD;
-}
-
-footer{
-    background-color: #f2f2f2;
-}
-footer p{
-    text-decoration: underline;
+text-align: center;
 }
