@@ -8,7 +8,7 @@ import Main from '../Main';
     return (
         < >
         <Main/>
-        <Cards/>
+        
         </>
 
     );
