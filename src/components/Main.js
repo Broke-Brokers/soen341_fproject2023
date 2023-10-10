@@ -1,15 +1,24 @@
 import React from 'react'
 import'./Main.css'
 import '../App.css';
-
+import { Link } from 'react-router-dom';
+import backImage from '../components/IMG_6840.JPG'
 function Main() {
   return (
-    <div className='main-container'>
-      
-      <video src='public\video-1.mp4/video-1.mp4' autoPlay loop muted />
-        <h1>Building Dreams, One Home at a Time</h1>
-      
+    <div className='main'style={{backgroundImage: `url(${backImage})`}}>
+    <div className="headerContainer" >
+      <h1>
+      Building Dreams, One Home at a Time
+      </h1>
+      <Link to = "">
+        <button> Find Your Home</button>
+      </Link>
+
     </div>
+
+  
+  </div>
+
   );
 }
 
