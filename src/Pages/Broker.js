@@ -1,4 +1,11 @@
-export default function Broker(){
+import React from 'react'
 
-    return <h1>Broker Page</h1>
+function Broker() {
+  return (
+    <div>
+      <h1>Broker Page</h1>
+    </div>
+  )
 }
+
+export default Broker

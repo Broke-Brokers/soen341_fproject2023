@@ -1,4 +1,11 @@
-export default function Sign(){
-
-    return <h1>Sign in Page</h1>
+import React from 'react'
+import LogingSignup from '../components/LoginSignup'
+function Sign() {
+  return (
+    <div>
+      <LogingSignup/>
+    </div>
+  )
 }
+
+export default Sign

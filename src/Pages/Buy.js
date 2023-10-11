@@ -1,4 +1,11 @@
-export default function Buy(){
+import React from 'react'
 
-    return <h1>Buy Page</h1>
+function Buy() {
+  return (
+    <div>
+      <h1>Buy Page</h1>
+    </div>
+  )
 }
+
+export default Buy

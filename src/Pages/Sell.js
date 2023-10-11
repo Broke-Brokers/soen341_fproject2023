@@ -1,4 +1,11 @@
-export default function Sell(){
+import React from 'react'
 
-    return <h1>Sell Page</h1>
+function Sell() {
+  return (
+    <div>
+      <h1>Sell Page</h1>
+    </div>
+  )
 }
+
+export default Sell
