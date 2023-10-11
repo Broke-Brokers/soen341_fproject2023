@@ -2,7 +2,7 @@ import React from 'react'
 import'./Main.css'
 import '../App.css';
 import { Link } from 'react-router-dom';
-import backImage from '../components/IMG_6840.JPG'
+import backImage from '../Images/IMG_6840.JPG'
 function Main() {
   return (
     <div className='main'style={{backgroundImage: `url(${backImage})`}}>
