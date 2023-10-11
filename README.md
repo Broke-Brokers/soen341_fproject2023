@@ -3,6 +3,16 @@
 1- npm install react-scripts --save
 2- npm start
 
+colors 
+
+E1CFCA
+D2D2D2
+FECECC
+EDBCCF
+F2F2F2
+EE7EA0
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
