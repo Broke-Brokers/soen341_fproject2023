@@ -19,7 +19,9 @@ function App() {
     <Routes>
       <Route path='/' exact element = {<Home/>} ></Route>
       <Route path='/Sell' exact element = {<Sell/>} ></Route>
-
+      <Route path='/buy' exact element = {<Buy/>} ></Route>
+      <Route path='/Broker' exact element = {<Broker/>} ></Route>
+      <Route path='/sign-in' exact element = {<Sign/>} ></Route>
     </Routes>
     <Footer/>
 
