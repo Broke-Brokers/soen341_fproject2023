@@ -12,14 +12,85 @@ time spent
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
 Dominique Proulx - 40177566
-
+03-10-2023
 *****
+Task breakdown was transferred from tables and documents to organization project and separated in issues in the repo.
 
+User stories Homebuyer, Renter and Broker have been broken down into components.
+tags such as [BUTTON] and [FORM] were used to identify the type of component  needed from user stories.
+Added references to other issues in the components. But I did not create more issues.
+
+Ask team to familiarize themselves and update the tasks on where they are at , assign themselves.
+When overtaking the creation of a componen, we should copy/paste the breakdown and create new issues referenced in the user story issue.
+
+I have assigned milestones and sprints to the issues.
+
+4 hours
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
 Dominique Proulx - 40177566
+5-10-2023
+*****
+Lab Thursday
+React environment setup
+Research for search 
 
+Communication with team about deadlines of week 1 and 2 
+wrotes and proposed fields for databases
+highlights points to be discussed in tonights meeting 
+Made a github discussion about the strategy to tackle tasks
+Lab meeting and discussion
+
+3 hours
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Dominique Proulx - 40177566
+7-10-2023
 *****
 
+React training
+wrote website hierarchy in issue #51
+Started property search page thumbnail component
+
+
+2 hours
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Dominique Proulx - 40177566
+9-10-2023
+*****
+
+React training
+Created and pushed the html structure from the hierarchy to the main branch, with div ID's for react component to hook up on it
+Corrected sprint #2 task breakdown(there were tasks that are for sprint #3)for user stories #1 , #2 and #3
+Created a referenced issue for the tasks for sprint #3
+
+
+
+3 hours
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Dominique Proulx - 40177566
+10-10-2023
+*****
+
+Meeting with team about page hierarchy 
+change index.html for login.html
+Change homepage.html for index.html
+new page hierarchy with the html page names posted to issue #51
+property page gallery training with react
+
+2hours 46 minutes 
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Dominique Proulx - 40177566
+11-10-2023
+*****
+
+Reupload html structure back to main branch 
+fight github desktop bug (github training! ) that did not let me merge branch.
+discussion with the team about the rmeoval of the files.
+
+1 hour
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
