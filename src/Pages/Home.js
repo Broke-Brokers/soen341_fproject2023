@@ -9,6 +9,7 @@ import Card from '../components/Card';
         < >
         <Main/>
         <Card/>
+       
         </>
 
     );
