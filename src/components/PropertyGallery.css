@@ -4,14 +4,17 @@ width: 50%;
 float: right;
 border-style: solid;
 border-width: 7px;
+margin : 10px;
 }
 .photoContainer{
-    width: 50%;
+    width: 45%;
     min-height: 500px;
     float: left;
-    background-image: url(../Images/property_image_test1.jpg);
-    background-position: center;
-    background-size: fill;
-    background-repeat: no-repeat;
+    padding: 20px;
     }
+
+    .photoContainer img{
+        max-width: 100%;
+        height: auto;
+        }
 

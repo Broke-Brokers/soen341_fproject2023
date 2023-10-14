@@ -12,7 +12,7 @@ function PropertyPage() {
 
      
       <div className="photoContainer">
-        <p>this is a test</p>
+      <img src={home_photo} alt=''/>
       </div>
       <>
       <PropertyGallery/>
