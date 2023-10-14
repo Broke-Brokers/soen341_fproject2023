@@ -5,7 +5,7 @@ export default function PropertyInfo(props){
    /*const price = props.price;
    const postName = props.postName;
    const constructionYear = props.constrcutionYear;
-       */
+    */
 
    /*For testing purposes these are hardcoded, please remove after testing*/
     const price = 12345;
