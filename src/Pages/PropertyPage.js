@@ -3,7 +3,7 @@ import '../App.css'
 import '../components/PropertyGallery.css' 
 import Card from '../components/Card';
 import PropertyGallery from '../components/PropertyGallery';
-import home_photo from '../Images/IMG_0197.JPG'
+import home_photo from '../Images/property_image_test1.jpg'
 
 function PropertyPage() {
   return (
@@ -11,14 +11,7 @@ function PropertyPage() {
       <h1>Take a closer look at this property!</h1>
       <p>this is a test</p>
       <>
-
-            <img src={home_photo} alt=''/>
-         
-        
-        
-    
-       <PropertyGallery/>
-        
+      <PropertyGallery/>
       </>
     </div>
   )
