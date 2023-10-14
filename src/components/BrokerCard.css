@@ -1,0 +1,58 @@
+
+.brokerCard {
+  border-left:  30px solid #EE7EA0;
+  box-shadow: 5px 6px 0px #D2D2D2;
+  transition: 0.3s all;
+  border-radius: 3px;
+  background-color: #fff;
+  padding: 21px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 340px;
+  max-width: 95%;
+ display: inline-block;
+ margin:1%;
+
+
+  .profilePic {
+    img {
+      border-radius: 50%;
+      border: 7px solid #EE7EA0;
+      max-height:50%;
+      max-width: 50%;
+    
+    }
+  }
+
+  .brokerName {
+    font-size: 26px;
+    margin-top: 18px;
+    color: #EE7EA0;
+  }
+
+  .brokerInfo {
+    font-size: 17px;
+    margin-top: 18px;
+    color: #000;
+  }
+  .cardTitle {
+    font-size: 26px;
+    margin-top: 18px;
+    color: #D2D2D2;
+    padding:5%;
+  }
+  .social {
+    ul {
+      margin-top: 22px;
+      list-style-type: none;
+      li {
+        display: inline;
+        font-size: 22px;
+        cursor: pointer;
+        color: #D2D2D2;
+      }
+    }
+  }
+}

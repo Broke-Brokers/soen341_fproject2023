@@ -22,11 +22,15 @@ const images = [
 
 
 return(
-<div className="myGalleryCountainer">
+<div className="myGalleryContainer">
     
-<ImageGallery items={images} />
+<ImageGallery
+thumbnailPosition={'right'}
+showPlayButton={false}
+items={images} />
     </div>
 
 );
 }
 
+/*https://www.npmjs.com/package/react-image-gallery*/
