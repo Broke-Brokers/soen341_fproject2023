@@ -15,15 +15,12 @@ function PropertyPage() {
     
 <>
 <div>
-  {/**Css of photoContainer and photochontainer will need to be mode to a photo component. */}
-      <div className="photoContainer">
-      <img src={home_photo} alt=''/>
-      </div>
+ 
     
       <PropertyGallery/>
       </div>
    <div>
-      <PropertyInfo/>
+      <PropertyInfoContainer/>
       <BrokerCard/>
       </div>
      
