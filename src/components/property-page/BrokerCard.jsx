@@ -1,5 +1,5 @@
 import React from 'react';
-import '../components/property-page/BrokerCard.css' 
+import '../src/components/property-page/BrokerCard.css' 
 
 
 export default function BrokerCard(props){
