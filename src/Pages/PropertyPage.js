@@ -4,7 +4,6 @@ import  '../components/PropertyGallery.css';
 import Card from '../components/Card';
 import BrokerCard from '../components/BrokerCard';
 import PropertyGallery from '../components/PropertyGallery';
-
 import PropertyInfo from '../components/PropertyInfo';
 import home_photo from '../Images/property_image_test1.jpg'
 

@@ -1,17 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD:src/components/PropertyInfo.jsx
-<<<<<<< HEAD
-<<<<<<< HEAD:src/components/property-page/PropertyInfo.jsx
-import '../src/components/property-page/PropertyInfo.css' 
-=======
-import '../components/PropertyInfo.css' 
->>>>>>> parent of 8c30fae (created a property-page folder and broke everything.):src/components/PropertyInfo.jsx
-=======
-import '../components/PropertyInfo.css' 
->>>>>>> parent of 8c30fae (created a property-page folder and broke everything.)
-=======
-import '../components/property-page/PropertyInfo.css' 
->>>>>>> parent of b7b00d8 (I fixed it.):src/components/property-page/PropertyInfo.jsx
+import'../components/PropertyInfo.css';
 
 export default function PropertyInfo(props){
 

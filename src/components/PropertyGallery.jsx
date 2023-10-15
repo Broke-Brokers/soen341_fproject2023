@@ -1,18 +1,6 @@
 import React from 'react';
 import ImageGallery from "react-image-gallery";
-<<<<<<< HEAD:src/components/PropertyGallery.jsx
-<<<<<<< HEAD
-<<<<<<< HEAD:src/components/property-page/PropertyGallery.jsx
-import '../src/components/property-page/PropertyGallery.css' 
-=======
-import '../components/PropertyGallery.css' 
->>>>>>> parent of 8c30fae (created a property-page folder and broke everything.):src/components/PropertyGallery.jsx
-=======
-import '../components/PropertyGallery.css' 
->>>>>>> parent of 8c30fae (created a property-page folder and broke everything.)
-=======
-import '../components/property-page/PropertyGallery.css' 
->>>>>>> parent of b7b00d8 (I fixed it.):src/components/property-page/PropertyGallery.jsx
+import '../components/PropertyGallery.css';
 import 'react-image-gallery/styles/css/image-gallery.css';
 
 export default function PropertyGallery(){
