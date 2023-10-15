@@ -1,5 +1,5 @@
 import React from 'react'
-import'../components/PropertyInfo.css';
+import'/components/PropertyInfo.css';
 
 export default function PropertyInfo(props){
 
