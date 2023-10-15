@@ -16,6 +16,7 @@ DECISIONS ITEMS
 
 DISCUSSION 
 - Navigation : Universal react component with different menu items based on logical test on user type logged in
+- Login will search through Homebuyers/brokers and sysadmin databases until it finds it
 - Dominique: Team discussion on broker offer feature, seat up Github page
 - Rebecca, Isabelle: SQL training, deciding field for properties, users
 - Taylor: Merging navigation and home page, touch up design and UI components
