@@ -1,14 +1,12 @@
-- UserType: Indicate if the user logged is an home buyer, home renter, broker or administrator.
+- UserType: Indicate if the user logged is an home buyer/home renter, broker or administrator.
 - Client Status: Indicate if the home buyer or home renter is associated with a broker or not 
 
-LIST OF BROKERS:
-An admin of user type 4 and with an ID=1 (only one admin) has access to all brokers. 
+### LIST OF BROKERS
+An admin of user type 1 and with an ID=1 (only one admin) has access to all brokers. 
 Specifying a broker’s ID give to the admin access to the broker’s general information. 
-
-LIST OF PROPERTIES:
-A home buyer (user type 1) or a home renter (user type 2) with a specific ID have access to a property list ID that contains all the properties saved.
-
-CLIENT FILE:
+### LIST OF PROPERTIES
+A home buyer/home renter (user type 2) with a specific ID have access to a property list ID that contains all the properties saved.
+### CLIENT FILE
 A Broker (user type 3) with a specific ID has access to all his clients thanks to a client file ID. 
 The client status associated with the file is status 2 ie associated with a broker. 
 Specifying a client file ID gives to the broker access to the file information such as the type of client, the client ID or  the favourite properties saved in the property list. 
@@ -18,4 +16,3 @@ Specifying a client file ID gives to the broker access to the file information s
 - Property status: Indicate if house is sold or not 
 - Property Amenity: Indicate type of amenity in property
 - Amenity: Indicate if the amenity is a garage, pool etc.
-
