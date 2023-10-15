@@ -1,9 +1,14 @@
-import React from 'react'
+
+
+import Card from '../components/Card'
 
 function Buy() {
   return (
     <div>
-      <h1>Buy Page</h1>
+      <h1>Buy Page !!!</h1>
+      
+      
+
     </div>
   )
 }

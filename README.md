@@ -3,6 +3,29 @@
 1- npm install react-scripts --save
 2- npm start
 
+
+--  back end---- 
+
+packege.json
+npm init -y
+
+express server
+
+npm i express mysql nodemon
+
+- "main": "index.js",
+  "type":"module",
+
+node index.js
+
+
+ "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    ,"start": "nodemon index.js"
+  }
+
+  so we can start on npm start 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
