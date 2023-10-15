@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD:src/components/property-page/BrokerCard.jsx
 import '../src/components/property-page/BrokerCard.css' 
+=======
+import '../components/BrokerCard.css' 
+>>>>>>> parent of 8c30fae (created a property-page folder and broke everything.):src/components/BrokerCard.jsx
 
 
 export default function BrokerCard(props){
