@@ -14,7 +14,7 @@ export default function PropertyInfo(props){
    const constructionYear = 1966;
       
     return(
-    <div className="propertyInfo">
+    <div className="propertyInfoBox">
         <h1>{price}$</h1>
         <h2>{postName}</h2>
         <p>{constructionYear}</p>
