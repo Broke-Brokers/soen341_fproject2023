@@ -1,6 +1,6 @@
 import React from 'react';
 import ImageGallery from "react-image-gallery";
-import '../components/PropertyGallery.css' 
+import '../components/property-page/PropertyGallery.css' 
 import 'react-image-gallery/styles/css/image-gallery.css';
 
 export default function PropertyGallery(){
