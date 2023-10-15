@@ -1,11 +1,15 @@
 import React from 'react'
+import Test from '../components/Test'
 
 function Buy() {
   return (
-    <div>
+    
+<>
       <h1>Buy Page</h1>
-    </div>
-  )
+      <Test/>
+      </>
+    
+  );
 }
 
-export default Buy
+export default Buy;
