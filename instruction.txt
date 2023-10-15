@@ -1,0 +1,40 @@
+--  back end---- 
+
+packege.json
+npm init -y
+
+express server
+
+npm i express mysql nodemon
+
+in package.json
+- "main": "index.js",
+  "type":"module",
+
+run :
+node index.js
+
+in package.json to make it so npm start run nmon
+
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    ,"start": "nodemon index.js"
+  }
+
+http://localhost:8800/
+
+
+if auth prob
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'broke';
+
+ 
+
+  so we can start on npm start 
+
+to fetch from db, make api request using an api app
+  npm instal i axios 
+
+
+allow app to use backend 
+
+npm i cors
