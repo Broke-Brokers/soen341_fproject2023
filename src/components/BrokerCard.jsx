@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/property-page/BrokerCard.jsx
 import '../src/components/property-page/BrokerCard.css' 
 =======
