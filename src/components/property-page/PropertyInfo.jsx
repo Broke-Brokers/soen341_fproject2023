@@ -1,5 +1,8 @@
 import React from 'react'
-import'/components/PropertyInfo.css';
+import'../property-page/PropertyInfo.css';
+import home_photo from '../../Images/property_image_test1.jpg'
+
+
 
 export default function PropertyInfo(props){
 
@@ -14,6 +17,13 @@ export default function PropertyInfo(props){
    const constructionYear = 1966;
       
     return(
+
+        <div className="infoContainer">
+
+            {/**Css of photoContainer and photochontainer will need to be mode to a photo component. */}
+      <div className="photoContainer">
+      <img src={home_photo} alt=''/>
+      </div>
     <div className="propertyInfoBox">
         <h1>{price}$</h1>
         <h2>{postName}</h2>
@@ -21,7 +31,7 @@ export default function PropertyInfo(props){
         <p>{constructionYear}</p>
         <p>{constructionYear}</p>
         </div>
-    
+    </div>
     );
     }
     

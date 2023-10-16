@@ -1,0 +1,52 @@
+
+.infoContainer{
+    border-left:  30px solid #E1CFCA;
+    border-top : 1px solid #d2d2d2;
+    box-shadow: 5px 6px 0px #D2D2D2;
+    transition: 0.3s all;
+    border-radius: 3px;
+    background-color: #fff;
+    padding: 21px;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    min-width: 340px;
+    width: 60%;
+    max-width: 95%;
+    margin:1%;
+
+}
+
+
+
+.propertyInfoBox{
+    width: 100%;
+   padding: 20px;
+   /*margin: 10px;*/
+  /* clear: both;*/
+   display: inline-block;
+ vertical-align: top;
+ text-align:left;
+ 
+}
+
+
+h1{
+   
+    color: #EE7EA0;
+   font-family : 'PT Sans', sans-serif;
+   font-size:48px;
+   font-weight: 700;
+   text-align : left;
+}
+
+.photoContainer{
+    width: 100%;
+    float: left;
+    padding: 20px;
+    }
+
+.photoContainer img{
+        max-width: 100%;
+        height: auto;
+        }
