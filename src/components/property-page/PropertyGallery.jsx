@@ -27,7 +27,8 @@ return(
 <ImageGallery
 thumbnailPosition={'right'}
 showPlayButton={false}
-items={images} />
+items={images} 
+originalTitle={"Property Name 123 boul Maisonneuve"}/>
     </div>
 
 );
