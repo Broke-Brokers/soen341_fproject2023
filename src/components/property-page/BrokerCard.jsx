@@ -7,7 +7,16 @@ export default function BrokerCard(props){
 /*const brokerName = props.name;
    const email = props.email;
    const phoneNumber = props.phoneNumber;
-    */
+
+
+   /*The fields:
+     Broker_id integer PK
+  First_Name VARCHAR
+  Last_Name VARCHAR
+  Phone_Number VARCHAR
+  Email Varchar
+   */
+    
 
    /*For testing purposes these are hardcoded, please remove after testing*/
    const brokerName = "Albus Dumbledore";
@@ -34,9 +43,8 @@ export default function BrokerCard(props){
   <div className="social">
     <ul>
       <li><i class="fab fa-facebook"></i></li>
-      <li><i class="fab fa-twitter"></i></li>
-      <li><i class="fab fa-github"></i></li>
-      <li><i class="fab fa-dev"></i></li>
+      <li><i class="fas fa-envelope"></i></li>
+            <li><i class="fas fa-phone"></i></li>
       <li><i class="fas fa-link"></i></li>
     </ul>
   </div>
