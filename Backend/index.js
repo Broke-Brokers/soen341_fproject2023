@@ -1,27 +1,29 @@
-const { default: userEvent } = require('@testing-library/user-event');
-const express = require("express");
-const  app = express();
-const mysql = require("mysql");
+//const { default: userEvent } = require('@testing-library/user-event');
+import mysql from 'mysql2'
+import dotenv from 'dotenv'
+dotenv.config()
 
-const db = mysql.createPool({
-host: "localhost",
-user: "root",
-Password: "ElusmeG1",
-database: 'Properties'
+const pool = mysql.createPool({
+host: process.env.MYSQL_HOST,
+user: process.env.MYSQL_USER,
+password: process.env.MYSQL_PASSWORD,
+database: process.env.MYSQL_DATABASE
 
-});
+}).promise();
 
-app.get("/",(req,res) => {
-   
+async function getTests() {
+//pool.query("INSERT INTO Test (idTest, adress) VALUES (2,'test!');")
+const [rows] = await pool.query("SELECT * FROM Properties.Test")
+        return rows
+}
 
-    const sqlInsert = "INSERT INTO Test (idTest, adress) VALUES (2,'test!');"
-    db.query(sqlInsert,(err,result) => {
-        res.send("fmarymr");
-    } )
-});
+async function getTest(id){
+    const [rows] = await pool.query(`
+    SELECT * 
+    FROM Properties.Test
+    WHERE idTest = ?`, [id])
+        return rows[0]
+}
 
-
-app.listen(3001,() =>{
-
-    console.log("running on port 3001");
-});
+const test = await getTest(1)
+console.log(test)
