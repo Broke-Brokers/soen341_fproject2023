@@ -11,27 +11,52 @@ database: process.env.MYSQL_DATABASE
 
 }).promise();
 
-async function getTests() {
-//pool.query("INSERT INTO Test (idTest, adress) VALUES (2,'test!');")
-const [rows] = await pool.query("SELECT * FROM Properties.Test")
-        return rows
-}
+// get all the properties
+async function getProperties() 
+        {
 
-async function getTest(id){
+        const [rows] = await pool.query("SELECT * FROM Properties.Property")
+        console.log(rows)
+             return rows
+                 }
+
+// For search after ... 
+async function getProperty(id){
     const [rows] = await pool.query(`
     SELECT * 
-    FROM Properties.Test
+    FROM Properties.Property
     WHERE idTest = ?`, [id])
         return rows[0]
 }
 
-async function createTest(idTest, adress){
+// to create a new property
+async function createProperty(Price, Adress, PostalCode, City, Province,
+                                 Neighborhood, Baths, Beds, 
+                                 Property_type, Listing_type )
+ {
+             
         const [result] = await pool.query(`
-        INSERT INTO Test (idTest, adress)
-        VALUES (?,?)
-        `, [idTest,adress] )
+        INSERT INTO Property (price, adress, Postal_Code, City, Province, Neighborhood, No_Bathrooms, No_Bedrooms, 
+                Property_type_id, Listing_type_id )
+        VALUES (?,?,?,?,?,?,?,?,?,?)
+        `, [Price, Adress, PostalCode, City, Province, Neighborhood, Baths, Beds, 
+                Property_type, Listing_type ] )
         
 }
 
-const result = await createTest(4,'Test')
-console.log(result)
+//async function updateProperty
+
+// to delete a property
+async function deleteProperty(id){
+        const [result]= await pool.query(`
+        DELETE FROM Property 
+        WHERE property_id =?`, [id])
+
+}
+
+//const result = await getProperties()
+//console.log(result)
+
+//getProperties()
+//const result = await createProperty(900, "Reussix", "H3H3H2", "Montreal", "Quebec",null, 4, 5,1,2)
+const result1 = await deleteProperty(64)
