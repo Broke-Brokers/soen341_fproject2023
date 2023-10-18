@@ -25,5 +25,13 @@ async function getTest(id){
         return rows[0]
 }
 
-const test = await getTest(1)
-console.log(test)
+async function createTest(idTest, adress){
+        const [result] = await pool.query(`
+        INSERT INTO Test (idTest, adress)
+        VALUES (?,?)
+        `, [idTest,adress] )
+        
+}
+
+const result = await createTest(4,'Test')
+console.log(result)
