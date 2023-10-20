@@ -2,7 +2,7 @@ import React from 'react'
 import'../property-page/PropertyInfo.css';
 import home_photo from '../../Images/property_image_test1.jpg'
 import SaveFavorite_Button from '../buttons/SaveFavorite_Button';
-
+import RequestVisit_Button from '../buttons/RequestVisit_Button';
 
 export default function PropertyInfo(props){
 
@@ -62,6 +62,7 @@ export default function PropertyInfo(props){
       
         </div>
         <SaveFavorite_Button/>
+        <RequestVisit_Button/>
     </div>
     );
     }
