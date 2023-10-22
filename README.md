@@ -75,6 +75,19 @@ Brokers can submit offers, manage property listings, match properties with buyer
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## install additional components
+
+### react image gallery 
+
+- npm install react-image-gallery
+
+### font awesome 
+
+npm i --save @fortawesome/fontawesome-svg-core
+npm install --save @fortawesome/free-solid-svg-icons
+npm install --save @fortawesome/react-fontawesome
+
+
 ## Available Scripts
 
 In the project directory, you can run:
