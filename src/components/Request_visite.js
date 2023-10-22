@@ -31,7 +31,7 @@ const Request_visite = () => {
     <label for="customerPhone">Phone Number <em>&#x2a;</em></label>
     <input id="customerPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" type="tel" placeholder= " Phone "name="user_phone" required />
     <label for="customerNote">YOUR MESSAGE <em>&#x2a;</em> </label>
-    <textarea id="customerNote" name="customerNote" required="" rows="4"></textarea>
+    <textarea id="customerNote" name="message" required="" rows="4"></textarea>
     <h3>
       Please provide all detaill.
     </h3>
