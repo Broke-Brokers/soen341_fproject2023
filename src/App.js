@@ -30,13 +30,14 @@ function App() {
       <Route path='/sign-in' exact element = {<Sign/>} ></Route>
       <Route path='/buy' exact element = {<Buy/>} ></Route>
       <Route path='/Broker' exact element = {<Broker/>} ></Route>
+      
 
       {/*HomeOwner / Renter property page */}
       <Route path='/propertyPage' exact element = {<PropertyPage/>} ></Route>
       {/*Sysadmin profile page */}
       <Route path='/sysadmin' exact element = {<SysAdminProfile/>} ></Route>
-    {/*HomeOwner / Renter / Broker  Search for property page*/}
-    <Route path='/search' exact element = {<Search/>} ></Route>
+      {/*HomeOwner / Renter / Broker  Search for property page*/}
+      <Route path='/search' exact element = {<Search/>} ></Route>
 
       
     </Routes>

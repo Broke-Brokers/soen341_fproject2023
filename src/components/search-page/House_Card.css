@@ -89,3 +89,11 @@ width:100%;
     display:inline;
    
 }
+
+
+.HC_infoContainer:hover {
+    /* styles to apply on hover */
+    transform: scale(1.05); /* scales the card slightly */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* adds a shadow for depth */
+    cursor: pointer; /* changes the cursor to a pointer to indicate clickability */
+}

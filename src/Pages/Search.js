@@ -1,11 +1,11 @@
 import React from 'react'
-import House_Card from '../components/search-page/House_Card'
+import House_Grid from '../components/search-page/House_Grid'
 
 function Search() {
   return (
     <div>
       <h1>Search For Properties page</h1>
-      <House_Card/>
+      <House_Grid/>
     </div>
   )
 }
