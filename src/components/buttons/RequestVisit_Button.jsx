@@ -12,7 +12,7 @@ export default function RequestVisit_Button(){
   
     return(
         <div >
-<img className="requestButton" src={require('../../Images/home_visit.jpg')} alt="requestAVisit" onClick={() => requestAVistit()} />
+<img className="requestButton" src={require('../../Images/home_visit.png')} alt="requestAVisit" onClick={() => requestAVistit()} />
 
           
 </div>
