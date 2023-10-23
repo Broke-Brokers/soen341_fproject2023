@@ -1,5 +1,6 @@
 import React from 'react'
-import Add_Button from '../components/buttons/Add_Button'
+import Add_Button from './components/buttons/Add_Button'
+import React_Grid from './components/Profile-page/React_Grid'
 
 function Profile() {
   return (
@@ -9,7 +10,9 @@ function Profile() {
         {/*brokers showed alphabetically*/}
         {/*click on card : edit button is a pen*/}
          {/*click on card delete button  is a trash*/}
-         <h1>Manage the BrokeBroker's Brokers</h1>
+
+         
+      <React_Grid/>
       <Add_Button/>
     </div>
   )

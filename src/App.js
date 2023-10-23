@@ -10,10 +10,11 @@ import Buy from './Pages/Buy';
 import Broker from './Pages/Broker';
 import Sign from './Pages/Sign';
 import PropertyPage from './Pages/PropertyPage';
-import Profile from './Pages/Profile'
+import Profile from './Profile';
 import Search from './Pages/Search';
 // import fontawesome library
 import './fontawesome';
+
 
 
 
