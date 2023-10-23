@@ -5,6 +5,12 @@
 
 # To install :
 npm install react-range
+
+         --- Grid ----
+npm i --save @devexpress/dx-react-core @devexpress/dx-react-grid
+
+npm i --save @devexpress/dx-react-grid-material-ui
+
 ***
 ### 2023-09-29
 
