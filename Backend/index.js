@@ -1,7 +1,10 @@
 //const { default: userEvent } = require('@testing-library/user-event');
 import mysql from 'mysql2'
 import dotenv from 'dotenv'
+import express from "express"
 dotenv.config()
+
+const app = express()
 
 const pool = mysql.createPool({
 host: process.env.MYSQL_HOST,
@@ -10,6 +13,20 @@ password: process.env.MYSQL_PASSWORD,
 database: process.env.MYSQL_DATABASE
 
 }).promise();
+app.get("/", (req,res) =>{
+        res.json("hello this is backend")
+    })
+
+ app.get("/Test", async (req,res) => {
+        const q = await getProperties()
+        res.send(q)
+        })
+    
+    
+    
+    app.listen(8080, () =>{
+        console.log("Connected to backend! ")
+    })
 
 // get all the properties
 async function getProperties() 
@@ -59,4 +76,4 @@ async function deleteProperty(id){
 
 //getProperties()
 //const result = await createProperty(900, "Reussix", "H3H3H2", "Montreal", "Quebec",null, 4, 5,1,2)
-const result1 = await deleteProperty(64)
+//const result1 = await deleteProperty(64)
