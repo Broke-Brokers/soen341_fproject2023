@@ -3,6 +3,8 @@
 
 ## Important notes and Updates
 
+# To install :
+npm install react-range
 ***
 ### 2023-09-29
 

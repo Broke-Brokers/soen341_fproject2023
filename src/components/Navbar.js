@@ -30,7 +30,12 @@ window.addEventListener('resize', showButton);
         <div className="menu-icon" onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'}/>
         </div>
+
+        
+
+
         <ul className={click? 'nav-menu active' : 'nav-menu'}>
+          
           <li className='nav-item'>
             <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                 Home
@@ -51,13 +56,29 @@ window.addEventListener('resize', showButton);
                 Broker
             </Link>
           </li>
+
+          <li className='nav-item'>
+          <Link to='/search' className='nav-links nav-button' onClick={closeMobileMenu}>
+            Search
+              </Link>
+              </li>
+
+
+
           <li className='nav-item'>
             <Link to='/sign-in' className='nav-links-mobile' onClick={closeMobileMenu}>
                 Sign In
             </Link>
           </li>
+          
+
+
         </ul>
+
         {button && <Button buttonStyle='btn--outline'>SIGN IN</Button>}
+
+
+        
     </div>
    </nav>
    </>
