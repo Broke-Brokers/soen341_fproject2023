@@ -1,7 +1,7 @@
 import React from 'react'
 import Add_Button from '../components/buttons/Add_Button'
 
-function SysAdminProfile() {
+function Profile() {
   return (
     <div>
 
@@ -15,4 +15,4 @@ function SysAdminProfile() {
   )
 }
 
-export default SysAdminProfile
+export default Profile
