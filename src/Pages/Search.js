@@ -1,10 +1,11 @@
 import React from 'react'
 import House_Grid from '../components/search-page/House_Grid'
+import Search_Filter from '../components/search-page/Search_Filter'
 
 function Search() {
   return (
     <div>
-      <h1>Search For Properties page</h1>
+      <Search_Filter/>
       <House_Grid/>
     </div>
   )
