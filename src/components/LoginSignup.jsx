@@ -1,82 +1,105 @@
-//import React from 'react';
-import './LoginSignup.css';
-
+// React Component
 import React, { useState } from 'react';
-
-
-
+import './LoginSignup.css';
 import user_icon from '../Images/LoginSignup/person.png';
 import email_icon from '../Images/LoginSignup/email.png';
 import password_icon from '../Images/LoginSignup/password.png';
 
-const LogingSignup =() => {
 
-    // dynamic variable
-    const[action,setAction ] =useState("Login");
+// Firebase Initialization and Configurations
+import { initializeApp } from "firebase/app";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyD67j-e8plVp5mtf6Td_7R-OV4Wbo1MmdI",
+  authDomain: "soen341db.firebaseapp.com",
+  projectId: "soen341db",
+  storageBucket: "soen341db.appspot.com",
+  messagingSenderId: "388617260788",
+  appId: "1:388617260788:web:33bd62fe3f958ca0f658a1"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
 
+    // END FOR FIRE BASE
 
-
-    return(
-        <div className ='container'>
-            <div className ="header">
-                <div className="text">{action}</div>
-                <div className="underline"></div>
+    const LogingSignup = () => {
+        const [view, setView] = useState("Login");
+        const [email, setEmail] = useState("");
+        const [password, setPassword] = useState("");
+        const [error, setError] = useState("");
+    
+        const register = async () => {
+            try {
+                await createUserWithEmailAndPassword(auth, email, password);
+                setError("");
+            } catch (err) {
+                setError(err.message);
+            }
+        };
+    
+        const login = async () => {
+            try {
+                await signInWithEmailAndPassword(auth, email, password);
+                setError("");
+            } catch (err) {
+                setError(err.message);
+            }
+        };
+    
+        return (
+            <div className='container'>
+                <div className="header">
+                    <div className="text">{view}</div>
+                    <div className="underline"></div>
+                    <div className="toggleView">
+                        <button className="switchbuttom" onClick={() => setView(view === "Login" ? "Signup" : "Login")}>
+                            Go to {view === "Login" ? "Signup" : "Login"} 
+                        </button>
+                    </div>
+                </div>
+    
+                {view === "Signup" && (
+                    <>
+                        <div className="titletext">User Type</div>
+                        <select className='dropdown'>
+                            <option value="broker">Broker</option>
+                            <option value="system_admin">System Admin</option>
+                            <option value="home_buyer">Home Buyer</option>
+                        </select>
+                        <div className='input'>
+                            <img src={user_icon} alt=""/>
+                            <input type="text" placeholder='Surname'/>
+                        </div>
+                        <div className='input'>
+                            <img src={user_icon} alt=""/>
+                            <input type="text" placeholder='Name'/>
+                        </div>
+                    </>
+                )}
+    
+                <div className='inputs'>
+                    <div className='input'>
+                        <img src={email_icon} alt="" />
+                        <input type="email" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} /> 
+                    </div>
+    
+                    <div className='input'>
+                        <img src={password_icon} alt="" />
+                        <input type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
+                    </div>
+    
+                    {error && <div className="error">{error}</div>} {/* Display errors */}
+    
+                    <div className="submit-container">
+                        {view === "Signup" && <button className="submit" onClick={register}>Sign Up</button>}
+                        {view === "Login" && <button className="submit" onClick={login}>Login</button>}
+                    </div>
+                </div>
             </div>
-
-            <div className="inputs">
-                        {action === "Login" ? (
-                <div></div>
-            ) : (
-                <>
-                    <div className='input'>
-                        <img src={user_icon} alt=""/>
-                        <input type ="text" placeholder='Surname'/>
-                    </div>
-                
-                    <div className='input'>
-                        <img src={user_icon} alt=""/>
-                        <input type ="text" placeholder='Name'/>
-                    </div>
-                </>
-            )}
-  
-                    <div className='input'>
-                    <img src={email_icon} alt=""/>
-                    <input type ="email" placeholder='Email'/>
-                    </div>
-
-                    <div className='input'>
-                    <img src={password_icon} alt=""/>
-                    <input type ="password" placeholder='Password'/>
-                    </div>
-            </div>
-   
-   {action==="Sign Up"?<div></div>:
-   <div className="forgot-password">Lost Password? <span>Click Here !</span></div>    
-   }
-              <div className="submit-container">
-                <div className={action=="Login"?"submit gray":"submit"} onClick={()=>{setAction("Sign Up")}}>Sign Up</div>
-                <div className={action=="Sign Up"?"submit gray":"submit"}onClick={()=>{setAction("Login")}}>Login</div>
-
-
-            </div>
-        </div>
-    )
-}
-
-export default LogingSignup
-
-//https://www.youtube.com/watch?v=8QgQKRcAUvM
-
-// colors
-/*
-
-E1CFCA
-D2D2D2
-FECECC
-EDBCCF
-F2F2F2
-EE7EA0
-
-*/
+        );
+    }
+    
+    export default LogingSignup;

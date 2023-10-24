@@ -7,6 +7,7 @@ import Card from '../components/Card';
 
     return (
         < >
+        
         <Main/>
         <Card/>
         </>
