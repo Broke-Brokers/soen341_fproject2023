@@ -9,7 +9,7 @@ assignees: ''
 
 from : #issueNumber
 
-##T ASK DESCRIPTION 
+## TASK DESCRIPTION 
 
 As a _, I want to _ so that _ .
 
