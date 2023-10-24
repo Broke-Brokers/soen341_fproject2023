@@ -1,5 +1,5 @@
 ---
-name: TASK Template
+name: " TASK Template"
 about: TASK template
 title: 'TASK - '
 labels: TASK
@@ -9,7 +9,7 @@ assignees: ''
 
 from : #issueNumber
 
-##TASK DESCRIPTION 
+##T ASK DESCRIPTION 
 
 As a _, I want to _ so that _ .
 
