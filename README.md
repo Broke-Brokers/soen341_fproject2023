@@ -6,7 +6,8 @@
 ### for sprint 2  :
 
 * [Sprint 3 backlog is here :](https://github.com/Broke-Brokers/Broke_BRokers-soen341projectF2023/blob/main-branch/Sprint%20%233/BrokeBrokers_Sprint3Backlog.xlsx)
-* [Acceptance test1:](https://github.com/Broke-Brokers/Broke_BRokers-soen341projectF2023/issues/125)
+* Acceptance test :
+- [1.1](https://github.com/Broke-Brokers/Broke_BRokers-soen341projectF2023/issues/125)
 
 ***
 ### 2023-09-29
