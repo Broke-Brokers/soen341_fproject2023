@@ -1,13 +1,13 @@
 import React from 'react'
 import './Card.css'
 import home_photo from '../Images/IMG_0197.JPG'
-const Card = () => {
+const Card = ({Property}) => {
   return (
     <div className='card'>
       <div className='gradiant'></div>
       <div className='profile-down'>
         <img src={home_photo} alt=''/>
-        <div className="title">ADDRESS</div>
+        <div className="title">{}</div>
         <div className="description">
             Description
         </div>

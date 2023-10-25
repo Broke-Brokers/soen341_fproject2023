@@ -4,6 +4,7 @@ import Search_Filter from '../components/search-page/Search_Filter'
 import {useState, useEffect} from "react";
 import {db} from '../firebase_configuration.js'
 import { collection, getDocs} from "firebase/firestore";
+import ProperyCard from './card'
 
 function Search() {
 
@@ -13,6 +14,7 @@ function Search() {
 
   useEffect(() => {
 
+    // get the properties in a clean way
     const getProperties = async () => {
       const data = await getDocs(PropertiesCollectionRef);
       setProperties(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
