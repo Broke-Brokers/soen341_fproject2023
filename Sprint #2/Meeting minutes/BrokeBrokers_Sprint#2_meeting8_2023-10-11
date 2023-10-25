@@ -1,0 +1,23 @@
+2023-10-11 8:30 pm to 8:50 pm
+
+ATTENDING
+Chrisdonia Isabelle Charles
+Rebecca Elusme
+Dominique Proulx
+Taylor Mervil
+Junior Peumi
+
+
+
+DECISIONS ITEMS
+- Daily updates
+- Discussion on page hierarchy and structure
+
+
+DISCUSSION 
+- Navigation : Universal react component with different menu items based on logical test on user type logged in
+- Login will search through Homebuyers/brokers and sysadmin databases until it finds it
+- Dominique: Team discussion on broker offer feature, seat up Github page
+- Rebecca, Isabelle: SQL training, deciding field for properties, users
+- Taylor: Merging navigation and home page, touch up design and UI components
+- Junior: Footer, header of home page, backbone for sell

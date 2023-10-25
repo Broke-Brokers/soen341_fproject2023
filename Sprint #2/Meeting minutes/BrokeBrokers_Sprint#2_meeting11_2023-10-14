@@ -1,0 +1,33 @@
+2023-10-14 1pm to 3 pm
+
+ATTENDING
+Chrisdonia Isabelle Charles
+Rebecca Elusme
+Dominique Proulx
+Taylor Mervil
+Junior Peumi
+
+REGRETS 
+- Ask TA if can separate branch for website and documentation
+- Clarification on unit test for sprint 2
+
+DECISIONS ITEMS
+- Project progress
+- Issues review
+- Troubleshoot problem of connecting to the github
+
+
+DISCUSSION 
+- Branch's nomenclature: functionality_nameOfCollaborator
+- Placeholders before integration with backend 
+- css refactoring will be noted; If merge css sheets, need to be careful about nomenclature 
+- More comments on issues track easily progress 
+- Taylor & Junior: Tutorial on react components, how to build page and how to connect pages with app
+- Progress will be tracked periodically in discussions
+- Levels of tests: Acceptance test in issues to state the desired flow for customers, unit test done by developpers to ensure functionality of website (commented in acceptance test issues), automated test for demo (JUnit test)
+- Rebecca & Isabelle: Documents from Broke-Brokers.github.io repository need to be moved to Broke_BRokers-soen341projectF2023 repository
+- Isabelle task breakdown for User story 4 sysAdmin issue [#37](https://github.com/Broke-Brokers/Broke_BRokers-soen341projectF2023/issues/37)
+- Rebecca:  export the field names from property database
+- Isabelle: Priority on user database
+- When creating smaller issues out of big issues to incorporate functionalities small user stories for each need to be written
+- images folder will be moved from document branch to the main branch under src/images 
