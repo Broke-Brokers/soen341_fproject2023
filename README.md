@@ -3,7 +3,8 @@
 
 ## Important notes and Updates
 ***
-### 2023-10-24 
+### for sprint 2  :
+
 [Sprint 3 backlog is here :]( https://github.com/Broke-Brokers/Broke_BRokers-soen341projectF2023/blob/main-branch/SPRINT3/BrokeBrokers_Sprint3Backlog.xlsx)
 
 
