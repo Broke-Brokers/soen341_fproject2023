@@ -2,9 +2,11 @@
 # README
 
 ## Important notes and Updates
+***
+### 2023-10-24 
+Sprint 3 backlog is were :
 
-# To install :
-npm install react-range
+
 ***
 ### 2023-09-29
 
@@ -89,6 +91,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - npm install --save @fortawesome/free-solid-svg-icons
 - npm install --save @fortawesome/react-fontawesome
 
+# react range selector  :
+npm install react-range
 
 ## Available Scripts
 
