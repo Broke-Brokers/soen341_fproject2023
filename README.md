@@ -94,6 +94,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 # react range selector  :
 npm install react-range
 
+# emailJs
+npm install @emailjs/browser --save
+
 ## Available Scripts
 
 In the project directory, you can run:
