@@ -4,7 +4,7 @@ function Broker() {
   return (
     <div>
 
-      <Request_visite/>
+      <h1>Broker page </h1>
     </div>
   )
 }
