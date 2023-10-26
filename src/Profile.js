@@ -1,6 +1,7 @@
 import React from 'react'
 import Add_Button from './components/buttons/Add_Button'
 import Broker_Offer_Grid from './components/Profile-page/Broker_Offer_Grid' //Broker_Offer_Grid
+import Admin_Brokers_Grid from './components/Profile-page/Admin_Brokers_Grid'
 
 function Profile() {
   return (
@@ -15,6 +16,7 @@ function Profile() {
 
          
       <Broker_Offer_Grid/>
+    <Admin_Brokers_Grid/>
       
     
     </div>
