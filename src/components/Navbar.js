@@ -42,7 +42,7 @@ window.addEventListener('resize', showButton);
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/Sell' className='nav-links' onClick={closeMobileMenu}>
+            <Link to='/sell' className='nav-links' onClick={closeMobileMenu}>
                 Sell
             </Link>
           </li>
@@ -52,7 +52,7 @@ window.addEventListener('resize', showButton);
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/Broker' className='nav-links' onClick={closeMobileMenu}>
+            <Link to='/broker' className='nav-links' onClick={closeMobileMenu}>
                 Broker
             </Link>
           </li>
@@ -66,12 +66,15 @@ window.addEventListener('resize', showButton);
 
 
           <li className='nav-item'>
+            <Link to='/about' className='nav-links' onClick={closeMobileMenu}>
+                About Us
+            </Link>
+          </li>
+          <li className='nav-item'>
             <Link to='/sign-in' className='nav-links-mobile' onClick={closeMobileMenu}>
                 Sign In
             </Link>
           </li>
-          
-
 
         </ul>
 

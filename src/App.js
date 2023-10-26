@@ -9,6 +9,7 @@ import Sell from './Pages/Sell';
 import Buy from './Pages/Buy';
 import Broker from './Pages/Broker';
 import Sign from './Pages/Sign';
+
 import PropertyPage from './Pages/PropertyPage';
 import  SysAdminProfile from './Pages/SysAdminProfile';
 import Search from './Pages/Search';
@@ -16,7 +17,7 @@ import Search from './Pages/Search';
 import './fontawesome';
 
 
-
+import AboutUs from './Pages/AboutUs';
 function App() {
 
   return (
@@ -26,9 +27,13 @@ function App() {
     
     <Routes>
       <Route path='/' exact element = {<Home/>} ></Route>
-      <Route path='/Sell' exact element = {<Sell/>} ></Route>
+      <Route path='/sell' exact element = {<Sell/>} ></Route>
       <Route path='/sign-in' exact element = {<Sign/>} ></Route>
       <Route path='/buy' exact element = {<Buy/>} ></Route>
+
+
+
+
       <Route path='/Broker' exact element = {<Broker/>} ></Route>
       
 
@@ -38,8 +43,9 @@ function App() {
       <Route path='/sysadmin' exact element = {<SysAdminProfile/>} ></Route>
       {/*HomeOwner / Renter / Broker  Search for property page*/}
       <Route path='/search' exact element = {<Search/>} ></Route>
+      <Route path='/broker' exact element = {<Broker/>} ></Route>
+      <Route path='/about' exact element = {<AboutUs/>} ></Route>
 
-      
     </Routes>
     <Footer/>
 
