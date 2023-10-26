@@ -2,26 +2,17 @@ import React from 'react'
 import home_photo from '../../Images/property_image_test1.jpg'
 import {useState, useEffect} from "react";
 import {db} from '../../firebase_configuration.js'
-import { collection, getDocs, deleteDoc, doc} from "firebase/firestore";
+import { collection, getDocs, deleteDoc} from "firebase/firestore";
 import'../search-page/House_Card.css';
 import Add_Button from '../../components/buttons/Add_Button';
 import Creation_Property from '../Profile-page/Creation_Property';
 function Card_home() {
 
-    //const [PropertyId, setPropertyId] = useState("");
     const [Properties, setProperties] = useState([]);
     const PropertiesCollectionRef = collection(db, "Properties")
-
-   /* const getPropertyIdHandler = (id) => {
-        conseole.log("ID of document to be edited: " id);
-        setPropertyId(id);
-    };
-    const updateUser = async (id, Adre)*/
-
   
     const deleteProperty = async (id) => {
-        const PropertyDoc = doc(db, "Properties", id);
-        await deleteDoc(PropertyDoc);
+        const PropertyDoc = doc(db, "Properties, id");
     };
   
     useEffect(() => {
@@ -30,6 +21,7 @@ function Card_home() {
       const getProperties = async () => {
         const data = await getDocs(PropertiesCollectionRef);
         setProperties(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
+        await deleteDoc()
     
       };
   
@@ -63,13 +55,8 @@ function Card_home() {
       <li className="HC_li"><i class="fa fa-bath"></i>  {Property.Bathrooms}</li>
       <li className="HC_li"><i class="fa fa-bookmark"></i></li>
       <li className="HC_li"> <i class="fa fa-user-check"></i></li>
-      <button onClick={() => {
-        deleteProperty(Property.id);
-            }}>
+      <button onClick={() => {deleteProperty(Property.id)}}>
                       Delete
-                    </button>
-     <button >
-                      Edit
                     </button>
                  
        </ul>
