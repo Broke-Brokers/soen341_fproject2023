@@ -1,13 +1,17 @@
 import React from 'react'
-import House_Grid from '../components/search-page/House_Grid'
-import Search_Filter from '../components/search-page/Search_Filter'
+import Card_home from '../components/search-page/Card_home';
+import Profile from '../Profile'
 
 function Search() {
   return (
-    <div>
-      <Search_Filter/>
-      <House_Grid/>
+    <div> 
+     <h1>Sell Page</h1>
+     <Card_home/>
+
+    
     </div>
+
+    
   )
 }
 

@@ -11,13 +11,16 @@ import Broker from './Pages/Broker';
 import Sign from './Pages/Sign';
 
 import PropertyPage from './Pages/PropertyPage';
-import  SysAdminProfile from './Pages/SysAdminProfile';
+import Profile from './Profile';
 import Search from './Pages/Search';
+
 // import fontawesome library
 import './fontawesome';
 
 
-import AboutUs from './Pages/AboutUs';
+
+
+
 function App() {
 
   return (
@@ -39,8 +42,8 @@ function App() {
 
       {/*HomeOwner / Renter property page */}
       <Route path='/propertyPage' exact element = {<PropertyPage/>} ></Route>
-      {/*Sysadmin profile page */}
-      <Route path='/sysadmin' exact element = {<SysAdminProfile/>} ></Route>
+      {/* profile page */}
+      <Route path='/profile' exact element = {<Profile/>} ></Route>
       {/*HomeOwner / Renter / Broker  Search for property page*/}
       <Route path='/search' exact element = {<Search/>} ></Route>
       <Route path='/broker' exact element = {<Broker/>} ></Route>
