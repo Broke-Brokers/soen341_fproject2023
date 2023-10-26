@@ -1,9 +1,8 @@
 import React from "react";
 import Add_Button from '../../components/buttons/Add_Button'
-
 import {useState, useEffect} from "react";
 import {db} from '../../firebase_configuration.js'
-import { collection, getDocs, addDoc} from "firebase/firestore";
+import { collection, getDocs, addDoc, updateDoc} from "firebase/firestore";
 
 function Creation_Property()  {
 
