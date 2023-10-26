@@ -1,46 +1,18 @@
 import React from 'react'
-import House_Grid from '../components/search-page/House_Grid'
-import Search_Filter from '../components/search-page/Search_Filter'
-import {useState, useEffect} from "react";
-import {db} from '../firebase_configuration.js'
-import { collection, getDocs} from "firebase/firestore";
-import ProperyCard from './card'
+import Card_home from '../components/search-page/Card_home';
+import Profile from '../Profile'
 
 function Search() {
-
-  const [Properties, setProperties] = useState([]);
-  const PropertiesCollectionRef = collection(db, "Properties")
-
-
-  useEffect(() => {
-
-    // get the properties in a clean way
-    const getProperties = async () => {
-      const data = await getDocs(PropertiesCollectionRef);
-      setProperties(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
-  
-    };
-
-    getProperties();
-  }, []);
   return (
     <div> 
-      {Properties.map((Property) => {
-          return (
-            <div>
-              {" "}
-              <h1> Prix: {Property.Price}</h1>
-              <h1> Adresse: {Property.Adress} </h1>
-              </div>
-          );
+     <h1>Sell Page</h1>
+     <Card_home/>
 
-
-      })}
     
-     <Search_Filter/>
-     <House_Grid/>
     </div>
-  );
+
+    
+  )
 }
 
 export default Search

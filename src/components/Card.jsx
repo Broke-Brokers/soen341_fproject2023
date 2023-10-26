@@ -1,7 +1,7 @@
 import React from 'react'
 import './Card.css'
 import home_photo from '../Images/IMG_0197.JPG'
-const Card = ({Property}) => {
+const Card = ({}) => {
   return (
     <div className='card'>
       <div className='gradiant'></div>

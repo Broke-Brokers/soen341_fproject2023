@@ -14,10 +14,17 @@ function Profile() {
   const [newPrice, setNewPrice] = useState("") 
   const [newAdress, setNewAdress] = useState(0)
   const [newCity, setNewCity] = useState("")
+  const [newProvince, setNewProvince] = useState("")
+  const [newNeighborhood, setNewNeighborhood] = useState("")
+  const [newBedrooms, setNewBedrooms] = useState(0)
+  const [newNBathrooms, setNewNBathrooms]= useState(0)
   const createProperty = async () => {
 
       // To add the fetch values to the database
-    await addDoc( PropertiesCollectionRef, { Price: newPrice, Adress: newAdress }) ;
+    await addDoc( PropertiesCollectionRef, { Price: newPrice, 
+      Adress: newAdress, City: newCity, 
+      Province: newProvince, Neighborhood: newNeighborhood,
+    Bedrooms: newBedrooms, Bathrooms: newNBathrooms }) ;
 
   }
 
@@ -64,22 +71,41 @@ function Profile() {
     <input placeholder ="Province..." 
 
       onChange={(event) => {
-      setNewCity(event.target.value);
+      setNewProvince(event.target.value);
 
        }}
       />
 
 <br />
 
-    <input placeholder ="Province..." 
+    <input placeholder ="Neighborhood..." 
 
       onChange={(event) => {
-      setProvince(event.target.value);
+      setNewNeighborhood(event.target.value);
 
        }}
       />
     
    <br />
+
+   <input placeholder ="No of Beds..." 
+
+    onChange={(event) => {
+    setNewBedrooms(event.target.value);
+
+      }}
+    />
+
+<br />
+    <input placeholder ="No of Baths..." 
+    
+    onChange={(event) => {
+    setNewNBathrooms(event.target.value);
+
+      }}
+    />
+
+<br />
     <button onClick={createProperty}> Create Property</button>
 
             {/*====FOR SYTEM ADMIIN======*/}
