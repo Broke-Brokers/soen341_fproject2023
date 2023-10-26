@@ -1,11 +1,13 @@
 import React from 'react'
 import Card_home from '../components/search-page/Card_home';
 import Profile from '../Profile'
+import Search_Filter from '../components/search-page/Search_Filter';
 
 function Search() {
   return (
     <div> 
-     <h1>Sell Page</h1>
+     
+     <Search_Filter/>
      <Card_home/>
 
     
