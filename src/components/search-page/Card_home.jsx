@@ -37,14 +37,16 @@ function Card_home() {
      </div>
    <div className="HC_InfoBox">
        <h1 className="HC_price">{Property.Price}$</h1>
-       <h2 className="HC_postname">House Name</h2>
+       <h1 className="HC_PropertyListing">{Property.PropertyListing}</h1>
+       <h2 className="HC_postname">{Property.PropertyType}</h2>
        <p className="HC_details">{Property.Adress}, {Property.City}, {Property.Province}</p>
        <p className="HC_details">{Property.Neighborhood}</p>
        
+       
        <div className="HC_iconSection">
            <ul className="HC_ul">
-   <li className="HC_li"><i class="fa fa-bed"></i>  5 </li>
-      <li className="HC_li"><i class="fa fa-bath"></i>  2</li>
+   <li className="HC_li"><i class="fa fa-bed"></i> {Property.Bedrooms}</li>
+      <li className="HC_li"><i class="fa fa-bath"></i>  {Property.Bathrooms}</li>
       <li className="HC_li"><i class="fa fa-bookmark"></i></li>
       <li className="HC_li"> <i class="fa fa-user-check"></i></li>
  
