@@ -86,17 +86,21 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### react image gallery 
 
 - npm install react-image-gallery
+### MUI component library : 
 
+- npm install @mui/material @emotion/react @emotion/styled
+- npm install @mui/material @mui/styled-engine-sc styled-components
+form : https://mui.com/material-ui/getting-started/installation/
 ### font awesome 
 
 - npm i --save @fortawesome/fontawesome-svg-core
 - npm install --save @fortawesome/free-solid-svg-icons
 - npm install --save @fortawesome/react-fontawesome
 
-# react range selector  :
+### react range selector  :
 npm install react-range
 
-# emailJs
+### emailJs
 npm install @emailjs/browser --save
 
 ## Available Scripts
