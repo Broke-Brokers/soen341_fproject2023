@@ -4,7 +4,6 @@
 name: property_page_test
 
 on:
-  
   push:
     branches:
       - 'copy_branch_to_test_CI_on'
