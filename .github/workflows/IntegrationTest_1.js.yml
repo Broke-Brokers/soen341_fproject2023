@@ -61,7 +61,12 @@ jobs:
     - run: npm i babel-plugin-macros
     
     # install react
+    
     - run: npm install react react-dom
+    - run: npm i react-router-dom
+    - run: npm i react-icons
+    - run: npm i react-scripts
+    - run: npm i web-vitals
     - run: npm ci
     - run: npm run my_CI_test --if-present
     - run: npm test
