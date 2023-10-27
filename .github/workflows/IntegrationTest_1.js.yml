@@ -42,16 +42,24 @@ jobs:
     # install mui dependencies
     - run: npm install @emotion/react 
     - run: npm install @emotion/styled
+    - run: npm i @mui/icons-material
+    - run: npm i @mui/material
     #install the font awesome dependencies 
     - run: npm i --save @fortawesome/fontawesome-svg-core 
     - run: npm i --save @fortawesome/free-solid-svg-icons
     - run: npm i --save @fortawesome/free-regular-svg-icons
     - run: npm i --save @fortawesome/free-brands-svg-icons
     - run: npm i --save @fortawesome/react-fontawesome@latest
-    #install image gallery dependency
-    - run: npm install react-image-gallery
-    #install range dependecy of the search page
-    - run: npm i react-range
+     
+    #install other dependecies
+    - run: npm i react-range #search page range 
+    - run: npm install react-image-gallery #property page
+   #testing libraries
+    - run: npm i @testing-library/jest-dom
+    - run: npm i @testing-library/react
+    - run: npm i @testing-library/user-event
+    - run: npm i babel-plugin-macros
+    
     # install react
     - run: npm ci
     - run: npm run my_CI_test --if-present
