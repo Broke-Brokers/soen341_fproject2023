@@ -15,7 +15,7 @@
    * [3.3]()
    * [4.1]()
 
-* [Continuous Integration pipeline : setup + he had successful tests: ](https://github.com/Broke-Brokers/Broke_BRokers-soen341projectF2023/actions/workflows/IntegrationTest_1.js.yml)
+* [Continuous Integration pipeline : setup + we had successful tests: ](https://github.com/Broke-Brokers/Broke_BRokers-soen341projectF2023/actions/workflows/IntegrationTest_1.js.yml)
 * [contribution logs:](https://github.com/Broke-Brokers/Broke_BRokers-soen341projectF2023/tree/main-branch/Sprint%20%232/Member's%20contribution)
 * [meeting minutes :](https://github.com/Broke-Brokers/Broke_BRokers-soen341projectF2023/tree/main-branch/Sprint%20%232/Meeting%20minutes)
 ***
