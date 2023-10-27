@@ -12,8 +12,7 @@ import Sign from './Pages/Sign';
 import PropertyPage from './Pages/PropertyPage';
 import  SysAdminProfile from './Pages/SysAdminProfile';
 import Search from './Pages/Search';
-// import fontawesome library
-import './fontawesome';
+
 
 
 
