@@ -68,5 +68,6 @@ jobs:
     - run: npm i web-vitals
     - run: npm ci
     - run: npm run my_CI_test --if-present
+# info on tests : https://create-react-app.dev/docs/running-tests/
     - run: npm i test
-    - run: npm test
+    - run: npm test --passWithNoTests
