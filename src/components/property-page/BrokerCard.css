@@ -25,7 +25,7 @@
 
   .profilePic {
     img {
-      border-radius: 50%;
+      border-radius: 51%;
       border: 7px solid #EE7EA0;
       max-height:50%;
       max-width: 50%;
