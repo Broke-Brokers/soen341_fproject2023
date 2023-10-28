@@ -3,21 +3,8 @@
 
 ## Important notes and Updates
 ***
-### For sprint 2  :
+### For sprint 2  : https://github.com/Broke-Brokers/Broke_BRokers-soen341projectF2023/wiki/Sprint-%232
 
-* [Sprint 3 backlog is here :](https://github.com/Broke-Brokers/Broke_BRokers-soen341projectF2023/wiki/Sprint-3-backlog)
-* Acceptance test :
-   * [1.1](https://github.com/Broke-Brokers/Broke_BRokers-soen341projectF2023/issues/125) 
-   * [1.3]()
-   * [2.1]()
-   * [2.3]()
-   * [3.2]()
-   * [3.3]()
-   * [4.1]()
-
-* [Continuous Integration pipeline : setup + we had successful tests: ](https://github.com/Broke-Brokers/Broke_BRokers-soen341projectF2023/actions/workflows/IntegrationTest_1.js.yml)
-* [contribution logs:](https://github.com/Broke-Brokers/Broke_BRokers-soen341projectF2023/tree/main-branch/Sprint%20%232/Member's%20contribution)
-* [meeting minutes :](https://github.com/Broke-Brokers/Broke_BRokers-soen341projectF2023/tree/main-branch/Sprint%20%232/Meeting%20minutes)
 ***
 ### 2023-09-29
 
