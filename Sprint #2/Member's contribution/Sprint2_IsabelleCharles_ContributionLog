@@ -1,4 +1,4 @@
-TOTAL TIME SPENT FOR SPRINT 2: 23,5h
+TOTAL TIME SPENT FOR SPRINT 2: ~40h
 
 -----------------------------------------
 ------------------------------------------------------------------------------------
@@ -55,3 +55,15 @@ Chrisdonia Isabelle Charles (40212996)
 Chrisdonia Isabelle Charles (40212996)
 2023-10-15 2pm to 2:30 pm
 - commented issues [#65] & [#97]
+
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Chrisdonia Isabelle Charles (40212996)
+2023-10-23 to 2023-10-27
+- CRUD OPERATION ON BROKERS
+- Create and save in firebase
+- Read info on broker on system admin profile 
+- Update: Edit information on system admin profile and see changes on firebase
+- delete : click on button and don't see broker on firebase collection
+- Units tests for crud operation on broker
+- meeyying minutes
