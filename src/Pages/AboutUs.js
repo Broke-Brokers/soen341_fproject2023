@@ -1,9 +1,11 @@
 import React from 'react'
+import Card from '../components/Card';
 
 function AboutUs() {
   return (
     <div>
-      <h1>About us  Page</h1>
+      
+      <Card/>
     </div>
   )
 }

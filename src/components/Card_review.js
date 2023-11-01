@@ -6,7 +6,7 @@ import item_pic_seller from"../Images/IMG_0213.JPG"
 function Card_review() {
   return (
     <div className='cards'>
-      <h1>FROM OUR USER </h1>
+      <h1 className='title'>FROM OUR USER </h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
           <ul className='cards__items'>

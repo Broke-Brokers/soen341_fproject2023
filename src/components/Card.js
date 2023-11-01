@@ -7,7 +7,7 @@ import item_pic_succes from"../Images/IMG_0211.JPG"
 function Card() {
   return (
     <div className='cards'>
-      <h1>YOU ARE OUR PRIORITY!</h1>
+      <h1 className='title'>YOU ARE OUR PRIORITY!</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
           <ul className='cards__items'>

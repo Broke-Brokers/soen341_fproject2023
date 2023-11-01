@@ -7,11 +7,12 @@ function Main() {
   return (
     <div className='main'style={{backgroundImage: `url(${backImage})`}}>
     <div className="headerContainer" >
-      <h1>
-      Building Dreams, One Home at a Time
+
+    <h1 className="noWrap">
+      Building Dreams,One Home at a Time
       </h1>
-      <Link to = "">
-        <button> Find Your Home</button>
+      <Link to = "http://localhost:3000/search">
+      <button className="customButton">Find Your Home</button>
       </Link>
 
     </div>
