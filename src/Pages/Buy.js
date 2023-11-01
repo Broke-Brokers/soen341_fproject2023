@@ -5,7 +5,7 @@ import Profile from '../Profile'
 function Buy() {
   return (
     <div>
-      <h1>Buy Page</h1>
+  
       <Card_home/>
       
     </div>

@@ -1,9 +1,10 @@
 import React from 'react'
-
+import Card_home from '../components/search-page/Card_home'
 function Sell() {
   return (
     <div>
-      <h1>Sell Page</h1>
+      <h1>Sell</h1>
+    <Card_home/>
     </div>
   )
 }

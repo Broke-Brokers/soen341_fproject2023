@@ -8,7 +8,7 @@ function Main() {
     <div className='main'style={{backgroundImage: `url(${backImage})`}}>
     <div className="headerContainer" >
 
-    <h1 className="noWrap">
+    <h1 className="title-main">
       Building Dreams,One Home at a Time
       </h1>
       <Link to = "http://localhost:3000/search">
