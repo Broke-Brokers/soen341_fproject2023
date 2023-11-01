@@ -6,14 +6,25 @@ import { collection, getDocs, deleteDoc} from "firebase/firestore";
 import'../search-page/House_Card.css';
 import Add_Button from '../../components/buttons/Add_Button';
 import Creation_Property from '../Profile-page/Creation_Property';
+import { doc } from "firebase/firestore";
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
+
+
 function Card_home() {
 
     const [Properties, setProperties] = useState([]);
     const PropertiesCollectionRef = collection(db, "Properties")
   
+    // const deleteProperty = async (id) => {
+    //     const PropertyDoc = doc(db, "Properties", id);
+    // };
+
     const deleteProperty = async (id) => {
-        const PropertyDoc = doc(db, "Properties, id");
-    };
+      const PropertyDoc = doc(db, "Properties", id);
+      await deleteDoc(PropertyDoc);
+  };
+  
   
     useEffect(() => {
   
@@ -21,7 +32,7 @@ function Card_home() {
       const getProperties = async () => {
         const data = await getDocs(PropertiesCollectionRef);
         setProperties(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
-        await deleteDoc()
+       // await deleteDoc()
     
       };
   

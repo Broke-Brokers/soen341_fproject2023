@@ -9,7 +9,7 @@ import Sell from './Pages/Sell';
 import Buy from './Pages/Buy';
 import Broker from './Pages/Broker';
 import Sign from './Pages/Sign';
-
+import AboutUs from './Pages/AboutUs'
 import PropertyPage from './Pages/PropertyPage';
 import Profile from './Profile';
 import Search from './Pages/Search';
