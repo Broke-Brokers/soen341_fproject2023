@@ -11,6 +11,7 @@ import Broker from './Pages/Broker';
 import Sign from './Pages/Sign';
 import PropertyPage from './Pages/PropertyPage';
 import  SysAdminProfile from './Pages/SysAdminProfile';
+import SearchForBrokers from './Pages/SearchForBrokers';
 import Search from './Pages/Search';
 
 
@@ -37,7 +38,8 @@ function App() {
       <Route path='/sysadmin' exact element = {<SysAdminProfile/>} ></Route>
       {/*HomeOwner / Renter / Broker  Search for property page*/}
       <Route path='/search' exact element = {<Search/>} ></Route>
-
+      {/*HomeOwner / Renter Search for brokers*/}
+      <Route path='/searchbrokers' exact element = {<SearchForBrokers/>} ></Route>
       
     </Routes>
     <Footer/>
