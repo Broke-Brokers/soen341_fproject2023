@@ -59,7 +59,8 @@ jobs:
     - run: npm i @testing-library/react
     - run: npm i @testing-library/user-event
     - run: npm i babel-plugin-macros
-    
+    # firebase
+    - run: npm i firebase
     # install react
     
     - run: npm install react react-dom
