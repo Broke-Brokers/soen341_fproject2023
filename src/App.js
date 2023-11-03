@@ -11,15 +11,12 @@ import Broker from './Pages/Broker';
 import Sign from './Pages/Sign';
 import AboutUs from './Pages/AboutUs'
 import PropertyPage from './Pages/PropertyPage';
-
 import Profile from './Profile';
 import Search from './Pages/Search';
-// import fontawesome library
-//import './fontawesome';
-
 import SearchForBrokers from './Pages/SearchForBrokers';
 
-
+// import fontawesome library
+//import './fontawesome';
 
 
 
@@ -36,10 +33,6 @@ function App() {
       <Route path='/sell' exact element = {<Sell/>} ></Route>
       <Route path='/sign-in' exact element = {<Sign/>} ></Route>
       <Route path='/buy' exact element = {<Buy/>} ></Route>
-
-
-
-
       <Route path='/Broker' exact element = {<Broker/>} ></Route>
 
       {/*HomeOwner / Renter property page */}
