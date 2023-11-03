@@ -9,6 +9,8 @@ import Creation_Property from '../Profile-page/Creation_Property';
 import { doc } from "firebase/firestore";
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
+import { Link } from 'react-router-dom'; 
+import PropertyPage from '../Pages/PropertyPage';
 
 
 function Card_home() {
@@ -45,7 +47,7 @@ function Card_home() {
     {Properties.map((Property) => {
         return (
           
-
+          <Link to="/propertyPage">
      <div className="HC_infoContainer">
 
             
@@ -76,12 +78,13 @@ function Card_home() {
       
       
    </div>
-        );
+   </Link>
+     );
 
 
     })}
     </div>
-  );
+    );
   
 }
 
