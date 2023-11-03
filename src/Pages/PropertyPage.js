@@ -1,6 +1,5 @@
 import React from 'react'
 import '../App.css' 
-
 import Card from '../components/Card';
 import BrokerCard from '../components/property-page/BrokerCard';
 import PropertyGallery from '../components/property-page/PropertyGallery';
