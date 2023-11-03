@@ -61,6 +61,7 @@ Brokers can submit offers, manage property listings, match properties with buyer
 [See project approach and tehcnology section in the Wiki!](https://github.com/Broke-Brokers/soen341_fproject2023/wiki#project-technologies---technology-stack)
 *  Agile Approach for methodology 
 *	mySQL with Node.js for Brokers database and property database
+    * Update :11-02-2023  Firebase will now be used as it's easier to integrate
 *  React and Javascript for functionalities
 *  HTML and CSS for structure
 
