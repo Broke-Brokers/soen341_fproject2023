@@ -1,0 +1,36 @@
+/* General container styling */
+.container-profile {
+    display:flex;
+    flex-direction:column;
+    margin:auto;
+    margin-top:200px;
+    width:600px;
+    background: white;
+    padding-bottom:30px
+}
+
+/* Input styling */
+.container-profile input {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+/* Button styling */
+.container-profile button {
+    padding: 10px 25px;
+    background-color: #EE7EA0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container-profile button:hover {
+    background-color: #e8d5db;
+}

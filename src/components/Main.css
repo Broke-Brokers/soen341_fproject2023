@@ -27,18 +27,18 @@ align-items: center;
 font-size: 70px;
 height: 60px;
 font-weight: 50;
-color: black;
+color: #ffffff;
 }
 
 
 .headerContainer button {
-color: black;
+
 border: none;
 border-radius: 5px;
 cursor:pointer;
 align-items: center;
 justify-content: center;
-background-color: #121619;
+background-color:#eb82a1;
 height: 50px;
 width: 180px;
 color: white;
@@ -95,4 +95,12 @@ transition: 0.3s ease-in;
   background-color: rgb(225, 225, 225);
   color: #121619;
 }
+}
+
+.title-main {
+  color:white;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  
 }
