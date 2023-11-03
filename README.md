@@ -101,6 +101,9 @@ npm install react-range
 ### emailJs
 npm install @emailjs/browser --save
 
+### Pop up
+npm i reactjs-popup
+
 ## Available Scripts
 
 In the project directory, you can run:

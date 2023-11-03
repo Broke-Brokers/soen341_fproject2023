@@ -3,6 +3,10 @@ import'../property-page/PropertyInfo.css';
 import home_photo from '../../Images/property_image_test1.jpg'
 import SaveFavorite_Button from '../buttons/SaveFavorite_Button';
 import RequestVisit_Button from '../buttons/RequestVisit_Button';
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+import Request_visit2 from '../forms/Request_visit2';
+import { Link } from 'react-router-dom';
 
 export default function PropertyInfo(props){
 
@@ -62,8 +66,28 @@ export default function PropertyInfo(props){
       
         </div>
         <SaveFavorite_Button/>
+        <Link to='/requestVisitForm'>
         <RequestVisit_Button/>
+        </Link>
+        
+       <div >
+
+        {/*We would need to style the pop up if we use this method https://react-popup.elazizi.com/css-styling/ */}
+        <Popup trigger={<img className="requestButton" src={require('../../Images/home_visit.png')} alt="requestAVisit" /*onClick={() => requestAVistit()}*/ />} position="right center">
+    <div><Request_visit2 /></div>
+          </Popup>
+    
+
+          
+        </div>
     </div>
     );
     }
+    
+    /*const requestAVistit= () => {
+      /*<Popup trigger={<button> Trigger</button>} position="right center">
+    <div>Popup content here 1!!</div>
+  </Popup>
+    }*/
+
     
