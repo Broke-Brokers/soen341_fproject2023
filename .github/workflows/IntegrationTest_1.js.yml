@@ -59,6 +59,7 @@ jobs:
     - run: npm i @devexpress/dx-react-core
     - run: npm i @devexpress/dx-react-grid
     - run: npm i bootstrap
+    - run : npm i reactjs-popup
     
    #testing libraries
     - run: npm i @testing-library/jest-dom
