@@ -54,11 +54,18 @@ jobs:
     #install other dependecies
     - run: npm i react-range #search page range 
     - run: npm install react-image-gallery #property page
+    - run: npm i @emailjs/browser
+    - run: npm i @devexpress/dx-react-grid-material-ui
+    - run: npm i @devexpress/dx-react-core
+    - run: npm i @devexpress/dx-react-grid
+    - run: npm i bootstrap
+    
    #testing libraries
     - run: npm i @testing-library/jest-dom
     - run: npm i @testing-library/react
     - run: npm i @testing-library/user-event
     - run: npm i babel-plugin-macros
+    
     # firebase
     - run: npm i firebase
     # install react
