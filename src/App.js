@@ -15,7 +15,7 @@ import PropertyPage from './Pages/PropertyPage';
 import Profile from './Profile';
 import Search from './Pages/Search';
 // import fontawesome library
-import './fontawesome';
+//import './fontawesome';
 import  SysAdminProfile from './Pages/SysAdminProfile';
 import SearchForBrokers from './Pages/SearchForBrokers';
 
