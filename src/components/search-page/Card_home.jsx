@@ -10,7 +10,7 @@ import { doc } from "firebase/firestore";
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 import { Link } from 'react-router-dom'; 
-import PropertyPage from '../Pages/PropertyPage';
+
 
 
 function Card_home() {

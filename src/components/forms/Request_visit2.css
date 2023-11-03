@@ -95,7 +95,8 @@ bodyrv {
 
 
 .container1rv {
-    width: 80%;
+    width: 100%;
+
     margin: 50px auto;
 }
 
@@ -104,14 +105,8 @@ bodyrv {
     display: flex;
 }
 
-.left-partrv {
-    flex-basis: 60%;
-    padding: 40px 60px;
+.centerpart {
+    flex-basis: 100%;
+    padding: 10px 10px;
 }
 
-.right-partrv {
-    flex-basis: 60%;
-    padding: 40px;
-    background: #f2f2f2;
-    color: #ffff;
-}

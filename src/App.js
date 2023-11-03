@@ -14,7 +14,7 @@ import PropertyPage from './Pages/PropertyPage';
 import Profile from './Profile';
 import Search from './Pages/Search';
 import SearchForBrokers from './Pages/SearchForBrokers';
-
+import Request_visite from './components/Request_visite';
 // import fontawesome library
 //import './fontawesome';
 
@@ -46,6 +46,11 @@ function App() {
       <Route path='/about' exact element = {<AboutUs/>} ></Route>
       {/*HomeOwner / Renter Search for brokers*/}
       <Route path='/searchbrokers' exact element = {<SearchForBrokers/>} ></Route>
+
+
+
+      {/*Route for request visit button to request to visit page*/}
+      <Route path='/requestVisitForm' exact element = {<Request_visite/>} ></Route>
 
     </Routes>
     <Footer/>
