@@ -1,12 +1,23 @@
-TOTAL TIME SPENT FOR SPRINT 2: 
+TOTAL TIME SPENT FOR SPRINT 3: 
 
 -----------------------------------------
 ------------------------------------------------------------------------------------
 Chrisdonia Isabelle Charles (40212996)
-2023-11-03 8 h
-*****
-- merged
-- meeting minutes
-- folder for meeting minutes on repo
-- folder for member contri
-- link to wiki
+2023-11-03 9h
+- Merged my profile-admin-isa to BRANCH_MERGED_TEST1 of Taylor
+- Created copy of those branches to conflict in each files to see what is need where
+- Came up with a final branch that have all branches from 4 teammates: Isabelle_merging_sprint2
+- Tried merging branch of 4 combined with last member's branch that is the main branch
+- Tried merging Property page on main branch with Isabelle_merging_sprint2
+- Perform Integration test on the merging done
+- Tested failed and tried to understand why
+- Performed acceptance for features of sprint 2
+- Compared current website in main branch with user stories and acceptance criteria defined at the beginning of the sprint
+- Completed Meeting minute 2 for sprint 3
+- Began Meeting minute 1 for sprint 3
+- Updated discussion about enhancement of sprint 2 and task assign for sprint 3
+- Created folders for meeting minutes on repository
+- Created folder for member contribution log
+- Added a file for each member contribution log
+- Created new page on wiki for meeting minutes and member contribution log
+- Link to wiki folder for meeeting minutes and member contribution
