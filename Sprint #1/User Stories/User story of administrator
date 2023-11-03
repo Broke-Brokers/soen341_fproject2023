@@ -1,0 +1,17 @@
+ADMNISTRATOR
+
+USER STORY DESCRIPTION
+As an administrator, I want to be able to create, read, update or delete profiles for broker
+
+USER ACCEPTANCE FLOW
+
+1. When login as an administrator, an alphabetic list with all the broker on the website appears
+2. To create a new profile, a + button leads to a page to enter information about the broker
+3. To modify or block a profile, a right click on the broke’s name appears a list allowing to modify or delete the profile
+
+
+
+ACCEPTANCE CRITERIA
+1. The list are rectangular of medium width with the broker’s picture and name as well as phone, mail and globe icon to respectively have access to it’s number, email address or message platform from the website and personal website
+2. The + button is at the top left corner of the page and the edit page is as follow: the information needed at the top and a rectangular frame to enter the information below
+3. A ≡ symbol at the right end of the profile allows the modify or delete icon to appear. The modify icon is a small pencil and the delete icon is a red trash bin. Selecting the modify icon leads to the page to edit the profile while selecting the trash bin allows a pop up asking if the administrator wants to really delete this profile to appear.

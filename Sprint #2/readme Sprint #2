@@ -1,0 +1,7 @@
+Creating the Sprint #2 folder
+Taylor - Developed the search functionality with filter creation for property searches. Branch: search-result-gallery_Taylor-Dominique.
+Taylor - Implemented the login/signup page integrated with the database. Branch: profiles-taylor.
+Rebecca - Engineered the display of properties through a card layout on the search page and performed CRUD operations on properties. Branch: properties_firebase_Rebecca_fr.
+Junior - Created the request visit form. Branch: request_visit_branch.
+Dominique - Constructed the property page located in the main branch.
+Isabelle - Conducted CRUD operations on brokers. Branch: #206.

@@ -1,0 +1,98 @@
+Contribution Log Sprint 2 Rebecca Elusme
+
+TOTAL TIME SPENT FOR SPRINT 2: 
+
+-----------------------------------------
+------------------------------------------------------------------------------------
+Rebecca Elusme (40212994)
+2023-10-01 6pm to midnight
+*****
+- Decide Website's color palette, tone, style of button
+- Home page mockup
+- Navigation bar mockup
+- Mockup for how does it work page with branding guide and texts
+- Mockup for about us page with branding guide
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Rebecca Elusme (40212994)
+2023-10-04 8 pm to 11 pm
+*****
+- created Google drive with the following folders and updated the images for them: home page, about us page, how does it work page
+- created the labels 
+- assigned the labels to issues 
+- updated the mock-up for search page
+- install and setup of Visual Studio and connexion with github 
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Rebecca Elusme (40212994)
+2023-10-09 6 pm to 10 pm
+*****
+- Made research on which type of database will be used 
+- created the fields for the Property Database 
+- Created the tables and the relationships between each of them.
+- Installed and setup of MySQL 
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+
+Rebecca Elusme (40212994)
+2023-10-10 8 pm to 11 pm
+*****
+- Training of 1h30 of MySQL to learn the basics queries 
+- updated the issues for the fields of database wit dbdiagram.io
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+
+Rebecca Elusme (40212994)
+2023-10-12 10 am to 15 am
+*****
+- Implemented the tables on mySQL for the : Property, property type, listing type, property status, ammenity, 
+  brokers and relationships with foreign keys.
+- Populated the fields for 30 houses of property
+- Looked for houses caracteristics and the type of houses we will be selling. 
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Rebecca Elusme (40212994)
+2023-10-15 12 pm to 4 am
+*****
+- Training for the CRUD Operation on my SQL with node.js and express.js
+- Tried to connect the local database with the backend of the project
+- Did some testing for the connection, failed
+- Retrieved informations for the user and the local host 
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Rebecca Elusme (40212994)
+2023-10-16 12 pm to 4 am
+*****
+- Continuation of the training for the CRUD operation 
+- Succeeded at the connexion between React and MySQL
+- Started implementing the queries in order to view and create properties from the react terminal
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Rebecca Elusme (40212994)
+2023-10-17 4 pm to 9 pm
+*****
+- Continuation of the training for the CRUD operation 
+- Testing of the create and read functions queries 
+- Started implementing the queries in order to update and delete properties on the database
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Rebecca Elusme (40212994)
+2023-10-18 4 pm to 10 pm
+*****
+- Continuation of the training for the CRUD operation 
+- Testing of the update and delete functions queries, update is unscessful
+- Started implementing the API with express.js 
+- Express is unsuccessful, started to look at other databases 
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Rebecca Elusme (40212994)
+2023-10-25 4 pm to 9 pm
+*****
+- Creation of database on Firebase 
+- Population of database 
+- CRUD operation on properties on firebase
+- Connexion to frontend succesful 
+- Update operation unsuccesfull
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+

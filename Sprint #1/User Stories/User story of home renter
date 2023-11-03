@@ -1,0 +1,38 @@
+User Story 2: Home renter
+
+User story description
+As a home renter, I can use the system to search for properties by specifying criteria, while also saving preferred listings for later review. Additionally, I can request property viewings and search for brokers.
+
+User acceptance flow: 
+Property search: 
+-	User presses a dedicated "Property Search" button that leads to the property search interface.
+-	Options to input various search criteria, such as location, price range, number of bedrooms, and amenities.
+1.User can include city, neighborhood, ZIP code, or any other relevant geographic information.
+2.List of common amenities or features that I can select or deselect to filter the properties.
+a. options such as swimming pool, garage, garden, etc.
+Save favorites: 
+-	When browsing through property listings, the user should see a "Save" icon next to each property that adds the property to a list of saved favorites.
+-	The user can view the list of saved favorite properties from his user profile or a designated section of the website.
+-	An option to remove properties from my saved favorites.
+
+Request visit to property:
+-	Button labeled "Request Viewing" that the user can press.
+-	"Request Viewing" option should open a form or dialog where I can provide the following information and submit them after:
+a.	My preferred date and time for the viewing appointment.
+b.	Contact information, including the name, email address, and phone number.
+-	Confirmation message indicating that the request has been received by the system.
+-	Email confirmation to the email address provided, summarizing the details of the viewing request and receipt.
+
+Search for brokers: 
+-	Possibility to choose to buy a house by himself or search for broker with a drop-down menu.
+-	A search functionality where the user can enter criteria such as location, expertise, and customer reviews to find brokers.
+-	System displays a list of broker profiles that match the criteria.
+a.	Broker profile should include information such as the broker's name, contact details, areas of expertise, customer reviews, and a photo. 
+b.	Click on a broker's profile to view detailed information such as their services.
+-	The user can contact a broker directly from their profile, either through a form or by displaying their contact information such as email or phone number.
+
+
+
+
+
+

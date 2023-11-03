@@ -2,13 +2,16 @@ import React from 'react';
 import '../property-page/BrokerCard.css' 
 
 
-export default function BrokerCard(props){
+export default function BrokerCard({ brokerList }){
 
-/*const brokerName = props.name;
-   const email = props.email;
-   const phoneNumber = props.phoneNumber;
+  
+   const brokerName = brokerList.FirstName;
+   const email = brokerList.Email;
+   const phoneNumber = brokerList.PhoneNumber;
 
-
+   console.log('Broker Name:', brokerList.FirstName);
+   console.log('Email:', brokerList.Email);
+   console.log('Phone Number:', brokerList.PhoneNumber);
    /*The fields:
      Broker_id integer PK
   First_Name VARCHAR
@@ -19,9 +22,9 @@ export default function BrokerCard(props){
     
 
    /*For testing purposes these are hardcoded, please remove after testing*/
-   const brokerName = "Albus Dumbledore";
+   /*const brokerName = "Albus Dumbledore";
    const email = "itsleviosa@hogwarts.com";
-   const phoneNumber = "514-252-2525";
+   const phoneNumber = "514-252-2525";*/
     const profilePicture = "https://pointrussell.opencities.com/files/content/public/v/5/council/elected-members/albus-dumbledore/albus-dumbledore.jpg?dimension=pageimage&w=480";
 
 
