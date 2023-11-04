@@ -44,7 +44,7 @@ export default function House_Card(props){
  
     return(
 
-        <a href="/propertypage"><div className="HC_infoContainer">
+        /*<a href="/propertypage">*/<div className="HC_infoContainer">
 
             
       <div className="HC_photoContainer">
@@ -68,7 +68,7 @@ export default function House_Card(props){
         </div>
        
        
-    </div></a>
+    </div>/*</a>*/
     );
     }
     

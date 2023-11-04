@@ -7,6 +7,7 @@ import PropertyInfo from '../components/property-page/PropertyInfo';
 
 
 
+
 function PropertyPage() {
   return (
     

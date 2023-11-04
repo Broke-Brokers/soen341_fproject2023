@@ -3,15 +3,21 @@ import '../property-page/BrokerCard.css'
 
 
 export default function BrokerCard({ brokerList }){
+  let brokerName, email, phoneNumber; // Declare these variables in the parent scope
 
+  if (!brokerList) { // evaluates to true if brokerList is null
+     //Placeholder name to handle the case where brokerList is empty
+     brokerName = "Albus Dumbledore";
+     email = "itsleviosa@hogwarts.com";
+     phoneNumber = "514-252-2525";
+  }
+  else{
   
-   const brokerName = brokerList.FirstName;
-   const email = brokerList.Email;
-   const phoneNumber = brokerList.PhoneNumber;
+    brokerName = brokerList.FirstName;
+    email = brokerList.Email;
+    phoneNumber = brokerList.PhoneNumber;
 
-   console.log('Broker Name:', brokerList.FirstName);
-   console.log('Email:', brokerList.Email);
-   console.log('Phone Number:', brokerList.PhoneNumber);
+   }
    /*The fields:
      Broker_id integer PK
   First_Name VARCHAR
@@ -21,10 +27,7 @@ export default function BrokerCard({ brokerList }){
    */
     
 
-   /*For testing purposes these are hardcoded, please remove after testing*/
-   /*const brokerName = "Albus Dumbledore";
-   const email = "itsleviosa@hogwarts.com";
-   const phoneNumber = "514-252-2525";*/
+
     const profilePicture = "https://pointrussell.opencities.com/files/content/public/v/5/council/elected-members/albus-dumbledore/albus-dumbledore.jpg?dimension=pageimage&w=480";
 
 
