@@ -1,0 +1,29 @@
+## Meeting 3: 2023-11-02 
+### Time 
+- 2,5 hours 
+### Participants 
+- Isabelle, Dominique
+### Approval of previous meeting minutes
+- Review tasks assigned for 1.4(Search for broker)
+- Review discussion #108 #130
+### Agenda 
+- Review task breakdown for 3.1 (Submit Offers: Brokers can submit offers for buying properties on behalf of their clients, and track the status of their offers) & 3.5 (Offer Management: Brokers can review and manage offers submitted by homebuyers for properties they represent)
+- Define field for database
+### Discussion
+- New field decided for Broker database: Language speak and years of experience
+- Those fields represent criteria for search broker bar
+- For now, request visit leads to a page and another button of request visit open a pop up form
+- Decided to keep leads to a new page
+- Removed buy & sell page
+- Save as favorite that is for next sprint, Request visit button that was for sprint 2, make an offer button for sprint 3 and broker card that leads to contact broker page will all have the same design
+- The design will be composed house card with only general info shown and broker card OR broker card only depending on the page AT THE LEFT
+- AT THE RIGHT, form for specific page will be present
+- Inputs for form will be similar
+- Submit form send email AND/OR set variables in Firebase
+- According to user connected, navigation bar will be different
+- React cookie will be used to set usertype id variable that tells which type of user is connected
+- According of user connected, pages will differ
+- Isabelle will summarize design choices and link them to task or current task
+### Next agenda
+- Review design choices with all members
+- Final tasks assignment for 3.1 & 3.5
