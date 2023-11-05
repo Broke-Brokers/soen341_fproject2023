@@ -80,7 +80,8 @@ Brokers can submit offers, manage property listings, match properties with buyer
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## install additional components
-
+### react cookies
+- npm i js-cookie
 ### react image gallery 
 
 - npm install react-image-gallery
