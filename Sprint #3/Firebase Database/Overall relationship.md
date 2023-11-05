@@ -1,1 +1,0 @@
-![Alt text](Broke_Brokers_Mockup-20.jpg)
