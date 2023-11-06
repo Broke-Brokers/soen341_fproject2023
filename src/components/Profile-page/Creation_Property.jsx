@@ -4,10 +4,11 @@ import {useState, useEffect} from "react";
 import {db} from '../../firebase_configuration.js'
 import { collection, getDocs, addDoc, updateDoc} from "firebase/firestore";
 import './Creation_Property.css';
+import Edit_home from './Edit_home';
 
 function Creation_Property()  {
 
-
+    const [editProperties, seteditProperties] = useState(false)
     const [Properties, setProperties] = useState([]);
     const PropertiesCollectionRef = collection(db, "Properties")
   
@@ -133,6 +134,8 @@ function Creation_Property()  {
     
     <br />
         <button onClick={createProperty}> Create Property</button>
+        <button onClick={ () => seteditProperties(true)}> Update Property</button>
+        {editProperties === true && <Edit_home /> }
     
                 {/*====FOR SYTEM ADMIIN======*/}
     
