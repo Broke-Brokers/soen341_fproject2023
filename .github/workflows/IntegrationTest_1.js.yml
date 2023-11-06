@@ -69,6 +69,9 @@ jobs:
     
     # firebase
     - run: npm i firebase
+
+    # cookies
+    - run: npm i js-cookie
     # install react
     
     - run: npm install react react-dom

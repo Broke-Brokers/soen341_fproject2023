@@ -1,0 +1,26 @@
+## Meeting 1: 2023-11-02 
+### Time 
+- 6 hours 
+### Participants 
+- Junior, Isabelle, Rebecca, Taylor, Dominique
+### Approval of previous meeting minutes
+- Retrospection on sprint 2
+- See all current page done by members
+### Agenda 
+- Merged Login, Home page, Profile for CRUD on property, profile for crud on broker, request visit page in a new branch
+- Merged Property page in home with new branch
+- Tried automated unit test when trying to merge branches
+### Discussion
+- Taylor merged login, home, profile for crud on property in BRANCH_MERGED_TEST1
+- Created branch Isabelle_merging_sprint2 from BRANCH_MERGED_TEST1
+- Manually merged profile for crud on broker and request visit page in Isabelle_merging_sprint2 so that Login, Home page, Profile for CRUD on property, profile for crud on broker, request visit page are merged
+- When added request visit page, conflict with the css color and placement
+- Resolved conflict, Request visit appears as expected
+- Using merging on Github, merged Isabelle_merging_sprint2 with main branch where property page is there
+- Because of automated unit test in Integration.ysml, merged difficul
+- Automated unit test failed because of react component that aren’t installed
+- Even when installed, test failed and stops from merging
+### Next agenda
+- Solve merging main branch with Isabelle_merging_sprint2
+- Discuss tasks for sprint 2 enhancement and sprint 3 following discussion #108 and 130 on Github Discussion
+- Assign tasks for sprint 2 enhancement and sprint 3

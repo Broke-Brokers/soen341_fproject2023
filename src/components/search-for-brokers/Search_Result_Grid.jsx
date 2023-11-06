@@ -25,7 +25,7 @@ const db = getFirestore(app);
 
 export default function Search_Result_Grid() {
   const [data, setData] = useState([]);
-
+  const [records, setRecords] = useState([])
   async function getBroker(db) {
     const myBrokers = collection(db, 'Broker');
     const brokerSnapshot = await getDocs(myBrokers);
@@ -38,6 +38,7 @@ export default function Search_Result_Grid() {
     const fetchData = async () => {
       const brokerData = await getBroker(db);
       setData(brokerData); // Set the data in state
+      setRecords(brokerData);
     };
     fetchData();
   }, [db]); // Include 'db' as a dependency to ensure useEffect is called when it changes
@@ -45,10 +46,17 @@ export default function Search_Result_Grid() {
   // An array to represent the number of results to display
   const itemResults = [1, 2, 3, 4, 5, 6, 7, 8, 9]; // ...as many as you want
   console.log('Data in Search_Result_Grid:', data);
+  const Filter = (event)=>{
+    setRecords(data.filter((f)=>
+    {return f.FirstName && f.FirstName.toLowerCase().includes(event.target.value)}))
+  }
   return (
+    
     <div className="grid-container">
+      <input id="searchInput1" type="text" placeholder="Search here..."  onChange={Filter}/>
       {/* Render the component for each result in the array */}
-      {data.map((broker, index) => (
+      
+      {records.map((broker, index) => (
         <BrokerCard key={index} brokerList={broker} /> // Use a unique 'key' prop for each element
       ))}
     </div>
