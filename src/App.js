@@ -16,7 +16,7 @@ import Broker from './Pages/Broker';
 import Sign from './Pages/Sign';
 import AboutUs from './Pages/AboutUs'
 import PropertyPage from './Pages/PropertyPage';
-import Profile from './Profile';
+import Profile from './Pages/Profile.js';
 import Search from './Pages/Search';
 import SearchForBrokers from './Pages/SearchForBrokers';
 import Request_visite from './components/Request_visite';

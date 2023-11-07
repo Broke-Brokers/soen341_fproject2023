@@ -1,6 +1,6 @@
 import React from 'react'
 import Card_home from '../components/search-page/Card_home'
-import Profile from '../Profile'
+import Profile from './Profile'
 
 function Buy() {
   return (
