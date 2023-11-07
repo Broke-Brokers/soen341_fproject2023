@@ -4,7 +4,7 @@ import {useState, useEffect} from "react";
 import {db} from '../../firebase_configuration.js'
 import { collection, getDocs, addDoc, updateDoc} from "firebase/firestore";
 import './Creation_Property.css';
-import Edit_home from './Edit_home';
+
 import { Bathroom } from "@mui/icons-material";
 import { doc } from "firebase/firestore";
 
