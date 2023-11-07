@@ -8,16 +8,30 @@ import { collection, doc, getDocs, addDoc, updateDoc} from "firebase/firestore";
 
 
 
-
-
-
-
-
-
-
-
 function Admin_Brokers_Grid(){
- 
+  
+ // Reading brokers
+   const [data, setData] = useState([]);
+    const [records, setRecords] = useState([])
+    async function getBroker(db) {
+      const myBrokers = collection(db, 'Broker');
+      const brokerSnapshot = await getDocs(myBrokers);
+      const brokerList = brokerSnapshot.docs.map(doc => doc.data());
+      return brokerList;
+    }
+  
+    useEffect(() => {
+      // Call the getBroker function to fetch the data when the component mounts
+      const fetchData = async () => {
+        const brokerData = await getBroker(db);
+        setData(brokerData); // Set the data in state
+        setRecords(brokerData);
+      };
+      fetchData();
+    }, [db]); // Include 'db' as a dependency to ensure useEffect is called when it changes
+  
+
+
 //MANUAL CRUD: to store in firebase
    //1. FOR CREATE Take user input from setNew to have a new variable using new...
 const[newBrokerID, setNewBrokerID]= useState(0)
@@ -117,14 +131,18 @@ const createBroker = async()=>{
 
 
   return (
+
+
+   
+
+
+
      //CRUD MANUALLY NOT INSIDE GRID
       //1. FOR CREATE: setNew...the value entered by user 
     <div>
-      {brokers.map((broker, index) => (
-        <BrokerCard key={index} myBrokerList={broker} /> // Use a unique 'key' prop for each element
+     {records.map((broker, index) => (
+        <BrokerCard key={index} brokerList={broker} /> // Use a unique 'key' prop for each element
       ))}
-  
-  
   
   
   <div className="Admin_Brokers_Grid">
