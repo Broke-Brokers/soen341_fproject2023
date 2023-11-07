@@ -4,7 +4,8 @@ import home_photo from '../../Images/property_image_test1.jpg'
 
 export default function Home_card({Propertylist}) {
   return (
-    <div>
+    <>
+    <div className='propertiesCards'>
    
        
           
@@ -45,6 +46,7 @@ export default function Home_card({Propertylist}) {
 
    
     </div>
+    </>
     );
   
 }
