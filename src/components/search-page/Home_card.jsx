@@ -1,8 +1,48 @@
 import React from 'react'
 import'../search-page/House_Card.css';
 import home_photo from '../../Images/property_image_test1.jpg'
-
+import Creation_Property from '../Profile-page/Creation_Property';
+import {useState, useEffect} from "react";
+import { collection, getDocs, addDoc, updateDoc} from "firebase/firestore";
+import {db} from '../../firebase_configuration.js'
 export default function Home_card({Propertylist}) {
+
+
+  const [Properties, setProperties] = useState([]);
+  const PropertiesCollectionRef = collection(db, "Properties")
+
+  const [newPropertyType, setNewPropertyType] = useState("")
+  const [newListingType, setNewListingType] = useState("")
+  const [newPrice, setNewPrice] = useState("") 
+  const [newAdress, setNewAdress] = useState(0)
+  const [newCity, setNewCity] = useState("")
+  const [newProvince, setNewProvince] = useState("")
+  const [newNeighborhood, setNewNeighborhood] = useState("")
+  const [newBedrooms, setNewBedrooms] = useState(0)
+  const [newNBathrooms, setNewNBathrooms]= useState(0)
+  const [id, setid] = useState('')
+
+
+  const [editProperties, seteditProperties] = useState(false)
+  const editProperty = async(id, PropertyType, ListingType,
+    Price, Adress, City,Province,
+    Neighborhood, Bedrooms, Bathrooms) => {
+
+setNewPropertyType(PropertyType)
+setNewListingType(ListingType)
+setNewPrice(Price)
+setNewAdress(Adress)
+setNewCity(City)
+setNewProvince(Province)
+setNewNeighborhood(Neighborhood)
+setNewBedrooms(Bedrooms)
+setNewNBathrooms(Bathrooms)
+setid(id)
+
+    }
+
+
+
   return (
     <div>
    
@@ -32,6 +72,14 @@ export default function Home_card({Propertylist}) {
       {/*<button onClick={() => {deleteProperty(Propertylist.id)}}>
                       Delete
   </button>*/}
+     {
+          Properties.map(Propertylist => 
+              <button onClick={ () => editProperty(Propertylist.id, Propertylist.PropertyType, Propertylist.ListingType, Propertylist.Price,
+                Propertylist.Adress, Propertylist.City, Propertylist.Province, Propertylist.Neighborhood, Propertylist.Bedrooms, Propertylist.Bathrooms)}> Edit</button>
+             
+            
+            )
+         }
                  
        </ul>
        </div>
