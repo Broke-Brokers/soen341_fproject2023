@@ -31,7 +31,6 @@ function Admin_Brokers_Grid(){
     }, [db]); // Include 'db' as a dependency to ensure useEffect is called when it changes
   
 
-
 //MANUAL CRUD: to store in firebase
    //1. FOR CREATE Take user input from setNew to have a new variable using new...
 const[newBrokerID, setNewBrokerID]= useState(0)
