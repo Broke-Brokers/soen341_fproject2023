@@ -5,11 +5,16 @@ import Creation_Property from '../Profile-page/Creation_Property';
 import {useState, useEffect} from "react";
 import { collection, getDocs, addDoc, updateDoc} from "firebase/firestore";
 import {db} from '../../firebase_configuration.js'
-export default function Home_card({Propertylist}) {
+import { doc } from "firebase/firestore";
+import { deleteDoc} from "firebase/firestore";
+
+ export default function Home_card({Propertylist}) {
+
 
 
   const [Properties, setProperties] = useState([]);
   const PropertiesCollectionRef = collection(db, "Properties")
+  const [editProperty, seteditProperty] = useState(false)
 
   const [newPropertyType, setNewPropertyType] = useState("")
   const [newListingType, setNewListingType] = useState("")
@@ -23,12 +28,11 @@ export default function Home_card({Propertylist}) {
   const [id, setid] = useState('')
 
 
-  const [editProperties, seteditProperties] = useState(false)
-  const editProperty = async(id, PropertyType, ListingType,
+  const editTEST = async(id, PropertyType, ListingType,
     Price, Adress, City,Province,
     Neighborhood, Bedrooms, Bathrooms) => {
 
-setNewPropertyType(PropertyType)
+{/*setNewPropertyType(PropertyType)
 setNewListingType(ListingType)
 setNewPrice(Price)
 setNewAdress(Adress)
@@ -37,10 +41,18 @@ setNewProvince(Province)
 setNewNeighborhood(Neighborhood)
 setNewBedrooms(Bedrooms)
 setNewNBathrooms(Bathrooms)
-setid(id)
-
+    setid(id)*/
+   }
+   console.log(Price)
     }
 
+
+ 
+  
+    const deleteProperty = async (id) => {
+      const PropertyDoc = doc(db, "Properties", id);
+      await deleteDoc(PropertyDoc);
+  };
 
 
   return (
@@ -69,17 +81,14 @@ setid(id)
       <li className="HC_li"><i class="fa fa-bath"></i>  {Propertylist.Bathrooms}</li>
       <li className="HC_li"><i class="fa fa-bookmark"></i></li>
       <li className="HC_li"> <i class="fa fa-user-check"></i></li>
-      {/*<button onClick={() => {deleteProperty(Propertylist.id)}}>
+      <button onClick={() => {deleteProperty(Propertylist.id)}}>
                       Delete
-  </button>*/}
-     {
-          Properties.map(Propertylist => 
-              <button onClick={ () => editProperty(Propertylist.id, Propertylist.PropertyType, Propertylist.ListingType, Propertylist.Price,
+  </button>
+     
+              <button onClick={ () => editTEST(Propertylist.id, Propertylist.PropertyType, Propertylist.ListingType, Propertylist.Price,
                 Propertylist.Adress, Propertylist.City, Propertylist.Province, Propertylist.Neighborhood, Propertylist.Bedrooms, Propertylist.Bathrooms)}> Edit</button>
              
-            
-            )
-         }
+          
                  
        </ul>
        </div>
@@ -94,5 +103,4 @@ setid(id)
    
     </div>
     );
-  
-}
+              }
