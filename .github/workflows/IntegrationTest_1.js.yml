@@ -58,6 +58,7 @@ jobs:
     - run: npm i @devexpress/dx-react-grid-material-ui
     - run: npm i @devexpress/dx-react-core
     - run: npm i @devexpress/dx-react-grid
+    - run: npm i @devexpress/dx-grid-core
     - run: npm i bootstrap
     - run : npm i reactjs-popup
     
