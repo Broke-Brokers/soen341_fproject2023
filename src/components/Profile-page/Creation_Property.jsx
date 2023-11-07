@@ -5,6 +5,8 @@ import {db} from '../../firebase_configuration.js'
 import { collection, getDocs, addDoc, updateDoc} from "firebase/firestore";
 import './Creation_Property.css';
 import Edit_home from './Edit_home';
+import { Bathroom } from "@mui/icons-material";
+import { doc } from "firebase/firestore";
 
 function Creation_Property()  {
 
@@ -21,7 +23,7 @@ function Creation_Property()  {
     const [newNeighborhood, setNewNeighborhood] = useState("")
     const [newBedrooms, setNewBedrooms] = useState(0)
     const [newNBathrooms, setNewNBathrooms]= useState(0)
-    
+    const [id, setid] = useState('')
   
     const createProperty = async () => {
   
@@ -34,6 +36,28 @@ function Creation_Property()  {
         Bedrooms: newBedrooms, Bathrooms: newNBathrooms   }) ;
   
     }
+
+    const editProperty = async(id, PropertyType, ListingType,
+                                Price, Adress, City,Province,
+                                Neighborhood, Bedrooms, Bathrooms) => {
+
+              setNewPropertyType(PropertyType)
+              setNewListingType(ListingType)
+              setNewPrice(Price)
+              setNewAdress(Adress)
+              setNewCity(City)
+              setNewProvince(Province)
+              setNewNeighborhood(Neighborhood)
+              setNewBedrooms(Bedrooms)
+              setNewNBathrooms(Bathrooms)
+              setid(id)
+        
+                                }
+    
+    const handleEdit = async() => {
+          const updateData = doc(db,"Properties", id )
+          await updateDoc(updateData, {Price: newPrice} )
+    }                          
   
     return (
 
@@ -134,8 +158,11 @@ function Creation_Property()  {
     
     <br />
         <button onClick={createProperty}> Create Property</button>
-        <button onClick={ () => seteditProperties(true)}> Update Property</button>
-        {editProperties === true && <Edit_home /> }
+        <button onClick = {handleEdit} > Edit Property </button>
+
+        
+         {/*editProperties === true && <Edit_home /> */}
+         
     
                 {/*====FOR SYTEM ADMIIN======*/}
     
