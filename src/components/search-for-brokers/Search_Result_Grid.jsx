@@ -50,10 +50,28 @@ export default function Search_Result_Grid() {
     setRecords(data.filter((f)=>
     {return f.FirstName && f.FirstName.toLowerCase().includes(event.target.value)}))
   }
+
+  const FilterLanguage = (event)=>{
+    setRecords(data.filter((broker)=>
+    {return broker.Language && broker.Language.toLowerCase().includes(event.target.value);}
+    ));
+  }
+  const FilterExperienceYears = (event)=>{
+    setRecords(data.filter((broker)=>
+    {return broker.ExperienceYears >= parseInt(event.target.value);}
+    ));
+  }
+  
   return (
     
     <div className="grid-container">
       <input id="searchInput1" type="text" placeholder="Search here..."  onChange={Filter}/>
+      {/* Render the component for each result in the array */}
+
+      <input id="searchInput2" type="text" placeholder="Search Language"  onChange={FilterLanguage}/>
+      {/* Render the component for each result in the array */}
+     
+      <input id="searchInput3" type="number" placeholder="Search Years of experience"  onChange={FilterExperienceYears}/>
       {/* Render the component for each result in the array */}
       
       {records.map((broker, index) => (
