@@ -1,5 +1,5 @@
 import React from 'react';
-import BrokerCard from '././property-page/BrokerCard';
+import BrokerCard from '../property-page/BrokerCard.jsx';
 import './Admin_Brokers_Grid.css';
 import {useState, useEffect} from "react";
 //allows connection to firebase
@@ -124,7 +124,7 @@ const createBroker = async()=>{
         <BrokerCard key={index} myBrokerList={broker} /> // Use a unique 'key' prop for each element
       ))}
   
-  </div>
+  
   
   
   <div className="Admin_Brokers_Grid">
@@ -182,7 +182,7 @@ const createBroker = async()=>{
 }
 
    
-
+</div>
 
 
 
