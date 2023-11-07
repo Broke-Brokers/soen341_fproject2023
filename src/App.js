@@ -74,6 +74,7 @@ function navbarChoice(){
     
        {/*Brokers  offers */}
       {<Route path='/offer' exact element = {<Offer/>} ></Route>}
+      
      {/*Brokers clients*/}
       {/* <Route path='/clients' exact element = {} ></Route>*/}
 
