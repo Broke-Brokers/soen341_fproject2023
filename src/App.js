@@ -20,6 +20,7 @@ import Profile from './Pages/Profile.js';
 import Search from './Pages/Search';
 import SearchForBrokers from './Pages/SearchForBrokers';
 import Request_visite from './components/Request_visite';
+import Offer from './Pages/Offer.js';
 import Cookies from 'js-cookie';
 // import fontawesome library
 //import './fontawesome';
@@ -72,7 +73,7 @@ function navbarChoice(){
       <Route path='/searchbrokers' exact element = {<SearchForBrokers/>} ></Route>
     
        {/*Brokers  offers */}
-      {/* <Route path='/offers' exact element = {} ></Route>*/}
+      {<Route path='/offer' exact element = {<Offer/>} ></Route>}
      {/*Brokers clients*/}
       {/* <Route path='/clients' exact element = {} ></Route>*/}
 

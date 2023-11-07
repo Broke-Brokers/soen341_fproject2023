@@ -34,7 +34,7 @@ function Card_home() {
         const data = await getDocs(PropertiesCollectionRef);
         setProperties(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
         setRecords(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
-       // await deleteDoc()
+       
     
       };
   
