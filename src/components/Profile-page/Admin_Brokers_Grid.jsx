@@ -1,4 +1,5 @@
 import React from 'react';
+import BrokerCard from '././property-page/BrokerCard';
 import './Admin_Brokers_Grid.css';
 import {useState, useEffect} from "react";
 //allows connection to firebase
@@ -47,6 +48,8 @@ const [show,setShow] = useState(false)
     const data = await getDocs(brokersCollectionRef);
     //setting brokers array = array of document data & id for each document
     setBrokers(data.docs.map((doc)=>({...doc.data(), id:doc.id})));
+    const myBrokerList = data.docs.map(doc => doc.data());
+
     
   };
   getBrokers();
@@ -116,6 +119,14 @@ const createBroker = async()=>{
   return (
      //CRUD MANUALLY NOT INSIDE GRID
       //1. FOR CREATE: setNew...the value entered by user 
+    <div>
+      {brokers.map((broker, index) => (
+        <BrokerCard key={index} myBrokerList={broker} /> // Use a unique 'key' prop for each element
+      ))}
+  
+  </div>
+  
+  
   <div className="Admin_Brokers_Grid">
 
 
