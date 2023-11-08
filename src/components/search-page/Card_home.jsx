@@ -232,7 +232,8 @@ function Card_home() {
       <div className='properties'>
       {records.map((Property) => (
         
-        <Home_card  Propertylist={Property} /> // Use a unique 'key' prop for each element
+       <Link to="/propertyPage"><Home_card  Propertylist={Property} /> // Use a unique 'key' prop for each element
+       </Link> 
       ))}
       </div>
 
