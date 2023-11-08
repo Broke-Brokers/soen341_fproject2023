@@ -29,7 +29,7 @@ const VisitRequest = () => {
     };
 
     return (
-        <div className='body'>
+        <div className='bodyrv'>
         <div className='container1rv'>
             <h1>Request Your Visit</h1>
             <div className='boxrv'>

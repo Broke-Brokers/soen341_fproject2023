@@ -56,7 +56,8 @@ setNewNBathrooms(Bathrooms)
 
 
   return (
-    <div>
+    <>
+    <div className='propertiesCards'>
    
        
           
@@ -102,5 +103,6 @@ setNewNBathrooms(Bathrooms)
 
    
     </div>
+    </>
     );
               }

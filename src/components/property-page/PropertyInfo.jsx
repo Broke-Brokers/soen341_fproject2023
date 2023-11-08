@@ -7,6 +7,7 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import Request_visit2 from '../forms/Request_visit2';
 import { Link } from 'react-router-dom';
+import Cookies from 'js-cookie';
 
 export default function PropertyInfo(props){
 
@@ -46,6 +47,16 @@ export default function PropertyInfo(props){
    const postName = "postName";
    const constructionYear = 1966;
  
+   const usertype = Cookies.get('usertypeID');
+
+   function isBroker(){
+     if(usertype ==  2)return (<Link to="/sell" className="offer-button">
+     Make an offer on this house!
+   </Link>);
+   }
+   
+
+   
     return(
 
         <div className="infoContainer">
@@ -69,13 +80,15 @@ export default function PropertyInfo(props){
         <Link to='/requestVisitForm'>
         <RequestVisit_Button/>
         </Link>
+        {isBroker()} 
+        
         
        <div >
 
-        {/*We would need to style the pop up if we use this method https://react-popup.elazizi.com/css-styling/ */}
-        <Popup trigger={<img className="requestButton" src={require('../../Images/home_visit.png')} alt="requestAVisit" /*onClick={() => requestAVistit()}*/ />} position="right center">
-    <div><Request_visit2 /></div>
-          </Popup>
+        {/*OPTION B : POP UPWe would need to style the pop up if we use this method https://react-popup.elazizi.com/css-styling/ */}
+         {/* <Popup trigger={<img className="requestButton" src={require('../../Images/home_visit.png')} alt="requestAVisit" /*onClick={() => requestAVistit()}/>} position="right center">*/}
+     {/*<div><Request_visit2 /></div>*/}
+          {/* </Popup>*/}
     
 
           

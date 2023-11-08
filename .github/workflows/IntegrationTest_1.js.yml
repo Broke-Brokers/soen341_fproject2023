@@ -21,7 +21,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
       # this line is for all the test to run even if one of them fail
@@ -58,17 +58,22 @@ jobs:
     - run: npm i @devexpress/dx-react-grid-material-ui
     - run: npm i @devexpress/dx-react-core
     - run: npm i @devexpress/dx-react-grid
+    - run: npm i @devexpress/dx-grid-core
     - run: npm i bootstrap
     - run : npm i reactjs-popup
+    - run: npm install react-error-boundary
     
    #testing libraries
     - run: npm i @testing-library/jest-dom
     - run: npm i @testing-library/react
     - run: npm i @testing-library/user-event
     - run: npm i babel-plugin-macros
-    
+    - run: npm install react-test-renderer
     # firebase
     - run: npm i firebase
+
+    # cookies
+    - run: npm i js-cookie
     # install react
     
     - run: npm install react react-dom

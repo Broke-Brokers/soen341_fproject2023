@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
-import { Button } from "./Button";
+import { Button } from './../Button';
+import { ErrorBoundary } from "react-error-boundary";
+
 import './Navbar.css';
 
-function Navbar() {
+function Navbar_Brokers() {
+  
     const [click, setClick] = useState(false);
     const[button,setButton]= useState(true);
     const handleClick = ()=>setClick(!click);
@@ -21,6 +24,7 @@ useEffect(()=>{showButton();},[]);
 window.addEventListener('resize', showButton);
   return (
     <>
+    <ErrorBoundary fallback={<div>Something went wrong</div>}>
    <nav className="navbar">
     <div className="navbar-container"> 
 
@@ -36,61 +40,41 @@ window.addEventListener('resize', showButton);
 
         <ul className={click? 'nav-menu active' : 'nav-menu'}>
           
-          <li className='nav-item'>
-            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                Home
-            </Link>
-          </li>
-          <li className='nav-item'>
-            <Link to='/sell' className='nav-links' onClick={closeMobileMenu}>
-                Sell
-            </Link>
-          </li>
-          <li className='nav-item'>
-            <Link to='/buy' className='nav-links' onClick={closeMobileMenu}>
-                Buy
-            </Link>
-          </li>
-          <li className='nav-item'>
-            <Link to='/broker' className='nav-links' onClick={closeMobileMenu}>
-                Broker
-            </Link>
-          </li>
-
-          <li className='nav-item'>
+        <li className='nav-item'>
           <Link to='/search' className='nav-links nav-button' onClick={closeMobileMenu}>
-            Search
+            Search for properties
               </Link>
               </li>
+                
+          <li className='nav-item'>
+            <Link to='/clients' className='nav-links' onClick={closeMobileMenu}>
+               Clients
+            </Link>
+          </li>
+          <li className='nav-item'>
+            <Link to='/offers' className='nav-links' onClick={closeMobileMenu}>
+               Offers
+            </Link>
+          </li>
+          
 
               <li className='nav-item'>
           <Link to='/profile' className='nav-links ' onClick={closeMobileMenu}>
-            Profile
+            My Profile
               </Link>
               </li>
 
-
-          <li className='nav-item'>
-            <Link to='/about' className='nav-links' onClick={closeMobileMenu}>
-                About Us
-            </Link>
-          </li>
-          <li className='nav-item'>
-            <Link to='/sign-in' className='nav-links-mobile' onClick={closeMobileMenu}>
-                Sign In
-            </Link>
-          </li>
-
         </ul>
-
+      {/*We will need to add  a signout */}
         {button && <Button buttonStyle='btn--outline'>SIGN IN</Button>}
 
 
         
     </div>
    </nav>
+   </ErrorBoundary>
    </>
   );
 }
 
-export default Navbar;
+export default Navbar_Brokers;

@@ -5,49 +5,79 @@ import user_icon from '../Images/LoginSignup/person.png';
 import email_icon from '../Images/LoginSignup/email.png';
 import password_icon from '../Images/LoginSignup/password.png';
 
+import { useNavigate } from 'react-router-dom';
 
 // Firebase Initialization and Configurations
 import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
-import {db} from '../firebase_configuration.js'
-const firebaseConfig = {
-  apiKey: "AIzaSyD67j-e8plVp5mtf6Td_7R-OV4Wbo1MmdI",
-  authDomain: "soen341db.firebaseapp.com",
-  projectId: "soen341db",
-  storageBucket: "soen341db.appspot.com",
-  messagingSenderId: "388617260788",
-  appId: "1:388617260788:web:33bd62fe3f958ca0f658a1"
-};
-
-// const app = initializeApp(firebaseConfig);
-// const auth = getAuth(app);
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from '../firebase_configuration' // make sure this path is correct
+import { getFirestore, doc, setDoc, getDoc } from 'firebase/firestore';
 
 
-    // END FOR FIRE BASE
 
-    const LogingSignup = () => {
-        const [view, setView] = useState("Login");
-        const [email, setEmail] = useState("");
-        const [password, setPassword] = useState("");
-        const [error, setError] = useState("");
-    
-        const register = async () => {
-            try {
-                await createUserWithEmailAndPassword(db, email, password);
-                setError("");
-            } catch (err) {
-                setError(err.message);
-            }
-        };
-    
-        const login = async () => {
-            try {
-                await signInWithEmailAndPassword(db, email, password);
-                setError("");
-            } catch (err) {
-                setError(err.message);
-            }
-        };
+// Initialize Firestore
+const db = getFirestore();
+
+
+// Functions for user profile management
+const createUserProfile = async (userCredential, additionalInfo) => {
+    await setDoc(doc(db, "userProfiles", userCredential.user.uid), additionalInfo);
+  };
+  
+  const getUserProfile = async (uid) => {
+    const docRef = doc(db, "userProfiles", uid);
+    const docSnap = await getDoc(docRef);
+  
+    if (docSnap.exists()) {
+      return docSnap.data();
+    } else {
+      console.log("No such user profile!");
+      return null;
+    }
+  };
+
+  const LoginSignup = () => {
+
+    const navigate = useNavigate();
+
+    const [view, setView] = useState("Login");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+    const [success, setSuccess] = useState(""); // State to handle success messages
+    const [surname, setSurname] = useState("");
+    const [name, setName] = useState("");
+    const [userType, setUserType] = useState("broker");
+
+    const navigateToHome = () => {
+        // Redirect user to the main home page after showing success message
+        navigate('/');
+    };
+    const register = async () => {
+        try {
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            const additionalInfo = { surname, name, userType };
+            await createUserProfile(userCredential, additionalInfo);
+            setSuccess("Successfully signed up! Redirecting to home page...");
+            setError("");
+            navigateToHome();
+        } catch (err) {
+            setError(err.message);
+            setSuccess("");
+        }
+    };
+
+    const login = async () => {
+        try {
+            const userCredential = await signInWithEmailAndPassword(auth, email, password);
+            // You can now access the signed-in user's information with userCredential.user
+            setError("");
+            // Redirect user to the dashboard or home page
+            navigate('/'); 
+        } catch (err) {
+            setError(err.message);
+        }
+    };
     
         return (
             <div className='container'>
@@ -64,22 +94,24 @@ const firebaseConfig = {
                     </div>
                 </div>
 
+                {success && <div className="success">{success}</div>} {/* Display success messages */}
+               
                 {view === "Signup" && (
                     <>
                         <div className="titletext">User Type</div>
-                        <select className='dropdown'>
+                        <select className='dropdown' value={userType} onChange={(e) => setUserType(e.target.value)}>
                             <option value="broker">Broker</option>
                             <option value="system_admin">System Admin</option>
                             <option value="home_buyer">Home Buyer</option>
                         </select>
                         <div className='input'>
-                            <img src={user_icon} alt=""/>
-                            <input type="text" placeholder='Surname'/>
-                        </div>
-                        <div className='input'>
-                            <img src={user_icon} alt=""/>
-                            <input type="text" placeholder='Name'/>
-                        </div>
+                        <img src={user_icon} alt=""/>
+                        <input type="text" placeholder='Surname' value={surname} onChange={(e) => setSurname(e.target.value)}/>
+                    </div>
+                    <div className='input'>
+                        <img src={user_icon} alt=""/>
+                        <input type="text" placeholder='Name' value={name} onChange={(e) => setName(e.target.value)}/>
+                    </div>
                     </>
                 )}
     
@@ -105,4 +137,4 @@ const firebaseConfig = {
         );
     }
     
-    export default LogingSignup;
+    export default LoginSignup;
