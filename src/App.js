@@ -29,6 +29,11 @@ import Cookies from 'js-cookie';
 //guest = 0 , system admin =1 , broker=2 , homebuyer/renter =3
 Cookies.set('usertypeID', '0')
 
+
+
+
+
+
 function App() {
 const usertype = Cookies.get('usertypeID');
 

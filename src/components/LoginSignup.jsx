@@ -6,48 +6,72 @@ import email_icon from '../Images/LoginSignup/email.png';
 import password_icon from '../Images/LoginSignup/password.png';
 
 
+
 // Firebase Initialization and Configurations
 import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
-import {db} from '../firebase_configuration.js'
-const firebaseConfig = {
-  apiKey: "AIzaSyD67j-e8plVp5mtf6Td_7R-OV4Wbo1MmdI",
-  authDomain: "soen341db.firebaseapp.com",
-  projectId: "soen341db",
-  storageBucket: "soen341db.appspot.com",
-  messagingSenderId: "388617260788",
-  appId: "1:388617260788:web:33bd62fe3f958ca0f658a1"
-};
-
-// const app = initializeApp(firebaseConfig);
-// const auth = getAuth(app);
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from '../firebase_configuration' // make sure this path is correct
+import { getFirestore, doc, setDoc, getDoc } from 'firebase/firestore';
 
 
-    // END FOR FIRE BASE
+// Initialize Firestore
+const db = getFirestore();
 
-    const LogingSignup = () => {
-        const [view, setView] = useState("Login");
-        const [email, setEmail] = useState("");
-        const [password, setPassword] = useState("");
-        const [error, setError] = useState("");
-    
-        const register = async () => {
-            try {
-                await createUserWithEmailAndPassword(db, email, password);
-                setError("");
-            } catch (err) {
-                setError(err.message);
+
+// Functions for user profile management
+const createUserProfile = async (userCredential, additionalInfo) => {
+    await setDoc(doc(db, "userProfiles", userCredential.user.uid), additionalInfo);
+  };
+  
+  const getUserProfile = async (uid) => {
+    const docRef = doc(db, "userProfiles", uid);
+    const docSnap = await getDoc(docRef);
+  
+    if (docSnap.exists()) {
+      return docSnap.data();
+    } else {
+      console.log("No such user profile!");
+      return null;
+    }
+  };
+
+  const LoginSignup = () => {
+    const [view, setView] = useState("Login");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+    const [surname, setSurname] = useState("");
+    const [name, setName] = useState("");
+    const [userType, setUserType] = useState("broker");
+
+    const register = async () => {
+        try {
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            // After successful registration, create a user profile in Firestore
+            const additionalInfo = { surname, name, userType };
+            await createUserProfile(userCredential, additionalInfo);
+            setError("");
+            // Redirect user or change app state here
+        } catch (err) {
+            setError(err.message);
+        }
+    };
+
+    const login = async () => {
+        try {
+            const userCredential = await signInWithEmailAndPassword(auth, email, password);
+            // After successful login, fetch the user profile
+            const userProfile = await getUserProfile(userCredential.user.uid);
+            if (userProfile) {
+                console.log(userProfile); // You can use the user profile information here
             }
-        };
+            setError("");
+            // Redirect user or change app state here
+        } catch (err) {
+            setError(err.message);
+        }
+    };
     
-        const login = async () => {
-            try {
-                await signInWithEmailAndPassword(db, email, password);
-                setError("");
-            } catch (err) {
-                setError(err.message);
-            }
-        };
     
         return (
             <div className='container'>
@@ -105,4 +129,4 @@ const firebaseConfig = {
         );
     }
     
-    export default LogingSignup;
+    export default LoginSignup;
