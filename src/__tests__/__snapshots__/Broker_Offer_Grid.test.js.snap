@@ -442,7 +442,7 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                $862544.98
+                $758134.51
               </td>
               <td
                 aria-sort={null}
@@ -456,6 +456,144 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
+                Vancouver
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                ON
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                Midtown
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                4
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                4
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                Apartment
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                Rent
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                Rented
+              </td>
+            </tr>
+            <tr
+              className="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+              role={null}
+            >
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableEditCommandCell-cell css-jtxqlg-MuiTableCell-root"
+                colSpan={1}
+              >
+                <button
+                  className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium TableEditCommandCell-button css-d0wp3b-MuiButtonBase-root-MuiButton-root"
+                  disabled={false}
+                  id="edit"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onContextMenu={[Function]}
+                  onDragLeave={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  tabIndex={0}
+                  type="button"
+                >
+                  Edit
+                  <span
+                    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+                <button
+                  className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium TableEditCommandCell-button css-d0wp3b-MuiButtonBase-root-MuiButton-root"
+                  disabled={false}
+                  id="delete"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onContextMenu={[Function]}
+                  onDragLeave={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  tabIndex={0}
+                  type="button"
+                >
+                  Delete
+                  <span
+                    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                1
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                $599495.02
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                789 Birch Street
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
                 Toronto
               </td>
               <td
@@ -463,7 +601,7 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                QC
+                ON
               </td>
               <td
                 aria-sort={null}
@@ -484,7 +622,7 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                2
+                1
               </td>
               <td
                 aria-sort={null}
@@ -498,7 +636,7 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                Rent
+                Sale
               </td>
               <td
                 aria-sort={null}
@@ -573,144 +711,6 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                1
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                $587558.19
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                456 Pine Avenue
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                Montreal
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                BC
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                Midtown
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                1
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                5
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                House
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                Sale
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                Rented
-              </td>
-            </tr>
-            <tr
-              className="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
-              role={null}
-            >
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableEditCommandCell-cell css-jtxqlg-MuiTableCell-root"
-                colSpan={1}
-              >
-                <button
-                  className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium TableEditCommandCell-button css-d0wp3b-MuiButtonBase-root-MuiButton-root"
-                  disabled={false}
-                  id="edit"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onContextMenu={[Function]}
-                  onDragLeave={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyUp={[Function]}
-                  onMouseDown={[Function]}
-                  onMouseLeave={[Function]}
-                  onMouseUp={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchMove={[Function]}
-                  onTouchStart={[Function]}
-                  tabIndex={0}
-                  type="button"
-                >
-                  Edit
-                  <span
-                    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
-                </button>
-                <button
-                  className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium TableEditCommandCell-button css-d0wp3b-MuiButtonBase-root-MuiButton-root"
-                  disabled={false}
-                  id="delete"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onContextMenu={[Function]}
-                  onDragLeave={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyUp={[Function]}
-                  onMouseDown={[Function]}
-                  onMouseLeave={[Function]}
-                  onMouseUp={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchMove={[Function]}
-                  onTouchStart={[Function]}
-                  tabIndex={0}
-                  type="button"
-                >
-                  Delete
-                  <span
-                    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
-                </button>
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
                 2
               </td>
               <td
@@ -718,7 +718,7 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                $569769.62
+                $791258.54
               </td>
               <td
                 aria-sort={null}
@@ -732,152 +732,14 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                Vancouver
+                Toronto
               </td>
               <td
                 aria-sort={null}
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                QC
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                Downtown
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                1
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                3
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                Condo
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                Rent
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                Rented
-              </td>
-            </tr>
-            <tr
-              className="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
-              role={null}
-            >
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableEditCommandCell-cell css-jtxqlg-MuiTableCell-root"
-                colSpan={1}
-              >
-                <button
-                  className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium TableEditCommandCell-button css-d0wp3b-MuiButtonBase-root-MuiButton-root"
-                  disabled={false}
-                  id="edit"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onContextMenu={[Function]}
-                  onDragLeave={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyUp={[Function]}
-                  onMouseDown={[Function]}
-                  onMouseLeave={[Function]}
-                  onMouseUp={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchMove={[Function]}
-                  onTouchStart={[Function]}
-                  tabIndex={0}
-                  type="button"
-                >
-                  Edit
-                  <span
-                    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
-                </button>
-                <button
-                  className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium TableEditCommandCell-button css-d0wp3b-MuiButtonBase-root-MuiButton-root"
-                  disabled={false}
-                  id="delete"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onContextMenu={[Function]}
-                  onDragLeave={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyUp={[Function]}
-                  onMouseDown={[Function]}
-                  onMouseLeave={[Function]}
-                  onMouseUp={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchMove={[Function]}
-                  onTouchStart={[Function]}
-                  tabIndex={0}
-                  type="button"
-                >
-                  Delete
-                  <span
-                    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
-                </button>
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                3
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                $685640.77
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                123 Maple Road
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                Vancouver
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                QC
+                ON
               </td>
               <td
                 aria-sort={null}
@@ -898,7 +760,7 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                5
+                1
               </td>
               <td
                 aria-sort={null}
@@ -912,6 +774,144 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
+                Sale
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                Available
+              </td>
+            </tr>
+            <tr
+              className="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+              role={null}
+            >
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableEditCommandCell-cell css-jtxqlg-MuiTableCell-root"
+                colSpan={1}
+              >
+                <button
+                  className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium TableEditCommandCell-button css-d0wp3b-MuiButtonBase-root-MuiButton-root"
+                  disabled={false}
+                  id="edit"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onContextMenu={[Function]}
+                  onDragLeave={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  tabIndex={0}
+                  type="button"
+                >
+                  Edit
+                  <span
+                    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+                <button
+                  className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium TableEditCommandCell-button css-d0wp3b-MuiButtonBase-root-MuiButton-root"
+                  disabled={false}
+                  id="delete"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onContextMenu={[Function]}
+                  onDragLeave={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  tabIndex={0}
+                  type="button"
+                >
+                  Delete
+                  <span
+                    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                3
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                $106848.16
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                123 Maple Road
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                Toronto
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                ON
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                Suburbs
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                5
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                1
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                Apartment
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
                 Rent
               </td>
               <td
@@ -919,7 +919,7 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                Sold
+                Rented
               </td>
             </tr>
             <tr
@@ -994,7 +994,145 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                $865972.92
+                $713199.25
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                789 Birch Street
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                Montreal
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                BC
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                Suburbs
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                4
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                4
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                Condo
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                Sale
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                Sold
+              </td>
+            </tr>
+            <tr
+              className="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+              role={null}
+            >
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableEditCommandCell-cell css-jtxqlg-MuiTableCell-root"
+                colSpan={1}
+              >
+                <button
+                  className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium TableEditCommandCell-button css-d0wp3b-MuiButtonBase-root-MuiButton-root"
+                  disabled={false}
+                  id="edit"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onContextMenu={[Function]}
+                  onDragLeave={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  tabIndex={0}
+                  type="button"
+                >
+                  Edit
+                  <span
+                    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+                <button
+                  className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium TableEditCommandCell-button css-d0wp3b-MuiButtonBase-root-MuiButton-root"
+                  disabled={false}
+                  id="delete"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onContextMenu={[Function]}
+                  onDragLeave={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  tabIndex={0}
+                  type="button"
+                >
+                  Delete
+                  <span
+                    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                5
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                $22444.72
               </td>
               <td
                 aria-sort={null}
@@ -1015,28 +1153,28 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                BC
+                QC
               </td>
               <td
                 aria-sort={null}
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                Midtown
+                Suburbs
               </td>
               <td
                 aria-sort={null}
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                5
+                3
               </td>
               <td
                 aria-sort={null}
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                5
+                1
               </td>
               <td
                 aria-sort={null}
@@ -1125,144 +1263,6 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                5
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                $330972.44
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                789 Birch Street
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                Toronto
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                ON
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                Suburbs
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                3
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                2
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                Apartment
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                Rent
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
-                Sold
-              </td>
-            </tr>
-            <tr
-              className="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
-              role={null}
-            >
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableEditCommandCell-cell css-jtxqlg-MuiTableCell-root"
-                colSpan={1}
-              >
-                <button
-                  className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium TableEditCommandCell-button css-d0wp3b-MuiButtonBase-root-MuiButton-root"
-                  disabled={false}
-                  id="edit"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onContextMenu={[Function]}
-                  onDragLeave={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyUp={[Function]}
-                  onMouseDown={[Function]}
-                  onMouseLeave={[Function]}
-                  onMouseUp={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchMove={[Function]}
-                  onTouchStart={[Function]}
-                  tabIndex={0}
-                  type="button"
-                >
-                  Edit
-                  <span
-                    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
-                </button>
-                <button
-                  className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium TableEditCommandCell-button css-d0wp3b-MuiButtonBase-root-MuiButton-root"
-                  disabled={false}
-                  id="delete"
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onContextMenu={[Function]}
-                  onDragLeave={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyUp={[Function]}
-                  onMouseDown={[Function]}
-                  onMouseLeave={[Function]}
-                  onMouseUp={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchMove={[Function]}
-                  onTouchStart={[Function]}
-                  tabIndex={0}
-                  type="button"
-                >
-                  Delete
-                  <span
-                    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
-                </button>
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
                 6
               </td>
               <td
@@ -1270,7 +1270,7 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                $835441.53
+                $520047.41
               </td>
               <td
                 aria-sort={null}
@@ -1284,14 +1284,14 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                Montreal
+                Vancouver
               </td>
               <td
                 aria-sort={null}
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                ON
+                BC
               </td>
               <td
                 aria-sort={null}
@@ -1305,13 +1305,6 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                5
-              </td>
-              <td
-                aria-sort={null}
-                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
-                colSpan={1}
-              >
                 3
               </td>
               <td
@@ -1319,14 +1312,21 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                Condo
+                5
               </td>
               <td
                 aria-sort={null}
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                Rent
+                House
+              </td>
+              <td
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
+                colSpan={1}
+              >
+                Sale
               </td>
               <td
                 aria-sort={null}
@@ -1408,28 +1408,28 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                $488683.21
+                $796239.85
               </td>
               <td
                 aria-sort={null}
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                456 Pine Avenue
+                123 Maple Road
               </td>
               <td
                 aria-sort={null}
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                Vancouver
+                Toronto
               </td>
               <td
                 aria-sort={null}
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                BC
+                ON
               </td>
               <td
                 aria-sort={null}
@@ -1443,28 +1443,28 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                2
+                3
               </td>
               <td
                 aria-sort={null}
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                4
+                1
               </td>
               <td
                 aria-sort={null}
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                Apartment
+                Condo
               </td>
               <td
                 aria-sort={null}
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                Sale
+                Rent
               </td>
               <td
                 aria-sort={null}
@@ -1546,7 +1546,7 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                $856257.96
+                $664617.29
               </td>
               <td
                 aria-sort={null}
@@ -1567,7 +1567,7 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                QC
+                ON
               </td>
               <td
                 aria-sort={null}
@@ -1581,21 +1581,21 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                2
+                1
               </td>
               <td
                 aria-sort={null}
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                5
+                3
               </td>
               <td
                 aria-sort={null}
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                Apartment
+                Condo
               </td>
               <td
                 aria-sort={null}
@@ -1609,7 +1609,7 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                Available
+                Sold
               </td>
             </tr>
             <tr
@@ -1684,14 +1684,14 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                $753888.48
+                $14621.94
               </td>
               <td
                 aria-sort={null}
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                456 Pine Avenue
+                123 Maple Road
               </td>
               <td
                 aria-sort={null}
@@ -1712,7 +1712,7 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                Midtown
+                Downtown
               </td>
               <td
                 aria-sort={null}
@@ -1726,7 +1726,7 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                1
+                3
               </td>
               <td
                 aria-sort={null}
@@ -1740,14 +1740,14 @@ exports[`performs snapshot testing 1`] = `
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                Rent
+                Sale
               </td>
               <td
                 aria-sort={null}
                 className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium TableCell-cell TableCell-cellNoWrap css-xhtqz8-MuiTableCell-root"
                 colSpan={1}
               >
-                Available
+                Sold
               </td>
             </tr>
           </tbody>
