@@ -86,6 +86,7 @@ function Creation_Property()  {
     <br />
     
         <input type = "number" placeholder ="Price..." 
+            PropertiesCollectionRef = {newPrice}
         
           onChange={(event) => {
           
@@ -149,16 +150,17 @@ function Creation_Property()  {
     
     <br />
         <input placeholder ="No of Baths..." 
-        
-        onChange={(event) => {
+    
+         onChange={(event) => {
         setNewNBathrooms(event.target.value);
+       
     
           }}
         />
     
     <br />
         <button onClick={createProperty}> Create Property</button>
-        <button onClick = {handleEdit} > Edit Property </button>
+        <button onClick = {handleEdit} > Update Property </button>
 
         
          {/*editProperties === true && <Edit_home /> */}

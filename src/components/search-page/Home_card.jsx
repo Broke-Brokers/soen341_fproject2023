@@ -32,7 +32,7 @@ import { deleteDoc} from "firebase/firestore";
     Price, Adress, City,Province,
     Neighborhood, Bedrooms, Bathrooms) => {
 
-{/*setNewPropertyType(PropertyType)
+setNewPropertyType(PropertyType)
 setNewListingType(ListingType)
 setNewPrice(Price)
 setNewAdress(Adress)
@@ -41,9 +41,8 @@ setNewProvince(Province)
 setNewNeighborhood(Neighborhood)
 setNewBedrooms(Bedrooms)
 setNewNBathrooms(Bathrooms)
-    setid(id)*/
-   }
-   console.log(Price)
+    setid(id)
+   console.log(newPrice)
     }
 
 
