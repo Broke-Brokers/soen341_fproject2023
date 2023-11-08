@@ -1,7 +1,7 @@
 ---
 name: Developpers Unit test
 about: 'DEV UT "task num" - '
-title: ''
+title: DEV Unit Test "task number" - "task title"
 labels: Testing
 assignees: ''
 
