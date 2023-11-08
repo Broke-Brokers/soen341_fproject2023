@@ -30,6 +30,8 @@ export default function BrokerCard({ brokerList }){
   const modifytest = async(nametest, email,phone)=>
   {console.log(nametest,email,phone);}
 
+ 
+
 
     const profilePicture = "https://pointrussell.opencities.com/files/content/public/v/5/council/elected-members/albus-dumbledore/albus-dumbledore.jpg?dimension=pageimage&w=480";
 

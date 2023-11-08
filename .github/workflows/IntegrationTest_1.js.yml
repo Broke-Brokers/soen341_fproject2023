@@ -67,6 +67,8 @@ jobs:
     - run: npm i @testing-library/user-event
     - run: npm i babel-plugin-macros
     - run: npm install react-test-renderer
+    - run : npm install --save-dev jest
+
     # firebase
     - run: npm i firebase
 

@@ -105,6 +105,9 @@ npm install @emailjs/browser --save
 ### Pop up
 npm i reactjs-popup
 
+### Jest 
+  npm install --save-dev jest
+
 ## Available Scripts
 
 In the project directory, you can run:
