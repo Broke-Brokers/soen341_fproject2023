@@ -5,13 +5,8 @@ import BrokerCard from '../components/property-page/BrokerCard';
 import PropertyGallery from '../components/property-page/PropertyGallery';
 import PropertyInfo from '../components/property-page/PropertyInfo';
 
-
-
-
 function PropertyPage() {
-  return (
-    
-    
+    return(
 <>
 <PropertyGallery/>
    <div>
@@ -20,13 +15,10 @@ function PropertyPage() {
       </div>
       <div>
   
-    
-  
   </div>
     
     </>
- 
-  )
+   
+);
 }
-
 export default PropertyPage

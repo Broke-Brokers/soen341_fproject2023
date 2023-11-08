@@ -53,3 +53,23 @@ h1{
 i{
     color: #EE7EA0;
 }
+
+
+/* Offer Button style */
+.offer-button {
+    border-radius: 5px;
+    background-color: rgb(177, 95, 95);
+    color: white;
+    padding: 20px 30px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    float:left;
+    margin : 5%;
+  }
+  
+  /* Button hover effect (optional) */
+  .offer-button:hover {
+    background-color: rgb(206, 21, 21);
+
+  }
