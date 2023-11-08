@@ -59,10 +59,10 @@ function Card_home() {
         return f
         }
         if (event.target.value=="sale"){
-          return f.PropertyType && f.PropertyType.toLowerCase().includes("single")
+          return f.ListingType && f.ListingType.toLowerCase().includes("sale")
         }
         if (event.target.value=="rent"){
-            return f.PropertyType && f.PropertyType.toLowerCase().includes("quadruplex")
+            return f.ListingType && f.ListingType.toLowerCase().includes("rent")
         }
 
       }))
@@ -113,6 +113,18 @@ function Card_home() {
         if (name === "bathrooms") setBathrooms(value);
       
     };
+
+   
+    const resetFilter = (event)=>{
+      setRecords(Properties.filter((f)=>
+      {
+        
+          return f;
+        
+
+      }))
+    
+    }
 
   return (
     <div className="housecontainer">
@@ -213,6 +225,9 @@ function Card_home() {
   </div>
 )}
 
+<button onClick={() => resetFilter()}>
+          Reset
+        </button>
 
       <div className='properties'>
       {records.map((Property) => (
@@ -220,9 +235,14 @@ function Card_home() {
         <Home_card  Propertylist={Property} /> // Use a unique 'key' prop for each element
       ))}
       </div>
+
+
+      
     </div>
     
-        );
+
+    
+    );
   
         
 }
