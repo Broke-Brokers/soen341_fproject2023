@@ -91,19 +91,19 @@ const createUserProfile = async (userCredential, additionalInfo) => {
                 {view === "Signup" && (
                     <>
                         <div className="titletext">User Type</div>
-                        <select className='dropdown'>
+                        <select className='dropdown' value={userType} onChange={(e) => setUserType(e.target.value)}>
                             <option value="broker">Broker</option>
                             <option value="system_admin">System Admin</option>
                             <option value="home_buyer">Home Buyer</option>
                         </select>
                         <div className='input'>
-                            <img src={user_icon} alt=""/>
-                            <input type="text" placeholder='Surname'/>
-                        </div>
-                        <div className='input'>
-                            <img src={user_icon} alt=""/>
-                            <input type="text" placeholder='Name'/>
-                        </div>
+                        <img src={user_icon} alt=""/>
+                        <input type="text" placeholder='Surname' value={surname} onChange={(e) => setSurname(e.target.value)}/>
+                    </div>
+                    <div className='input'>
+                        <img src={user_icon} alt=""/>
+                        <input type="text" placeholder='Name' value={name} onChange={(e) => setName(e.target.value)}/>
+                    </div>
                     </>
                 )}
     
