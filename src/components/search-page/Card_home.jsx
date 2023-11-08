@@ -224,6 +224,7 @@ function Card_home() {
     
         );
   
+        
 }
 
 export default Card_home
