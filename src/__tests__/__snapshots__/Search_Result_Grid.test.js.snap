@@ -10,5 +10,17 @@ exports[`performs snapshot testing 1`] = `
     placeholder="Search here..."
     type="text"
   />
+  <input
+    id="searchInput2"
+    onChange={[Function]}
+    placeholder="Search Language"
+    type="text"
+  />
+  <input
+    id="searchInput3"
+    onChange={[Function]}
+    placeholder="Search Years of experience"
+    type="number"
+  />
 </div>
 `;
