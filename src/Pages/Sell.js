@@ -6,7 +6,7 @@ function Sell() {
       <h1>Sell</h1>
     <Card_home/>
     </div>
-  )
+  );
 }
 
 export default Sell
