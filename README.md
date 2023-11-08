@@ -82,6 +82,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## install additional components
 ### react cookies
 - npm i js-cookie
+### Error handling
+- npm install react-error-boundary
 ### react image gallery 
 
 - npm install react-image-gallery

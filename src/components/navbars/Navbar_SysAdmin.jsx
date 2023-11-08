@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { Button } from './../Button';
-
+import { ErrorBoundary } from "react-error-boundary";
 import './Navbar.css';
 
-function Navbar() {
+function Navbar_SysAdmin() {
     const [click, setClick] = useState(false);
     const[button,setButton]= useState(true);
     const handleClick = ()=>setClick(!click);
@@ -22,6 +22,7 @@ useEffect(()=>{showButton();},[]);
 window.addEventListener('resize', showButton);
   return (
     <>
+    <ErrorBoundary fallback={<div>Something went wrong</div>}>
    <nav className="navbar">
     <div className="navbar-container"> 
 
@@ -53,8 +54,9 @@ window.addEventListener('resize', showButton);
         
     </div>
    </nav>
+   </ErrorBoundary>
    </>
   );
 }
 
-export default Navbar;
+export default Navbar_SysAdmin;

@@ -61,6 +61,7 @@ jobs:
     - run: npm i @devexpress/dx-grid-core
     - run: npm i bootstrap
     - run : npm i reactjs-popup
+    - run: npm install react-error-boundary
     
    #testing libraries
     - run: npm i @testing-library/jest-dom
