@@ -1,5 +1,19 @@
-import React from 'react';
+import React, {useRef}from 'react';
 import '../property-page/BrokerCard.css' 
+import Admin_Brokers_Grid from '../Profile-page/Admin_Brokers_Grid';
+
+//FOR CRUD BROKER AS AN ADMIN
+// Broker card is parent component
+// Child component is admin_broker_grid
+// function in admin broker grid is called in broker card
+// useRef: reference of child component to access it
+
+
+
+
+
+
+
 
 
 export default function BrokerCard({ brokerList }){
@@ -27,11 +41,12 @@ export default function BrokerCard({ brokerList }){
    */
     
 
-  const modifytest = async(nametest, email,phone)=>
-  {console.log(nametest,email,phone);}
+  
 
 
     const profilePicture = "https://pointrussell.opencities.com/files/content/public/v/5/council/elected-members/albus-dumbledore/albus-dumbledore.jpg?dimension=pageimage&w=480";
+    const RefChild_brokerGrid = useRef();
+    <Admin_Brokers_Grid ref_BrokerGrid={RefChild_brokerGrid}/>
 
 
     return(
@@ -57,9 +72,17 @@ export default function BrokerCard({ brokerList }){
       <li><i class="fas fa-link"></i></li>
     </ul>
   </div>
-  <button onClick={()=>{modifytest(brokerName,email,phoneNumber);}}
+ 
+
+ 
+  <button onClick={()=> RefChild_brokerGrid.current.modifyBroker(brokerName,email,phoneNumber)}>Modify</button>
   
-  >Modify</button>
+
+  
+  
+  
+  
+  
 </div>
 
 </>

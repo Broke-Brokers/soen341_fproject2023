@@ -7,10 +7,6 @@ import Admin_Brokers_Grid from '../components/Profile-page/Admin_Brokers_Grid';
 
 //import Profile from '../Profile'
 import Card_home from '../components/search-page/Card_home';
-<<<<<<< HEAD
-
-=======
->>>>>>> 216a317d35aa8cbbdc839d63c816e0623e4d0cfb
 
 
 function Profile() {

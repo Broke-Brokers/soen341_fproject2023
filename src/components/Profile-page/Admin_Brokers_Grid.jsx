@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {forwardRef, useImperativeHandle}from 'react';
 import BrokerCard from '../property-page/BrokerCard.jsx';
 import './Admin_Brokers_Grid.css';
 import {useState, useEffect} from "react";
@@ -7,8 +7,21 @@ import {db} from '../../firebase_configuration.js'
 import { collection, doc, getDocs, addDoc, updateDoc} from "firebase/firestore";
 
 
+// Broker card is parent component
+// Child component is admin_broker_grid
+// function in admin broker grid is called in broker card
+// ForwardRef: use to reference child component to access it
+// use imperative handle: allows function in child component (broker grid) 
+//to be called by parent component (broker card)
 
-function Admin_Brokers_Grid(){
+
+
+const Admin_Brokers_Grid = forwardRef((ref_BrokerGrid) => {
+
+
+
+
+
   
  // Reading brokers
    const [data, setData] = useState([]);
@@ -87,21 +100,38 @@ const createBroker = async()=>{
   }
   //2.FOR UPDATE
      //2.1 Get id of document in firebase and previous inputs
-  const modifyBroker = async(firebaseID, BrokerID, UsertypeID, ClientFileID, 
-    FirstName, LastName, Username, Email,Password, PhoneNumber )=>{
   
-      setFirebaseID(firebaseID)
-      setNewBrokerID(BrokerID)
-      setNewUserTypeID(UsertypeID)
-      setNewClientFileID(ClientFileID)
-      setNewFirstName(FirstName)
-      setNewLastName(LastName)
-      setNewUserName(Username)
-      setNewEmail(Email)
-      setNewPassword(Password)
-      setNewPhone(PhoneNumber)
-      setShow(true)
-  }
+      const modifyBroker = async( 
+        FirstName, Email, PhoneNumber )=>{
+      
+
+          console.log(FirstName,Email,PhoneNumber);
+          //setFirebaseID(firebaseID)
+          //setNewBrokerID(BrokerID)
+         // setNewUserTypeID(UsertypeID)
+         // setNewClientFileID(ClientFileID)
+         // setNewFirstName(FirstName)
+          //setNewLastName(LastName)
+          //setNewUserName(Username)
+        //  setNewEmail(Email)
+          //setNewPassword(Password)
+         // setNewPhone(PhoneNumber)
+         // setShow(true)
+      }
+
+ // will call modify function in broker card 
+      //write function that will be called from Broker card parent component
+      // use imperative handle parameters: reference & function which we want to call in parent component
+      //modify function is defined below
+      useImperativeHandle(ref_BrokerGrid,()=>({
+        modifyBroker
+        
+      }));
+      
+
+
+
+
   
   const updateBroker = async()=>{
   const updateData= doc(db,"Broker",firebaseID)
@@ -221,19 +251,8 @@ const createBroker = async()=>{
        
 
        
-        <button onClick={()=>{modifyBroker(
-          broker.firebaseID,
-          broker.BrokerID,
-          broker.UsertypeID,
-          broker.ClientFileID,
-          broker.FirstName,
-          broker.LastName,
-          broker.Username,
-          broker.Email,
-          broker.Password,
-          broker.PhoneNumber
-        );}}
-        > Modify</button>
+       
+        
 
 
         
@@ -242,6 +261,6 @@ const createBroker = async()=>{
       })}
   </div>
   );
-}
+});
 
 export default Admin_Brokers_Grid;
