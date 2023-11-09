@@ -41,3 +41,23 @@ Djimens Taylor Mervil (40157253)
   * Integrated mock data to test the grid layout.
 - Initiated database schema design.
 
+--------------------------------------------------------
+Djimens Taylor Mervil (40157253)
+2023-11-05 2 pm to 9 pm
+*****
+- Finalized the design of the login and signup pages:
+  * Created form components for user input.
+  * Implemented form validation logic using React hooks.
+  * Added user feedback mechanisms like success and error notifications.
+- Configured database connections and set up initial data tables.
+
+--------------------------------------------------------
+Djimens Taylor Mervil (40157253)
+2023-11-06 7 am to 7 pm
+*****
+- Enhanced the search function:
+  * Developed logic to handle search queries.
+  * Connected search function to mock data for testing.
+- Researched and integrated useful React libraries for UI/UX improvement.
+- Populated the database with test data and integrated with the frontend.
+
