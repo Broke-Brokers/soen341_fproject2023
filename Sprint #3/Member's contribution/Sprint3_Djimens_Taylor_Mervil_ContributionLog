@@ -8,4 +8,15 @@ Djimens Taylor Mervil (40157253)
   * Created directory structure following best practices.
 - Implemented the foundational architecture of the search function in the search page.
 
+--------------------------------------------------------
+Djimens Taylor Mervil (40157253)
+2023-11-03 4 pm to 7 pm
+*****
+- Designed the search page:
+  * Created React components for search inputs and buttons.
+  * Added placeholders in the UI components in anticipation of backend implementation.
+- Developed a grid component for the search page:
+  * Structured grid for search results.
+  * Implemented responsive design for grid layout.
+
 
