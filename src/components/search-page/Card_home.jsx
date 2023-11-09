@@ -129,9 +129,9 @@ function Card_home() {
   return (
     <div className="housecontainer">
       {/* Render the component for each result in the array */}
-      <input id="searchInput1" type="text" placeholder="Search here..."  onChange={Filter}/>
+      <input id="searchInput1" type="text" placeholder="Enter a city"  onChange={Filter}/>
       <select onChange={Filter_rent_sell} >
-        <option value="all">Select type</option>
+        <option value="all">Select type of listing </option>
         <option value="sale">For Sale</option >
         <option value="rent">For Rent</option>
       </select>
