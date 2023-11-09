@@ -26,6 +26,9 @@ const db = getFirestore(app);
 export default function Search_Result_Grid() {
   const [data, setData] = useState([]);
   const [records, setRecords] = useState([])
+  const [nbYears, setnbYear] = useState()
+
+
   async function getBroker(db) {
     const myBrokers = collection(db, 'Broker');
     const brokerSnapshot = await getDocs(myBrokers);
@@ -51,29 +54,64 @@ export default function Search_Result_Grid() {
     {return f.FirstName && f.FirstName.toLowerCase().includes(event.target.value)}))
   }
 
+
+
   const FilterLanguage = (event)=>{
-    setRecords(data.filter((broker)=>
-    {return broker.Language && broker.Language.toLowerCase().includes(event.target.value);}
-    ));
+    setRecords(data.filter((f)=>
+    {
+      if (event.target.value=="all"){
+      return f
+      }
+      if (event.target.value=="french"){
+        return f.Language && f.Language.toLowerCase().includes("french")
+      }
+      if (event.target.value=="english"){
+          return f.Language && f.Language.toLowerCase().includes("english")
+      }
+
+    }))
+  
   }
   const FilterExperienceYears = (event)=>{
+    if(event.target.value>=0){
+      setnbYear(event.target.value)
+    }else{
+      setnbYear(0)
+    }
     setRecords(data.filter((broker)=>
-    {return broker.ExperienceYears >= parseInt(event.target.value);}
+    { if(event.target.value>=0){
+      return broker.ExperienceYears >= event.target.value;
+    }else{
+      return broker;
+    }
+  }
     ));
   }
-  
+
+  const changeYear = (event)=>{
+    if(event.target.value>=0){
+      setnbYear(event.target.value)
+    }else{
+      setnbYear(0)
+    }
+  }
   return (
     
     <div className="grid-container">
+      <div>
       <input id="searchInput1" type="text" placeholder="Search here..."  onChange={Filter}/>
       {/* Render the component for each result in the array */}
-
-      <input id="searchInput2" type="text" placeholder="Search Language"  onChange={FilterLanguage}/>
+      <select onChange={FilterLanguage} >
+        <option value="all">select language</option>
+        <option value="french">French</option >
+        <option value="english">English</option>
+      </select>
+      
       {/* Render the component for each result in the array */}
      
-      <input id="searchInput3" type="number" placeholder="Search Years of experience"  onChange={FilterExperienceYears}/>
+      <input id="searchInput3" type="number" placeholder="Search Years of experience" value={nbYears} onChange={FilterExperienceYears}/>
       {/* Render the component for each result in the array */}
-      
+      </div>
       {records.map((broker, index) => (
         <BrokerCard key={index} brokerList={broker} /> // Use a unique 'key' prop for each element
       ))}
@@ -82,44 +120,3 @@ export default function Search_Result_Grid() {
 }
 
 
-
-/*
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
-
-
-export default function Search_Result_Grid() {
-    const [brokers, setBrokers] = useState([]);
-
-    async function getBroker(db) {
-        const myBrokers = collection(db, 'Broker');
-        const brokerSnapshot = await getDocs(myBrokers);
-        const brokerList = brokerSnapshot.docs.map(doc => doc.data());
-        setBrokers(brokerList);
-        return brokerList;
-      }
-      
-  useEffect(() => {
-    // Call the getBroker function to fetch the data when the component mounts
-    const fetchData = async () => {
-      const data = await getBroker('Broker'); 
-      
-    };
-    fetchData();
-  }, []);
-
-    // An array to represent the number of results to display
-    // Each item in this array represents a result
-    const itemResults = [1, 2, 3,4,5,6,7,8,9]; // ...as many wanted
-
-    return (
-        <div className="grid-container">
-            {/* Render the component for each results in the array }*/
-          /*  {itemResults.map((broker, index) => (
-                <BrokerCard key={index} brokerList={data} /> // Use a unique 'key' prop for each element
-            ))}
-        </div>
-    );
-    
-/*}*/
