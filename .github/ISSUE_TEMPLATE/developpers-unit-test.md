@@ -1,14 +1,14 @@
 ---
 name: Developpers Unit test
-about: 'DEV UT "task num" - '
+about: Allows developper to show unit test about the feature they implemented
 title: DEV Unit Test "task number" - "task title"
 labels: Testing
 assignees: ''
 
 ---
 
-### This unit test if for issue 
+## This unit test is for issue 
 
-### Expected output 
+##  Expected output 
 
-### Output
+## Output
