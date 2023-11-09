@@ -29,4 +29,16 @@ Djimens Taylor Mervil (40157253)
 - Developed database queries and ensured data integrity.
 - Carried out initial tests to ensure the seamless working of the implemented features.
 --------------------------------------------------------
+--------------------------------------------------------
+Djimens Taylor Mervil (40157253)
+2023-11-04 2 pm to 8 pm
+*****
+- Worked on the profile page:
+  * Designed the layout of the profile page.
+  * Created React components for user details, profile picture, and user activity.
+- Developed a grid component for the profile page:
+  * Created a responsive grid to display user-related data.
+  * Integrated mock data to test the grid layout.
+- Initiated database schema design.
+
 
