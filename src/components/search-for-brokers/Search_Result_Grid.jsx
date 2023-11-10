@@ -7,7 +7,9 @@ import firebase from "firebase/compat/app";
 /*import { getFirestore } from "firebase/firestore";*/
 // Required for side-effects
 import "firebase/firestore";
+import { db } from '../../firebase_configuration.js';
 
+/*
 const firebaseConfig = {
     apiKey: "AIzaSyBkEsZF6ISGAYWGaI9ALstOzHyHlVvqYuQ",
     authDomain: "soen341brokebrokers.firebaseapp.com",
@@ -22,6 +24,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+*/
 
 export default function Search_Result_Grid() {
   const [data, setData] = useState([]);

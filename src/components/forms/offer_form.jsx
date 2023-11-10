@@ -1,7 +1,7 @@
 import React from 'react'
 import {useState, useEffect} from "react";
 import {db} from '../../firebase_configuration.js'
-import { collection, doc, getDocs, addDoc, updateDoc} from "firebase/firestore";
+import { collection, doc, getDocs, addDoc, updateDoc, onSnapshot} from "firebase/firestore";
 import './OfferForm.css'
 function OfferForm() {
   let brokerid = 1; 
@@ -22,26 +22,39 @@ function OfferForm() {
 
 
 
-  useEffect(() => {
 
-    const getClients = async () => {
-      const data = await getDocs(ClientCollectionRef);
-      setClients(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
-      setRecords(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
-     
-  
-    };
+  useEffect(() => {
+       
+    //App component will run once when it loads
+    const getClients = async ()=>{
+    onSnapshot(ClientCollectionRef, (snapshot)=> {
+     //snapshot.docs.maps returns all documents in our firebase
+     // doc.data return the data of each document (Field & variables associated with data)
+     setClients(snapshot.docs.map(doc=> doc.data()));
+     setRecords(snapshot.docs.map(doc=> doc.data()));
+    });
+  };
     const getOffers = async () => {
-      const data = await getDocs(OffersCollectionRef);
-      setOffers(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
+      onSnapshot(OffersCollectionRef, (snapshot)=> {
+        //snapshot.docs.maps returns all documents in our firebase
+        // doc.data return the data of each document (Field & variables associated with data)
+        setOffers(snapshot.docs.map(doc=> doc.data()));
+        setRecords(snapshot.docs.map(doc=> doc.data()));
+       });
       
   
     };
-
-    getOffers();
-    getClients();
-  }, []);
   
+  getClients();
+  getOffers();
+ }, [])
+
+
+
+
+
+
+
 
   const createOffers = async()=>{
     await addDoc(OffersCollectionRef,{
@@ -74,7 +87,7 @@ const ClientSelect=(event)=>{
      
      <div className='rightpart'>
      <select className='selection' onChange={ClientSelect} >
-        <option  value = "" >clients </option>
+        <option  value = "" > Clients </option>
      { Clients.filter(f=> f.BrokerID== brokerid).map(option=>(
         <option value={option.ClientID}>{ option.UserID}</option>
 
