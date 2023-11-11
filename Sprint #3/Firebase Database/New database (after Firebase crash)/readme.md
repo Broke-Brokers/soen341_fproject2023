@@ -5,3 +5,4 @@
 - Researching on this crash, we learned that our queries to search an info in our database do to much readings 
 - So we had to create a new database with a new account and change how all our components do queries in the database
 - Our research concludes that our queries needs to interacts with snapshot of the database instead of the database itself
+- See #298 for more info (https://github.com/Broke-Brokers/Broke_BRokers-soen341projectF2023/issues/298)
