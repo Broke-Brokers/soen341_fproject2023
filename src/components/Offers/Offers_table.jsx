@@ -1,34 +1,60 @@
 import React, { useState, useEffect } from "react";
-import { collection, getDocs, onSnapshot } from "firebase/firestore";
+import { collection, onSnapshot } from "firebase/firestore";
 
 import {db} from '../../firebase_configuration'
 import './Offers_table.css'
 
 const Offers_table = () => {
-    const [clientOffers, setClientOffers] = useState([]); // Renamed and fixed variable name
-    const myCollection= collection(db,'BrokerTest');
-    // Set up the collection reference
-   // const clientOffersCollectionRef = collection(db, "Offers");
-
+    const [clients, setClients] = useState([]); // Renamed and fixed variable name
+    const [brokers, setBrokers] = useState ([]);
+    const [offers, setOffers] = useState([]);
+    const [records, setRecords] = useState([]);
+    const brokerCollectionRef= collection(db,'Broker');
+    const ClientCollectionRef = collection (db,'Client');
+   const offersCollectionRef = collection(db, "Offers");
+   let brokerid = "isa@gmail.com";
 
     useEffect(() => {
        
+        const getbrokers = async ()=>{
        //App component will run once when it loads
-       onSnapshot(myCollection, (snapshot)=> {
+       onSnapshot(brokerCollectionRef, (snapshot)=> {
         //snapshot.docs.maps returns all documents in our firebase
         // doc.data return the data of each document (Field & variables associated with data)
-        setClientOffers(snapshot.docs.map(doc=> doc.data()))
+        setBrokers(snapshot.docs.map(doc=> doc.data()))
        });
-       /*
-        const getClientOffer = async () => {
-            const data = await getDocs(clientOffersCollectionRef);
-            const offersData = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-            setClientOffers(offersData);
-        };
+    };
 
-        getClientOffer();
-        */
+
+    const getClients = async ()=>{
+        onSnapshot(ClientCollectionRef,(snapshot)=>{
+            setClients(snapshot.docs.map(doc=>doc.data()))
+        });
+
+    };
+
+    const getOffers = async ()=>{
+        onSnapshot(offersCollectionRef,(snapshot)=>{
+            setOffers(snapshot.docs.map(doc=>doc.data()))
+        });
+
+    };
+
+    getbrokers();
+    getClients();
+    getOffers();
+        
     }, [])
+
+
+
+const FilterClient = (client)=>{
+setRecords(client.filter((c)=>{
+    return c.BrokerID && brokerid
+}))};
+
+
+
 
     return (
         <div className="app-container">
@@ -41,11 +67,11 @@ const Offers_table = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {clientOffers.map(({CIDTest, IDTest,NameTest}) => (
-                        <tr key={CIDTest}>
-                            <td>{CIDTest}</td> {/* Assuming 'ClientID' is a field in your Firestore document */}
-                            <td>{NameTest}</td> {/* Assuming 'Price' is a field in your Firestore document */}
-                            <td>Pending </td>
+                    {offers.filter(offer=> offer.BrokerID_transmitter === brokerid).map((option) => (
+                        <tr key={option.ClientName}>
+                            <td>{option.ClientName}</td> 
+                            <td>{option.Price}</td> 
+                            <td>{option.OfferStatus} </td>
                         </tr>
                     ))}
                 </tbody>
