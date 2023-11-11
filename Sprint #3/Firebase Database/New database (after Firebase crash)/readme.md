@@ -1,0 +1,7 @@
+- November 9th at midnight, our database in Firebase has crashed due to exceed quotas. 
+- Indeed, the free account we had allows us to read, write and delete 50 000 times in our database per day. 
+- We had to wait November 10th midnight to continue working on our project. 
+- November 10th at midnight, we see our database was blocked again just by reloading our website
+- Researching on this crash, we learned that our queries to search an info in our database do to much readings 
+- So we had to create a new database with a new account and change how all our components do queries in the database
+- Our research concludes that our queries needs to interacts with snapshot of the database instead of the database itself
