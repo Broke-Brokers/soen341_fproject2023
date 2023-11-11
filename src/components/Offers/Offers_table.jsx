@@ -52,10 +52,11 @@ const Offers_table = () => {
 
 
 const answerSelect=async (event)=>{
-    setOfferStatus(event.target.value);
+
+const [offerID, offerStatus] = event.target.value.split('|');
     const updateData = doc (db,"Offers",offerID)
 
-    await updateData(updateData,{
+    await updateDoc(updateData,{
         OfferStatus: offerStatus
     });
   }
@@ -102,8 +103,8 @@ const answerSelect=async (event)=>{
                             <td>
                                 <select className="selection" onChange={answerSelect}>
                                     <option defaultValue="Pending"> Pending </option>
-                                    <option value = "Accepted">Accepted</option>
-                                    <option value = "Refused">Refused</option>
+                                    <option value = {`${option.ClientName}|Accepted`}>Accepted</option>
+                                    <option value = {`${option.ClientName}|Refused`}>Refused</option>
                                 </select>
                             </td>
                         </tr>
