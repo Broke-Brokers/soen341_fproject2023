@@ -90,6 +90,7 @@ setRecords(Clients.filter((c)=>
       BrokerID_transmitter: getBrokerID_transmitter,
       ClientID: getClientID,
       OfferID:getOfferID,
+      OfferStatus:"",
       Price:getPrice
       
       

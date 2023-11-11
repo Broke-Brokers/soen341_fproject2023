@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { collection, onSnapshot } from "firebase/firestore";
+import { collection, onSnapshot, updateDoc, doc} from "firebase/firestore";
 
 import {db} from '../../firebase_configuration'
 import './Offers_table.css'
@@ -9,10 +9,11 @@ const Offers_table = () => {
     const [brokers, setBrokers] = useState ([]);
     const [offers, setOffers] = useState([]);
     const [records, setRecords] = useState([]);
+   const [offerStatus, setOfferStatus] = useState("");
     const brokerCollectionRef= collection(db,'Broker');
     const ClientCollectionRef = collection (db,'Client');
    const offersCollectionRef = collection(db, "Offers");
-   let brokerid = "isa@gmail.com";
+   let brokeremail = "isa@gmail.com";
 
     useEffect(() => {
        
@@ -48,16 +49,22 @@ const Offers_table = () => {
 
 
 
-const FilterClient = (client)=>{
-setRecords(client.filter((c)=>{
-    return c.BrokerID && brokerid
-}))};
 
 
+const answerSelect=async (event)=>{
+    setOfferStatus(event.target.value);
+    const updateData = doc (db,"Offers",offerID)
+
+    await updateData(updateData,{
+        OfferStatus: offerStatus
+    });
+  }
 
 
     return (
+        
         <div className="app-container">
+            <h1>Offer sent</h1>
             <table>
                 <thead>
                     <tr>
@@ -67,7 +74,7 @@ setRecords(client.filter((c)=>{
                     </tr>
                 </thead>
                 <tbody>
-                    {offers.filter(offer=> offer.BrokerID_transmitter === brokerid).map((option) => (
+                    {offers.filter(offer=> offer.BrokerID_transmitter === brokeremail).map((option) => (
                         <tr key={option.ClientName}>
                             <td>{option.ClientName}</td> 
                             <td>{option.Price}</td> 
@@ -76,6 +83,35 @@ setRecords(client.filter((c)=>{
                     ))}
                 </tbody>
             </table>
+            
+            
+            <h1>Offer received </h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Client Name</th>
+                        <th>Offer Price ($)</th>
+                        <th>Answer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {offers.filter(offer=> offer.BrokerID_receiver === brokeremail).map((option) => (
+                        <tr key={option.ClientName}>
+                            <td>{option.ClientName}</td> 
+                            <td>{option.Price}</td> 
+                            <td>
+                                <select className="selection" onChange={answerSelect}>
+                                    <option defaultValue="Pending"> Pending </option>
+                                    <option value = "Accepted">Accepted</option>
+                                    <option value = "Refused">Refused</option>
+                                </select>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+
+
         </div>
     );
 };
