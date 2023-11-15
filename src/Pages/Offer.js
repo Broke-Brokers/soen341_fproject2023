@@ -7,8 +7,8 @@ function Offer(){
         <div> 
     
     <Offers_table/>
-    <h1>Offer sent</h1>
-    <h1>Offer received</h1>
+    
+    
     </div>
    
     )

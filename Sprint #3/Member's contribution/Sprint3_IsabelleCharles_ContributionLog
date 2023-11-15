@@ -1,4 +1,4 @@
-TOTAL TIME SPENT FOR SPRINT 3: 23h
+TOTAL TIME SPENT FOR SPRINT 3: 48h
 
 -----------------------------------------
 ------------------------------------------------------------------------------------
@@ -52,3 +52,12 @@ Chrisdonia Isabelle Charles (40212996)
 - [#37](https://github.com/Broke-Brokers/Broke_BRokers-soen341projectF2023/issues/37)
 - #57 
 - created new issues to resole [#160](https://github.com/Broke-Brokers/Broke_BRokers-soen341projectF2023/issues/160)
+
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+Chrisdonia Isabelle Charles (40212996)
+2023-11-06 to 2023-11-10 25h
+- Search for broker language & years of experience filter
+- Offer table in offer page to allows a broker to manage offer link to database
+- Research on Firebase quota exceed
+- Make "make an offer form" "offers_table" "admin_broker" "broker result gallery grid" reads snapshot of firebase

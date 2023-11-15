@@ -4,7 +4,7 @@ import './Admin_Brokers_Grid.css';
 import {useState, useEffect} from "react";
 //allows connection to firebase
 import {db} from '../../firebase_configuration.js'
-import { collection, doc, getDocs, addDoc, updateDoc} from "firebase/firestore";
+import { collection, doc, getDocs, addDoc, updateDoc, onSnapshot} from "firebase/firestore";
 
 
 
@@ -13,22 +13,22 @@ function Admin_Brokers_Grid(){
  // Reading brokers
    const [data, setData] = useState([]);
     const [records, setRecords] = useState([])
-    async function getBroker(db) {
-      const myBrokers = collection(db, 'Broker');
-      const brokerSnapshot = await getDocs(myBrokers);
-      const brokerList = brokerSnapshot.docs.map(doc => doc.data());
-      return brokerList;
-    }
+    const myBrokers = collection(db, 'Broker');
   
     useEffect(() => {
       // Call the getBroker function to fetch the data when the component mounts
-      const fetchData = async () => {
-        const brokerData = await getBroker(db);
-        setData(brokerData); // Set the data in state
-        setRecords(brokerData);
+      const getBroker = async () => {
+
+        onSnapshot(myBrokers,(snapshot)=>{
+          setData(snapshot.docs.map(doc=>doc.data()));
+          setRecords(snapshot.docs.map(doc=>doc.data()));
+
+
+        })
+        
       };
-      fetchData();
-    }, [db]); // Include 'db' as a dependency to ensure useEffect is called when it changes
+      getBroker();
+    }, []); 
   
 
 //MANUAL CRUD: to store in firebase
@@ -61,7 +61,6 @@ const [show,setShow] = useState(false)
     const data = await getDocs(brokersCollectionRef);
     //setting brokers array = array of document data & id for each document
     setBrokers(data.docs.map((doc)=>({...doc.data(), id:doc.id})));
-    const myBrokerList = data.docs.map(doc => doc.data());
 
     
   };

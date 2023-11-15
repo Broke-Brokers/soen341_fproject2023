@@ -10,7 +10,7 @@ import Navbar_Brokers from './components/navbars/Navbar_Brokers.jsx'
 import Footer from './components/Footer';
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import Home from './Pages/Home';
-import Sell from './Pages/Sell';
+import MakeOffer from './Pages/MakeOffer.js';
 import Buy from './Pages/Buy';
 import Broker from './Pages/Broker';
 import Sign from './Pages/Sign';
@@ -61,7 +61,7 @@ function navbarChoice(){
 
     <Routes>
       <Route path='/' exact element = {<Home/>} ></Route>
-      <Route path='/sell' exact element = {<Sell/>} ></Route>
+      <Route path='/makeoffer' exact element = {<MakeOffer/>} ></Route>
       <Route path='/sign-in' exact element = {<Sign/>} ></Route>
       <Route path='/buy' exact element = {<Buy/>} ></Route>
       <Route path='/Broker' exact element = {<Broker/>} ></Route>
