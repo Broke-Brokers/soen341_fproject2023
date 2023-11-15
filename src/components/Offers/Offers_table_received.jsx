@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from '../../firebase_configuration.js';
-import './Offers_table.css'
+import './Offers_table_received.css'
 
-const Offers_table = () => {
+const Offers_table_received = () => {
     const [clientOffers, setClientOffers] = useState([]); // Renamed and fixed variable name
 
     // Set up the collection reference
@@ -17,7 +17,7 @@ const Offers_table = () => {
         };
 
         getClientOffer();
-    }, [/*clientOffersCollectionRef*/]); // Added dependency to prevent unnecessary re-renders
+    }, [clientOffersCollectionRef]); // Added dependency to prevent unnecessary re-renders
 
     return (
         <div className="app-container">
@@ -43,4 +43,4 @@ const Offers_table = () => {
     );
 };
 
-export default Offers_table;
+export default Offers_table_received;
