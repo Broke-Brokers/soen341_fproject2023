@@ -6,14 +6,19 @@ import { useState } from 'react';
 export default function MortgageCalculator(){
 
     const [monthlyPayment, setMonthlyPayment] = useState([0]);
-    function calculateMortgage(){
-      
-        /*here goes the function to calculate the mortgage and returns the monthly payment  */
- setMonthlyPayment(100);
- return;
-    }
+    
+    
+    //Function   to calculate the mortgage monthly payment
+    // input : information from the form
+    // return : monthlyPayment amount
+        function calculateMortgage(){   
+    setMonthlyPayment(100);
+        return;
+                                 }
 
-    return(
+
+     // component return statement
+     return(
 
 // Outter container
 <div className ="mortgageCalculator_container" >
@@ -24,11 +29,10 @@ export default function MortgageCalculator(){
 {/*the mortgage calculator form*/}
     <form >
     <div className='inputs'>
-                    <div className='input'>
-                        
-                        <input type="" placeholder='an input' value="aValue" /> 
-                    </div>
-                    </div>
+     <div className='input'>       
+      <input type="" placeholder='an input' value="aValue" /> 
+        </div>
+         </div>
 
         <button type="button"  className="calculate" onClick={calculateMortgage} > Calculate</button>
 </form>
