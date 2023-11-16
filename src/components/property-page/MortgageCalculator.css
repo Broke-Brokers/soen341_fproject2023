@@ -1,55 +1,62 @@
 .mortgageCalculator_container {
-    border-left:  30px solid #ee7ea0;
-    border-top : 1px solid #d2d2d2;
-    box-shadow: 5px 6px 0px #D2D2D2;
-    transition: 0.3s all;
-    border-radius: 3px;
-    background-color: #fff;
-    padding: 21px;
+    font-family: 'Arial', sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .pretty-text {
+    color: #EE7EA0;
+    margin-bottom: 20px;
+}
+
+
+  /* Styling for the input fields */
+  .mortgageCalculator_container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Styling for the 'Calculate' button */
+  .mortgageCalculator_container {
+    /* Other styles */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
-    /*min-width: 340px;*/
-   max-width: 100%;
-   min-width :60%;
-   display: inline-block;
-   margin:1%;
-   vertical-align: center;
+    align-items: center;
 }
 
-.calculate{
-    margin : 25px;
+.mortgageCalculator_container button {
+    background-color: #EE7EA0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    /* Remove the flex properties from the button */
+}
+  
+  /* Hover effect for the button */
+  .mortgageCalculator_container button:hover {
+    background-color: #EE7EA0; /* Darker orange for hover state */
+  }
+  
+  /* Styling for the results display */
+  .mortgageCalculator_container h3 {
+    background-color: white;
+    color: #333;
     padding: 15px;
-  border-color: transparent;
-  border-radius: 4px;
-  background-color: #ee7ea0;
-  color: white;
-  cursor: pointer;
-  
-  
-}
-
-.calculate:hover{
-    background-color: #EDBCCF;
-}
-
-
-
-/*form css*/
-
-.inputs{
-    margin-top: 55px;
-    display:flex;
-    flex-direction: column;
-    gap:25px;
-}
-.input{
-    display:flex;
-    align-items:center;
-    margin: auto;
-    height: 80px;
-    background: #eaeaea;
-    border-radius: 6px;
-    margin-top: 3%;
-}
+    margin-top: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
