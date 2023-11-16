@@ -1,4 +1,5 @@
 {
+  "homepage": "http://broke-brokers.github.io/Broke_BRokers-soen341projectF2023",
   "name": "broke_broker",
   "version": "0.1.0",
   "private": true,
@@ -40,6 +41,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -64,6 +67,7 @@
   "devDependencies": {
     "enzyme": "^3.11.0",
     "enzyme-to-json": "^3.6.2",
+    "gh-pages": "^6.0.0",
     "jest": "^27.5.1"
   }
 }
