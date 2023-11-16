@@ -13,6 +13,8 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } f
 import { auth } from '../firebase_configuration' // make sure this path is correct
 import { getFirestore, doc, setDoc, getDoc } from 'firebase/firestore';
 
+import Cookies from 'js-cookie';
+
 
 
 // Initialize Firestore
@@ -38,6 +40,8 @@ const createUserProfile = async (userCredential, additionalInfo) => {
 
   const LoginSignup = () => {
 
+    
+
     const navigate = useNavigate();
 
     const [view, setView] = useState("Login");
@@ -49,35 +53,46 @@ const createUserProfile = async (userCredential, additionalInfo) => {
     const [name, setName] = useState("");
     const [userType, setUserType] = useState("broker");
 
-    const navigateToHome = () => {
-        // Redirect user to the main home page after showing success message
-        navigate('/');
-    };
+        // Function to handle user login
+        const handleLogin = (userType) => {
+            Cookies.set('usertypeID', userType);
+            window.dispatchEvent(new Event('cookieChange'));
+        };
+    
+        // Function to navigate to home after successful login/signup
+        const navigateToHome = () => {
+            navigate('/');
+        };
+
     const register = async () => {
         try {
-            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-            const additionalInfo = { surname, name, userType };
-            await createUserProfile(userCredential, additionalInfo);
-            setSuccess("Successfully signed up! Redirecting to home page...");
-            setError("");
-            navigateToHome();
+          const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+          const additionalInfo = { surname, name, userType };
+          await createUserProfile(userCredential, additionalInfo);
+          handleLogin(userType); // Call handleLogin with the correct user type
+          setSuccess("Successfully signed up! Redirecting to home page...");
+          setError("");
+          navigateToHome();
         } catch (err) {
-            setError(err.message);
-            setSuccess("");
+          setError(err.message);
+          setSuccess("");
         }
-    };
-
-    const login = async () => {
+      };
+    
+      const login = async () => {
         try {
-            const userCredential = await signInWithEmailAndPassword(auth, email, password);
-            // You can now access the signed-in user's information with userCredential.user
-            setError("");
-            // Redirect user to the dashboard or home page
-            navigate('/'); 
+          const userCredential = await signInWithEmailAndPassword(auth, email, password);
+          // Get the user type from the user's profile or another method
+          const userProfile = await getUserProfile(userCredential.user.uid);
+          if (userProfile) {
+            handleLogin(userProfile.userType); // Call handleLogin with the correct user type
+          }
+          setError("");
+          navigate('/');
         } catch (err) {
-            setError(err.message);
+          setError(err.message);
         }
-    };
+      };
     
         return (
             <div className='container'>
