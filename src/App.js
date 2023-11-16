@@ -12,10 +12,8 @@ import Navbar_Brokers from './components/navbars/Navbar_Brokers';
 
 // Components
 import Footer from './components/Footer';
-import Request_visite from './components/Request_visite';
 
 // Pages
-
 import Home from './Pages/Home';
 import MakeOffer from './Pages/MakeOffer.js';
 import Buy from './Pages/Buy';
