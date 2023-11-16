@@ -123,12 +123,7 @@ const ClientSelect=(event)=>{
       <option value={option.ClientID}>{option.ClientName} </option>
       ) )}
       </select>
-
-
-
-
-
-      
+     
       <label className='labelUserEmail'>Your email <em>&#x2a;</em></label>
       <input className='user_email' type="email" placeholder="Email"   
        onChange={(event)=> {

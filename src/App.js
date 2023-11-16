@@ -25,9 +25,15 @@ import Cookies from 'js-cookie';
 // import fontawesome library
 //import './fontawesome';
 
+
+
+
+//Render app in the root
+
+
 // set the cookie for usertype
 //guest = 0 , system admin =1 , broker=2 , homebuyer/renter =3
-Cookies.set('usertypeID', '2')
+Cookies.set('usertypeID', '0')
 
 
 
