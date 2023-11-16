@@ -1,9 +1,63 @@
-TOTAL TIME SPENT FOR SPRINT 2: 34 Hours
------------------------------------------
-------------------------------------------------------------------------------------
+TOTAL TIME SPENT FOR SPRINT 2: 31 Hours
+--------------------------------------------------------
 Djimens Taylor Mervil (40157253)
-2023-10-03 3 pm to 10 pm
+2023-11-02 3 pm to 10 pm
 *****
 - Initialized the React project structure.
   * Set up initial dependencies.
-  * Created directory struc
+  * Created directory structure following best practices.
+- Implemented the foundational architecture of the search function in the search page.
+
+--------------------------------------------------------
+Djimens Taylor Mervil (40157253)
+2023-11-03 4 pm to 7 pm
+*****
+- Designed the search page:
+  * Created React components for search inputs and buttons.
+  * Added placeholders in the UI components in anticipation of backend implementation.
+- Developed a grid component for the search page:
+  * Structured grid for search results.
+  * Implemented responsive design for grid layout.
+
+
+--------------------------------------------------------
+Djimens Taylor Mervil (40157253)
+2023-11-09 2 pm to 4 pm
+*****
+- Code refactoring and optimization.
+- Worked on integrating the frontend with potential backend endpoints.
+- Developed database queries and ensured data integrity.
+- Carried out initial tests to ensure the seamless working of the implemented features.
+--------------------------------------------------------
+--------------------------------------------------------
+Djimens Taylor Mervil (40157253)
+2023-11-04 2 pm to 8 pm
+*****
+- Worked on the profile page:
+  * Designed the layout of the profile page.
+  * Created React components for user details, profile picture, and user activity.
+- Developed a grid component for the profile page:
+  * Created a responsive grid to display user-related data.
+  * Integrated mock data to test the grid layout.
+- Initiated database schema design.
+
+--------------------------------------------------------
+Djimens Taylor Mervil (40157253)
+2023-11-05 2 pm to 9 pm
+*****
+- Finalized the design of the login and signup pages:
+  * Created form components for user input.
+  * Implemented form validation logic using React hooks.
+  * Added user feedback mechanisms like success and error notifications.
+- Configured database connections and set up initial data tables.
+
+--------------------------------------------------------
+Djimens Taylor Mervil (40157253)
+2023-11-06 7 am to 7 pm
+*****
+- Enhanced the search function:
+  * Developed logic to handle search queries.
+  * Connected search function to mock data for testing.
+- Researched and integrated useful React libraries for UI/UX improvement.
+- Populated the database with test data and integrated with the frontend.
+

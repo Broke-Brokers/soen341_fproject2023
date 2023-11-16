@@ -1,12 +1,45 @@
+TOTAL TIME SPENT FOR SPRINT 3: 34 hours
 
-Contribution Log Sprint 3 Peumi Junior
-
-TOTAL TIME SPENT FOR SPRINT 2: 
-
------------------------------------------
-------------------------------------------------------------------------------------
+--------------------------------------------------------
 Peumi Junior (40190355)
-2023-10-01 12pm to 8pm
+2023-11-02 3 pm to 10 pm
 *****
-- create the backbone for sell, buy and broker
-- stating implemented
+- Set up React components and state management for the Sell feature.
+- Integrated API endpoints for property submissions.
+
+--------------------------------------------------------
+Peumi Junior (40190355)
+2023-11-03 4 pm to 7 pm
+*****
+- Developed the Buy feature, including property listing components and filters.
+- Implemented the backend call for fetching property data.
+
+--------------------------------------------------------
+Peumi Junior (40190355)
+2023-11-04 2 pm to 8 pm
+*****
+- Established the Broker feature with user role management and permissions.
+- Created broker profile components and linked them with backend services.
+
+--------------------------------------------------------
+Peumi Junior (40190355)
+2023-11-05 2 pm to 9 pm
+*****
+- Enhanced the Search for Broker functionality with advanced filtering.
+- Implemented the connection with Firebase for real-time data updates.
+
+--------------------------------------------------------
+Peumi Junior (40190355)
+2023-11-06 7 am to 1 pm
+*****
+- Finalized the Search for Property feature with geolocation services and map integration.
+- Optimized property search results with pagination and sorting capabilities.
+
+--------------------------------------------------------
+Peumi Junior (40190355)
+2023-11-07 3 pm to 8 pm
+*****
+- Developed the Request Offer feature with form components and validation logic.
+- Set up secure communication with the server for offer submissions and data handling.
+
+--------------------------------------------------------

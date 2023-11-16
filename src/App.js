@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import './App.css';
 
+
 // Navbars
 import Navbar_Homebuyer from './components/navbars/Navbar_Homebuyer';
 import Navbar from './components/navbars/Navbar';
@@ -14,8 +15,9 @@ import Footer from './components/Footer';
 import Request_visite from './components/Request_visite';
 
 // Pages
+
 import Home from './Pages/Home';
-import Sell from './Pages/Sell';
+import MakeOffer from './Pages/MakeOffer.js';
 import Buy from './Pages/Buy';
 import Broker from './Pages/Broker';
 import Sign from './Pages/Sign';
@@ -24,7 +26,12 @@ import PropertyPage from './Pages/PropertyPage';
 import Profile from './Pages/Profile';
 import Search from './Pages/Search';
 import SearchForBrokers from './Pages/SearchForBrokers';
+
 import Offer from './Pages/Offer';
+import Request_visite from './components/Request_visite';
+
+
+
 
 function App() {
   const [userType, setUserType] = useState(Cookies.get('usertypeID') || 'guest');
@@ -63,6 +70,7 @@ function App() {
   }
 
   return (
+
     <Router>
       {navbarChoice()} {/* Render the navbar based on the userType */}
       <Routes>
@@ -82,6 +90,7 @@ function App() {
       </Routes>
       <Footer />
     </Router>
+
   );
 }
 
