@@ -1,14 +1,18 @@
 import './App.css';
 import React from 'react';
-
+import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+import Cookies from 'js-cookie';
 
 //navbars
 import Navbar_Homebuyer from './components/navbars/Navbar_Homebuyer'
 import Navbar from './components/navbars/Navbar.js';
 import Navbar_SysAdmin from './components/navbars/Navbar_SysAdmin.jsx' 
 import Navbar_Brokers from './components/navbars/Navbar_Brokers.jsx' 
+
+//footer
 import Footer from './components/Footer';
-import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+
+//pages
 import Home from './Pages/Home';
 import MakeOffer from './Pages/MakeOffer.js';
 import Buy from './Pages/Buy';
@@ -21,10 +25,6 @@ import Search from './Pages/Search';
 import SearchForBrokers from './Pages/SearchForBrokers';
 import Request_visite from './components/Request_visite';
 import Offer from './Pages/Offer.js';
-import Cookies from 'js-cookie';
-// import fontawesome library
-//import './fontawesome';
-
 
 
 
