@@ -69,7 +69,7 @@ function App() {
   }
 
   return (
-
+<>
     <Router>
       {navbarChoice()} {/* Render the navbar based on the userType */}
       <Routes>
@@ -91,7 +91,7 @@ function App() {
       </Routes>
       <Footer />
     </Router>
-
+    </>
   );
 }
 
