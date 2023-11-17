@@ -29,7 +29,7 @@ import SearchForBrokers from './Pages/SearchForBrokers';
 import Offer from './Pages/Offer';
 import Request_visite from './components/Request_visite';
 
-
+//this is a test , it can be removed after
 
 
 function App() {
@@ -74,7 +74,9 @@ function App() {
       {navbarChoice()} {/* Render the navbar based on the userType */}
       <Routes>
         <Route path='/' exact element={<Home />} />
+
        {/* <Route path='/sell' exact element={<Sell />} />*/}
+
         <Route path='/sign-in' exact element={<Sign />} />
         <Route path='/buy' exact element={<Buy />} />
         <Route path='/Broker' exact element={<Broker />} />
