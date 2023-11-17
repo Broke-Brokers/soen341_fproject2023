@@ -12,7 +12,6 @@ import Navbar_Brokers from './components/navbars/Navbar_Brokers';
 
 // Components
 import Footer from './components/Footer';
-//import Request_visite from './components/Request_visite';
 
 // Pages
 
@@ -75,7 +74,9 @@ function App() {
       {navbarChoice()} {/* Render the navbar based on the userType */}
       <Routes>
         <Route path='/' exact element={<Home />} />
-        {/* <Route path='/sell' exact element={<Sell />} /> */}
+
+       {/* <Route path='/sell' exact element={<Sell />} />*/}
+
         <Route path='/sign-in' exact element={<Sign />} />
         <Route path='/buy' exact element={<Buy />} />
         <Route path='/Broker' exact element={<Broker />} />
