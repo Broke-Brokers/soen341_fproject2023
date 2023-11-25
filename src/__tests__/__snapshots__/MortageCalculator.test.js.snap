@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`performs snapshot testing 1`] = `
+<div
+  className="mortgageCalculator_container"
+>
+  <p
+    className="pretty-text"
+  >
+     THE MORTGAGE CALCULATOR
+  </p>
+  <input
+    onChange={[Function]}
+    placeholder="Purchase Price..."
+    type="number"
+  />
+  <br />
+  <input
+    onChange={[Function]}
+    placeholder="Down Payment..."
+    type="number"
+  />
+  <br />
+  <input
+    onChange={[Function]}
+    placeholder="Loan Term..."
+    type="number"
+  />
+  <br />
+  <input
+    onChange={[Function]}
+    placeholder="Loan Interest ..."
+  />
+  <br />
+  <button
+    onClick={[Function]}
+  >
+     Calculate
+  </button>
+  <h3>
+    Monthly Payments: $ 
+    0
+  </h3>
+</div>
+`;
