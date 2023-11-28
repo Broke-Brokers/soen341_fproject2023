@@ -45,7 +45,12 @@ export default function House_Card(props){
     return(
 
         /*<a href="/propertypage">*/<div className="HC_infoContainer">
-
+ <div className="propertiesCards">
+    {/* Map through your data and return a House_Card for each item */}
+    {data.map((property) => (
+      <House_Card key={property.id} {...property} /> // Ensure each House_Card receives a unique 'key' prop
+    ))}
+  </div>
             
       <div className="HC_photoContainer">
       <img src={home_photo} alt=''/>

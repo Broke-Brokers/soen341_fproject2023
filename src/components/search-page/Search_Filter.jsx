@@ -1,3 +1,5 @@
+/*
+
 import React, { useState } from 'react';
 import { Range } from 'react-range';
 import './Search_Filter.css'; 
@@ -113,7 +115,7 @@ function Search_Filter() {
         </button>
         {showPriceDropdown && (
           <div className="price-dropdown">
-            {/* Range component for price selection */}
+           
             <Range
               step={10000} // Define the interval between values
               min={0}
@@ -147,11 +149,11 @@ function Search_Filter() {
                 />
               )}
             />
-            {/* Display the selected range */}
+          
             <div className="price-range-display">
               Price range: ${values[0]} - ${values[1]}
             </div>
-            {/* Confirm button */}
+          
             <button onClick={handlePriceConfirm}>Confirm</button>
           </div>
         )}
@@ -251,6 +253,18 @@ function Search_Filter() {
      
     </div>
   );
+}
+
+export default Search_Filter;
+*/
+import React from 'react';
+// ... other imports
+
+function Search_Filter() {
+  // ... all your state and functions
+  
+  // Render nothing
+  return null;
 }
 
 export default Search_Filter;

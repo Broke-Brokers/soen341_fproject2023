@@ -1,29 +1,49 @@
 .housecontainer {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    /*min-width: 340px;*/
-
-    display: flex;
-    margin: 1%;
-    vertical-align: center;
-
-    .properties {
-        flex-basis: 60%;
-        padding: 40px 60px;
-    }
-
-   
+    flex-direction: row; /* Align children in a row */
+    justify-content: center; /* Center children horizontally */
+    align-items: center; /* Center children vertically */
+    gap: 10px; /* Spacing between items */
+    flex-wrap: wrap; /* Wrap items to next line on smaller screens */
+    margin: 0 auto;
+    padding: 20px;
 }
-.input {
+
+/* Style for the specific search input */
+.housecontainer #searchInput1 {
+    flex-grow: 0; /* Do not allow the input to grow */
+    width: 150px; /* Set a smaller width */
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    flex: 1;
-    /* Allow the items to grow and shrink */
     margin: 5px;
-    /* Add margin for spacing between items */
-    min-width: 100px;
-    /* Set a min-width for better responsiveness */
 }
+
+/* Style for the specific select dropdown */
+.housecontainer select {
+    flex-grow: 0; /* Do not allow the select to grow */
+    width: 180px; /* Set a smaller width */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 5px;
+    background-color: #fff;
+}
+
+/* Style for buttons to not grow and take the minimal space required */
+.housecontainer .price-input button,
+.housecontainer button {
+    flex-grow: 0;
+    padding: 10px;
+    background-color: #ee7ea0; 
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+}
+
+/* Hover effect for buttons */
+.housecontainer button:hover {
+    background-color: #ec5b87; 
+}
+
