@@ -29,29 +29,29 @@ const VisitRequest = () => {
     };
 
     return (
-        <div className='bodyrv'>
-        <div className='container1rv'>
+        <div className='bodyrv1'>
+        <div className='container1rv1'>
             <h1>Request Your Visit</h1>
-            <div className='boxrv'>
-                <div className='left-partrv'>
+            <div className='boxrv1'>
+                <div className='left-partrv1'>
                     <form ref={formRv} onSubmit={sendEmailRv} action="#">
-                        <label className='labelrv'>First Name <em>&#x2a;</em></label>
-                        <input className='inputrv' type="text" placeholder="First Name" name="user_first_name" value={userFirstNameRv} onChange={(e) => setUserFirstNameRv(e.target.value)} required />
-                        <label className='labelrv'>Last Name <em>&#x2a;</em></label>
-                        <input className='inputrv' type="text" placeholder="Last Name" name="user_last_name" value={userLastNameRv} onChange={(e) => setUserLastNameRv(e.target.value)} required />
-                        <label className='labelrv'>Email <em>&#x2a;</em></label>
-                        <input className='inputrv' type="email" placeholder="Email" name="user_email" value={userEmailRv} onChange={(e) => setUserEmailRv(e.target.value)} required />
-                        <label className='labelrv'>Phone Number <em>&#x2a;</em></label>
-                        <input className='inputrv' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" type="tel" placeholder="Phone" name="user_phone" value={userPhoneRv} onChange={(e) => setUserPhoneRv(e.target.value)} required />
-                        <label className='labelrv'>YOUR MESSAGE <em>&#x2a;</em></label>
-                        <textarea className='textarearv' name="message" required="" rows="4" value={messageRv} onChange={(e) => setMessageRv(e.target.value)}></textarea>
-                        <h3 className='h3rv'>Please provide all details.</h3>
-                        <div className='btnrv'>
-                            <input className='inputrv'type="submit" value="Send" />
+                        <label className='labelrv1'>First Name <em>&#x2a;</em></label>
+                        <input className='inputrv1' type="text" placeholder="First Name" name="user_first_name" value={userFirstNameRv} onChange={(e) => setUserFirstNameRv(e.target.value)} required />
+                        <label className='labelrv1'>Last Name <em>&#x2a;</em></label>
+                        <input className='inputrv1' type="text" placeholder="Last Name" name="user_last_name" value={userLastNameRv} onChange={(e) => setUserLastNameRv(e.target.value)} required />
+                        <label className='labelrv1'>Email <em>&#x2a;</em></label>
+                        <input className='inputrv1' type="email" placeholder="Email" name="user_email" value={userEmailRv} onChange={(e) => setUserEmailRv(e.target.value)} required />
+                        <label className='labelrv1'>Phone Number <em>&#x2a;</em></label>
+                        <input className='inputrv1' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" type="tel" placeholder="Phone" name="user_phone" value={userPhoneRv} onChange={(e) => setUserPhoneRv(e.target.value)} required />
+                        <label className='labelrv1'>YOUR MESSAGE <em>&#x2a;</em></label>
+                        <textarea className='textarearv1' name="message" required="" rows="4" value={messageRv} onChange={(e) => setMessageRv(e.target.value)}></textarea>
+                        <h3 className='h3rv1'>Please provide all details.</h3>
+                        <div className='btnrv1'>
+                            <input className='inputrv1'type="submit" value="Send" />
                         </div>
                     </form>
                 </div>
-                <div className='right-partrv'></div>
+                <div className='right-partrv1'></div>
             </div>
         </div>
         </div>

@@ -1,9 +1,9 @@
-*rv {
+*rv1 {
     margin: 0;
     padding: 0;
 }
 
-.bodyrv {
+.bodyrv1 {
     width: 100%;
     height: 100%;
     display: flex;
@@ -18,15 +18,15 @@
     object-fit: contain;
 }
 
-.contact-usrv {
+.contact-usrv1 {
     background: #f8f4e5;
     padding: 50px 100px;
     border-top: 10px solid #f45702;
 }
 
-.labelrv,
-.inputrv,
-.textarearv {
+.labelrv1,
+.inputrv1,
+.textarearv1 {
     display: block;
     width: 100%;
     font-size: 12pt;
@@ -34,11 +34,11 @@
     font-family: "Spartan";
 }
 
-.inputrv {
+.inputrv1 {
     margin-bottom: 24pt;
 }
 
-.h3rv {
+.h3rv1 {
     font-weight: normal;
     font-size: 10pt;
     line-height: 24pt;
@@ -46,17 +46,17 @@
     margin: 0 0 0.5em 0;
 }
 
-.spanrv {
+.spanrv1 {
     font-size: 8pt;
 }
 
-.emrv {
+.emrv1 {
     color: #f45702;
     font-weight: bold;
 }
 
-.inputrv,
-.textarearv {
+.inputrv1,
+.textarearv1 {
     border: none;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 2px;
@@ -65,16 +65,16 @@
     outline: none;
 }
 
-.inputrv:focus,
-.textarearv:focus {
+.inputrv1:focus,
+.textarearv1:focus {
     border: 1px solid #6bd4b1;
 }
 
-.textarearv {
+.textarearv1 {
     resize: none;
 }
 
-.buttonrv {
+.buttonrv1 {
     width: 100px;
     display: block;
     float: right;
@@ -87,29 +87,29 @@
     outline: none;
 }
 
-.buttonrv:hover {
+.buttonrv1:hover {
     background: inherit;
     color: palevioletred;
     border-bottom: 2px solid palevioletred;
 }
 
 
-.container1rv {
+.container1rv1 {
     width: 80%;
     margin: 50px auto;
 }
 
-.boxrv {
+.boxrv1 {
     background: #ffff;
     display: flex;
 }
 
-.left-partrv {
+.left-partrv1 {
     flex-basis: 60%;
     padding: 40px 60px;
 }
 
-.right-partrv {
+.right-partrv1 {
     flex-basis: 60%;
     padding: 40px;
     background: #f2f2f2;
