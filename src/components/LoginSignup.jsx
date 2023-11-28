@@ -13,7 +13,9 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } f
 import { auth } from '../firebase_configuration' // make sure this path is correct
 import { getFirestore, doc, setDoc, getDoc } from 'firebase/firestore';
 
+
 import Cookies from 'js-cookie';
+
 
 
 
@@ -52,6 +54,17 @@ const createUserProfile = async (userCredential, additionalInfo) => {
     const [surname, setSurname] = useState("");
     const [name, setName] = useState("");
     const [userType, setUserType] = useState("broker");
+    
+//---------------------------------------------------------------------------
+    const [selectedUserType, setSelectedUserType] = useState("guest"); 
+
+    // Function to handle setting user type cookie for testing
+  const setUserTypeForTesting = (selectedUserType) => {
+    Cookies.set('usertypeID', selectedUserType);
+    window.dispatchEvent(new Event('cookieChange'));
+    navigate('/'); // Redirect to home page
+  };
+//---------------------------------------------------------------------------
 
         // Function to handle user login
         const handleLogin = (userType) => {
@@ -93,24 +106,50 @@ const createUserProfile = async (userCredential, additionalInfo) => {
           setError(err.message);
         }
       };
-    
-        return (
-            <div className='container'>
-                <div className="header">
-                    <div className="text">{view}</div>
-                    <div className="underline"></div>
-                    <div className="toggleView" onClick={() => setView(view === "Login" ? "Signup" : "Login")}>
-                        <div className={`switch`} data-view={view}>
-                            <div className="switch-slider"></div>
-                            <div className="switch-label">
-                                {view === "Login" ? "Signup" : "Login"}
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    //-----------------------------------------------------------
+   
+     // Function to set cookie and dispatch event to update userType in the App component
+  const setUserTypeAndRedirect = (userType) => {
+    Cookies.set('usertypeID', userType);
+    window.dispatchEvent(new Event('cookieChange'));
+    navigate('/'); // Redirect to home page
+  };
 
-                {success && <div className="success">{success}</div>} {/* Display success messages */}
-               
+    //---------------------------------------------------------------
+    return (
+      <div className='container'>
+        <div className="header">
+          <div className="text">{view}</div>
+          <div className="underline"></div>
+          <div className="toggleView" onClick={() => setView(view === "Login" ? "Signup" : "Login")}>
+            <div className={`switch`} data-view={view}>
+              <div className="switch-slider"></div>
+              <div className="switch-label">
+                {view === "Login" ? "Signup" : "Login"}
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        {success && <div className="success">{success}</div>} {/* Display success messages */}
+  
+        {/* Dropdown for testing user type without login/signup */}
+        {view === "Login" && (
+                      <>
+                        <div className="titletext-testing">User Type for Testing</div>
+                        <div className='dropdown-testing input'>
+                          <select value={userType} onChange={(e) => setUserType(e.target.value)}>
+                            <option value="guest">Guest</option>
+                            <option value="broker">Broker</option>
+                            <option value="system_admin">System Admin</option>
+                            <option value="home_buyer">Home Buyer</option>
+                          </select>
+                        </div>
+                        <button className="submit-testing" onClick={() => setUserTypeAndRedirect(userType)}>
+                          (Test)
+                        </button>
+                      </>
+                    )}
                 {view === "Signup" && (
                     <>
                         <div className="titletext">User Type</div>

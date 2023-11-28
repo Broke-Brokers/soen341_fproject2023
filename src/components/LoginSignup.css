@@ -177,3 +177,70 @@
     font-weight: 700;
     pointer-events: none;
 }
+
+.titletext-testing {
+    margin-top: 6%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    font-size: 19px;
+    color: #797979;
+    justify-content: center; /* Center the title text horizontally */
+    margin-bottom: 2%;
+}
+
+/* Style for the User Type for Testing dropdown */
+.dropdown-testing {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    height: 20px;
+    background: #eaeaea;
+    border-radius: 6px;
+    width: 400px;
+    text-align: center;
+    font-size: 19px;
+    margin-top: 4%; /* Adjust the margin to provide space from the title */
+    margin-bottom: 4%;
+}
+
+/* Style for the Set User Type & Redirect (Test) button */
+.submit-testing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 37px;
+    color: #fff;
+    background: #EE7EA0;
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    margin: auto;
+   
+}
+
+/* ...existing styles... */
+
+/* Adjust the dropdown to fill its container, matching other inputs */
+.input select {
+    height: 50px; /* Match the height of your other input fields */
+    width: 100%; /* Make the select fill the container */
+    background: transparent; /* Match the input field background */
+    border: none; /* Remove the default border */
+    color: #797979; /* Match the input field text color */
+    font-size: 19px; /* Match the input field font size */
+    padding-left: 30px; /* Add padding to match the input text indent */
+    -webkit-appearance: none; /* Remove default styling */
+    -moz-appearance: none; /* Remove default styling */
+    appearance: none; /* Remove default styling */
+    cursor: pointer; /* Indicate this is an interactive element */
+}
+
+/* Styling for the arrow indicator on the dropdown, if you want a custom arrow */
+.input select::-ms-expand {
+    display: none; /* Hide the default arrow in IE */
+}
+
