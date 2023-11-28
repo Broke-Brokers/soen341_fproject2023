@@ -26,6 +26,7 @@ import Profile from './Pages/Profile';
 import Search from './Pages/Search';
 import SearchForBrokers from './Pages/SearchForBrokers';
 
+
 import Offer from './Pages/Offer';
 import Request_visite from './components/Request_visite';
 
@@ -75,7 +76,7 @@ function App() {
       <Routes>
         <Route path='/' exact element={<Home />} />
 
-       {/* <Route path='/sell' exact element={<Sell />} />*/}
+       {<Route path='/makeoffer' exact element={<MakeOffer />} />}
 
         <Route path='/sign-in' exact element={<Sign />} />
         <Route path='/buy' exact element={<Buy />} />
