@@ -49,12 +49,18 @@ export default function PropertyInfo(props){
  
    const usertype = Cookies.get('usertypeID');
 
-   function isBroker(){
-     if(usertype ==  2)return (<Link to="/makeoffer" className="offer-button">
-     Make an offer on this house!
-   </Link>);
-   }
-   
+   function isBroker() {
+    const usertype = Cookies.get('usertypeID');
+    if (usertype === 'broker') {
+        return (
+            <Link to="/makeoffer" className="offer-button">
+                Make an offer on this house!
+            </Link>
+        );
+    }
+    return null; // Return null if not a broker
+}
+
 
    
     return(
