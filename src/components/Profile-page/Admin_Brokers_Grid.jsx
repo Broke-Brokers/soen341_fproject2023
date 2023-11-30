@@ -4,21 +4,25 @@ import './Admin_Brokers_Grid.css';
 import {useState, useEffect} from "react";
 //allows connection to firebase
 import {db} from '../../firebase_configuration.js'
-import { collection, doc, getDocs, addDoc, updateDoc, onSnapshot} from "firebase/firestore";
+import { docID_forModify, name_forModify } from '../property-page/BrokerCard.jsx';
+import { collection, doc, query, getDocs, addDoc, updateDoc, onSnapshot, DocumentReference, setDoc} from "firebase/firestore";
+
 
 
 
 function Admin_Brokers_Grid(){
-  
+ console.log("Specific id: ", docID_forModify )
 // Use useState to set a new constanct broker
 const brokerCollectionRef = collection(db,'Broker');
 const [brokerRecords,setBrokerRecords] = useState([]);       // Brokers records is an array that contains at each position one broker from Firebase
+//const [allIDs, setallIDs] = useState([])
 
 async function getBrokers()
 {
-   onSnapshot(brokerCollectionRef, (brokerSnapshot)=> {
+   onSnapshot(brokerCollectionRef, async (brokerSnapshot)=> {
     setBrokerRecords(brokerSnapshot.docs.map(doc=> doc.data()));  // allows the array to be a screenshot of Firebase & not the actual documents
-    
+    //setallIDs(brokerSnapshot.docs.map(doc=> doc.id));
+
 });
 }
 
@@ -28,8 +32,8 @@ getBrokers()
 
 }, [db])
     console.log("Broker record: ", brokerRecords);
+   // console.log("All brokers ID in Firebase: ",allIDs);
    
-  
 
 //MANUAL CRUD: to store in firebase
    //1. FOR CREATE Take user input from setNew to have a new variable using new...
@@ -45,40 +49,24 @@ const[newPassword, setNewPassword]= useState("")
 const[newLanguage, setNewLanguage]= useState("")
 const[newYearsExperience, setNewYearsExperience]= useState(0)
 
-const [show,setShow] = useState(false)
-/*
+
+
 
 //2.FOR UPDATE
-const[firebaseID, setFirebaseID]= useState("")
+const [firebaseID, setFirebaseID] = useState("")
 const [show,setShow] = useState(false)
 
 
 
 
- const [brokers, setBrokers]=useState([]);
- //reference the broker collection in the databse of firebase
- const brokersCollectionRef = collection (db,"Broker")
 
 
 
- useEffect(() => {
-  const getBrokers = async()=>{
-    //get all the data in broker collection
-    const data = await getDocs(brokersCollectionRef);
-    //setting brokers array = array of document data & id for each document
-    setBrokers(data.docs.map((doc)=>({...doc.data(), id:doc.id})));
 
-    
-  };
-  getBrokers();
- },[])
-
-
-*/
 //MANUAL CRUD: 
 //1.FOR CREATE: function that create a broker when click on create broker
 const createBroker = async()=>{
-  await addDoc(brokerCollectionRef,{
+  const docref= await addDoc(brokerCollectionRef,{
     //important that variable correspond to the one of Firebase
     BrokerID: newBrokerID,
     UsertypeID: newUserTypeID,
@@ -88,9 +76,13 @@ const createBroker = async()=>{
     BrokerEmail:newEmail,
     BrokerPassword:newPassword,
    // PhoneNumber:newPhoneNumber
-    BrokerYearsExperience: newLanguage,
-    BrokerLanguage: newYearsExperience
-  });
+    BrokerYearsExperience: newYearsExperience,
+    BrokerLanguage: newLanguage
+  })
+ await updateDoc(docref,{
+  DocumentID: docref.id
+ })
+
   }
   /*
   //2.FOR UPDATE
