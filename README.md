@@ -1,7 +1,10 @@
 
 # README
 
+
 ## Important notes and Updates
+### For sprint 4 see wiki
+
 ***
 ### For sprint 3 : (https://github.com/Broke-Brokers/Broke_BRokers-soen341projectF2023/wiki/Sprint-3)
 
