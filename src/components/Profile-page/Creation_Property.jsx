@@ -1,19 +1,46 @@
 import React from "react";
 import Add_Button from '../../components/buttons/Add_Button'
 import {useState, useEffect} from "react";
-import {db} from '../../firebase_configuration.js'
-import { collection, getDocs, addDoc, updateDoc} from "firebase/firestore";
+import { collection, doc, getDocs, addDoc, updateDoc, onSnapshot} from "firebase/firestore";
 import './Creation_Property.css';
+import { Link } from 'react-router-dom'; 
+import Home_card from '../search-page/Home_card';
+import House_Grid from "../search-page/House_Grid.jsx";
+import House_Card from "../search-page/House_Card";
+import { db } from "../../firebase_configuration.js";
 
-import { Bathroom } from "@mui/icons-material";
-import { doc } from "firebase/firestore";
+
 
 function Creation_Property()  {
 
     const [editProperties, seteditProperties] = useState(false)
     const [Properties, setProperties] = useState([]);
-    const PropertiesCollectionRef = collection(db, "Properties")
+    const PropertiesCollectionRef = collection(db, "Properties")    
   
+    //READ SNAPSHOF FIREBASE TO ENSURE CRUD WORKS
+    //GET ALL THE PROPERTIES STORE IN FIREBASE
+    async function getProperties()
+    {
+      onSnapshot(PropertiesCollectionRef, (snapshot)=>{
+        setProperties(snapshot.docs.map(doc=>doc.data()));
+      })
+    }
+
+    useEffect(()=>{
+      getProperties()
+    },[])
+
+    console.log("Content of Properties array in creation property: ", Properties)
+
+
+
+
+
+
+
+
+    //FOR CRUD
+    //VARIABLES TO CREATE NEW PROPERTY
     const [newPropertyType, setNewPropertyType] = useState("")
     const [newListingType, setNewListingType] = useState("")
     const [newPrice, setNewPrice] = useState("") 
@@ -61,7 +88,7 @@ function Creation_Property()  {
   
     return (
 
-    
+ <> 
 
       <div className="container-profile">
     
@@ -176,7 +203,19 @@ function Creation_Property()  {
           
         
         </div>
-        )
+<div className="Property gallery">
+
+{Properties.map((Property) => (
+        
+  
+    <House_Card property={Property} /> 
+  
+ ))}
+        
+        </div>
+
+</>  
+)
 
 }
 

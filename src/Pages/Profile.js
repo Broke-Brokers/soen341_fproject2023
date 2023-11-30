@@ -14,9 +14,9 @@ function Profile() {
 
     <div>
     
-      <Creation_Property/>
+    <Creation_Property/>
 
-      <Card_home/>
+    
 
       <Admin_Brokers_Grid/>
       

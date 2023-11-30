@@ -50,7 +50,7 @@ export default function PropertyInfo(props){
    const usertype = Cookies.get('usertypeID');
 
    function isBroker(){
-     if(usertype ==  2)return (<Link to="/sell" className="offer-button">
+     if(usertype ==  2)return (<Link to="/makeoffer" className="offer-button">
      Make an offer on this house!
    </Link>);
    }

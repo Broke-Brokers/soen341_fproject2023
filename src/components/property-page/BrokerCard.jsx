@@ -4,6 +4,7 @@ import { Language } from '@mui/icons-material';
 
 
 export default function BrokerCard({ brokerRecords }){
+  //With "brokerRecords", Broker card received the brokers in the array of parent that contain a list of broker
   let brokerName, email, phoneNumber, yearsOfExperience,language; // Declare these variables in the parent scope
 
   if (!brokerRecords) { // evaluates to true if brokerList is null
@@ -15,6 +16,8 @@ export default function BrokerCard({ brokerRecords }){
   }
   else{
   
+    //Broker Card can now retrieve the field of the actual broker in Firebase
+    // important that the variable corresponds to variable in Firebase
     brokerName = brokerRecords.BrokerName;
     email = brokerRecords.BrokerEmail;
     phoneNumber = brokerRecords.PhoneNumber;
@@ -51,6 +54,7 @@ export default function BrokerCard({ brokerRecords }){
   <div className="brokerInfo">
    <p>{email}</p>
    <p>{yearsOfExperience} Years of experience</p>
+   <p>Language Spoken: {language}</p>
   </div>
   <div className="social">
     <ul>

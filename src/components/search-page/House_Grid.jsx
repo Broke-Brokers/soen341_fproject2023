@@ -17,7 +17,7 @@ export default function House_Grid() {
         /*<Link to="/propertyPage">
         <House_Card key={index} />
         </Link>*/
-                    <House_Card key={index} />
+                    <House_Card key={index} property = {house} />
         
                 
 
