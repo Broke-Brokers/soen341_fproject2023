@@ -65,4 +65,27 @@
       }
     }
   }
+  
+  .modifyButton button
+ {
+  padding: 10px 25px;
+  background-color: #EE7EA0;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  }
+
+  .deleteButton button
+  {
+  padding: 10px 25px;
+  background-color: #EE7EA0;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+  }
 }

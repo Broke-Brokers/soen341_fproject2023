@@ -4,86 +4,137 @@ import './Admin_Brokers_Grid.css';
 import {useState, useEffect} from "react";
 //allows connection to firebase
 import {db} from '../../firebase_configuration.js'
-import { collection, doc, getDocs, addDoc, updateDoc, onSnapshot} from "firebase/firestore";
+import { docID_forModify, name_forModify } from '../property-page/BrokerCard.jsx';
+import { collection, doc, query, getDocs, addDoc, updateDoc, onSnapshot, DocumentReference, setDoc} from "firebase/firestore";
+
 
 
 
 function Admin_Brokers_Grid(){
-  
- // Reading brokers
-   const [data, setData] = useState([]);
-    const [records, setRecords] = useState([])
-    const myBrokers = collection(db, 'Broker');
-  
-    useEffect(() => {
-      // Call the getBroker function to fetch the data when the component mounts
-      const getBroker = async () => {
 
-        onSnapshot(myBrokers,(snapshot)=>{
-          setData(snapshot.docs.map(doc=>doc.data()));
-          setRecords(snapshot.docs.map(doc=>doc.data()));
+  //====================+ TAYLOR +=================
 
+  const [selectedBroker, setSelectedBroker] = useState(null);
 
-        })
-        
-      };
-      getBroker();
-    }, []); 
+  // States for form inputs
+  const [modifiedName, setModifiedName] = useState('');
+  const [modifiedEmail, setModifiedEmail] = useState('');
+  const [modifiedYearsExperience, setModifiedYearsExperience] = useState('');
+  const [modifiedLanguage, setModifiedLanguage] = useState('');
+
+  const handleModifyClick = (brokerData) => {
+      setSelectedBroker(brokerData);
+      // Pre-fill the form with the selected broker's data
+      setModifiedName(brokerData.BrokerName);
+      setModifiedEmail(brokerData.BrokerEmail);
+      setModifiedYearsExperience(brokerData.BrokerYearsExperience);
+      setModifiedLanguage(brokerData.BrokerLanguage);
+  };
+
+  const updateBroker = async () => {
+      if (selectedBroker) {
+          const brokerDoc = doc(db, "Broker", selectedBroker.DocumentID);
+          const updatedData = {
+              BrokerName: modifiedName,
+              BrokerEmail: modifiedEmail,
+              BrokerYearsExperience: modifiedYearsExperience,
+              BrokerLanguage: modifiedLanguage,
+          };
+          await updateDoc(brokerDoc, updatedData);
+          setSelectedBroker(null); // Clear the selection after updating
+      }
+    };
+
+  //==============================================
+
   
+ console.log("Specific id: ", docID_forModify )
+// Use useState to set a new constanct broker
+const brokerCollectionRef = collection(db,'Broker');
+const [brokerRecords,setBrokerRecords] = useState([]);       // Brokers records is an array that contains at each position one broker from Firebase
+//const [allIDs, setallIDs] = useState([])
+
+async function getBrokers()
+{
+   onSnapshot(brokerCollectionRef, async (brokerSnapshot)=> {
+    setBrokerRecords(brokerSnapshot.docs.map(doc=> doc.data()));  // allows the array to be a screenshot of Firebase & not the actual documents
+    //setallIDs(brokerSnapshot.docs.map(doc=> doc.id));
+
+});
+}
+
+useEffect(() => { 
+
+getBrokers()
+
+}, [db])
+    console.log("Broker record: ", brokerRecords);
+   // console.log("All brokers ID in Firebase: ",allIDs);
+   
 
 //MANUAL CRUD: to store in firebase
    //1. FOR CREATE Take user input from setNew to have a new variable using new...
 const[newBrokerID, setNewBrokerID]= useState(0)
 const[newUserTypeID, setNewUserTypeID]= useState(0)
-const[newClientFileID, setNewClientFileID]= useState(0)
-const[newFirstName, setNewFirstName]= useState("")
-const[newLastName, setNewLastName]= useState("")
+//const[newClientFileID, setNewClientFileID]= useState(0)
+const[newBrokerName, setNewBrokerName]= useState("")
+//const[newLastName, setNewLastName]= useState("")
 const[newUserName, setNewUserName]= useState("")
 const[newEmail, setNewEmail]= useState("")
 const[newPassword, setNewPassword]= useState("")
-const[newPhoneNumber, setNewPhone]= useState("")
+//const[newPhoneNumber, setNewPhone]= useState("")
+const[newLanguage, setNewLanguage]= useState("")
+const[newYearsExperience, setNewYearsExperience]= useState(0)
+
+
+
+
 //2.FOR UPDATE
-const[firebaseID, setFirebaseID]= useState("")
+const [firebaseID, setFirebaseID] = useState("")
 const [show,setShow] = useState(false)
 
 
 
 
- const [brokers, setBrokers]=useState([]);
- //reference the broker collection in the databse of firebase
- const brokersCollectionRef = collection (db,"Broker")
 
-
-
- useEffect(() => {
-  const getBrokers = async()=>{
-    //get all the data in broker collection
-    const data = await getDocs(brokersCollectionRef);
-    //setting brokers array = array of document data & id for each document
-    setBrokers(data.docs.map((doc)=>({...doc.data(), id:doc.id})));
-
-    
-  };
-  getBrokers();
- },[])
 
 
 
 //MANUAL CRUD: 
 //1.FOR CREATE: function that create a broker when click on create broker
 const createBroker = async()=>{
-  await addDoc(brokersCollectionRef,{
+  const docref= await addDoc(brokerCollectionRef,{
+    //important that variable correspond to the one of Firebase
     BrokerID: newBrokerID,
     UsertypeID: newUserTypeID,
-    ClientFileID: newClientFileID,
-    FirstName:newFirstName,
-    LastName:newLastName,
-    Username:newUserName,
-    Email:newEmail,
-    Password:newPassword,
-    PhoneNumber:newPhoneNumber
-  });
+    BrokerName:newBrokerName,
+   // LastName:newLastName,
+    BrokerUsername:newUserName,
+    BrokerEmail:newEmail,
+    BrokerPassword:newPassword,
+   // PhoneNumber:newPhoneNumber
+    BrokerYearsExperience: newYearsExperience,
+    BrokerLanguage: newLanguage
+  })
+ await updateDoc(docref,{
+  DocumentID: docref.id
+ })
+
+ //clear input field
+ setNewBrokerID("")
+ setNewUserTypeID("")
+ setNewBrokerName("")
+ setNewUserName("")
+ setNewEmail("")
+ setNewPassword("")
+ setNewLanguage("Select language")
+ setNewYearsExperience("")
+
+ 
+
+
   }
+  /*
   //2.FOR UPDATE
      //2.1 Get id of document in firebase and previous inputs
   const modifyBroker = async(firebaseID, BrokerID, UsertypeID, ClientFileID, 
@@ -101,7 +152,7 @@ const createBroker = async()=>{
       setNewPhone(PhoneNumber)
       setShow(true)
   }
-  
+
   const updateBroker = async()=>{
   const updateData= doc(db,"Broker",firebaseID)
   await updateDoc(updateData,{
@@ -126,7 +177,7 @@ const createBroker = async()=>{
   setNewPassword("")
   setNewPhone("")
 }
-
+*/
 
   return (
 
@@ -137,11 +188,13 @@ const createBroker = async()=>{
 
      //CRUD MANUALLY NOT INSIDE GRID
       //1. FOR CREATE: setNew...the value entered by user 
-    <div>
-     {records.map((broker, index) => (
-        <BrokerCard key={index} brokerList={broker} /> // Use a unique 'key' prop for each element
-      ))}
-  
+      // user enter its input in the placeholder
+      // the value of place holder set the variable defined in the beginning
+      // Firebase variable will be equals to those variables
+      // create button call function that does Firebase variable = user input
+      // to display the broker, each broker stored in broker records array will be map to the broker card component
+    
+  <>
   
   <div className="Admin_Brokers_Grid">
 
@@ -151,26 +204,18 @@ const createBroker = async()=>{
         setNewBrokerID(event.target.value);
       }}
     />
-    <input type='numberevent' placeholder='User type ID...'
+    <input type='number' placeholder='User type ID...'
     onChange={(event)=>{
       setNewUserTypeID(event.target.value);
     }}
     />
-    <input type='number' placeholder='Client File ID...'
-    onChange={(event)=> {
-      setNewClientFileID(event.target.value);
-    }}
-    />
-    <input placeholder='First name...'
+    
+    <input placeholder='Name...'
      onChange={(event)=> {
-      setNewFirstName(event.target.value);
+      setNewBrokerName(event.target.value);
     }}
     />
-    <input placeholder='Last name...'
-     onChange={(event)=> {
-      setNewLastName(event.target.value);
-    }}
-    />
+    
     <input placeholder='username...'
      onChange={(event)=> {
       setNewUserName
@@ -187,59 +232,62 @@ const createBroker = async()=>{
       setNewPassword(event.target.value);
     }}
     />
-    <input placeholder='Phone number(xxx-xxx-xxxx)...'
+    <input placeholder='Language Speak'
     onChange={(event)=> {
-      setNewPhone(event.target.value);
+      setNewLanguage(event.target.value);
+    }}
+    />
+    <input type='number'placeholder='Years of experience'
+    onChange={(event)=> {
+      setNewYearsExperience(event.target.value);
     }}
     />
 
 {!show?<button onClick={createBroker}> Create Broker</button>:
-        <button onClick={()=>{updateBroker()}}>Update</button>
+        <button onClick={()=>{createBroker()}}>Update</button>
 }
 
-   
 </div>
 
+<div className='Broker Grid'>
+                {brokerRecords.map((broker, index) => (
+                    <BrokerCard key={index} brokerRecords={broker} onModifyClick={handleModifyClick} />
+                ))}
+            </div>
 
-
-
-
-    {brokers.map((broker)=>{
-      return (
-      <div> 
-        {""}
-        <h2> Broker ID: {broker.BrokerID} </h2>
-        <h2> User Type ID: {broker.UsertypeID} </h2>
-        <h2> Client File ID: {broker.ClientFileID} </h2>
-        <h2> First name: {broker.FirstName} </h2>
-        <h2> Last Name: {broker.LastName} </h2>
-        <h2> Username: {broker.Username} </h2>
-        <h2> Email: {broker.Email} </h2>
-        <h2> Password: {broker.Password} </h2>
-        <h2> Phone Number: {broker.PhoneNumber} </h2>
-       
-
-       
-        <button onClick={()=>{modifyBroker(
-          broker.firebaseID,
-          broker.BrokerID,
-          broker.UsertypeID,
-          broker.ClientFileID,
-          broker.FirstName,
-          broker.LastName,
-          broker.Username,
-          broker.Email,
-          broker.Password,
-          broker.PhoneNumber
-        );}}
-        > Modify</button>
-
-
-        
-      </div>
-      );
-      })}
-  </div>
+            {selectedBroker && (
+            <div className='ModifyBrokerForm'>
+                <h3>Modify Broker</h3>
+                <input
+                    type="text"
+                    value={modifiedName}
+                    onChange={(e) => setModifiedName(e.target.value)}
+                    placeholder="Broker Name"
+                />
+                <input
+                    type="email"
+                    value={modifiedEmail}
+                    onChange={(e) => setModifiedEmail(e.target.value)}
+                    placeholder="Broker Email"
+                />
+                <input
+                    type="text"
+                    value={modifiedYearsExperience}
+                    onChange={(e) => setModifiedYearsExperience(e.target.value)}
+                    placeholder="Years of Experience"
+                />
+                <input
+                    type="text"
+                    value={modifiedLanguage}
+                    onChange={(e) => setModifiedLanguage(e.target.value)}
+                    placeholder="Language"
+                />
+                <button onClick={updateBroker}>Update Broker</button>
+            </div>
+        )}
+</>
+    
+  
   );
 }
 

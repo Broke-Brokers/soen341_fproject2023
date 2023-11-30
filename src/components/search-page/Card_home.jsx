@@ -2,7 +2,7 @@ import React from 'react'
 import home_photo from '../../Images/property_image_test1.jpg'
 import {useState, useEffect} from "react";
 import {db} from '../../firebase_configuration.js'
-import { collection, getDocs, deleteDoc} from "firebase/firestore";
+import { collection, getDocs, deleteDoc, onSnapshot} from "firebase/firestore";
 import Add_Button from '../../components/buttons/Add_Button';
 import Creation_Property from '../Profile-page/Creation_Property';
 import { doc } from "firebase/firestore";
@@ -12,12 +12,13 @@ import { Link } from 'react-router-dom';
 import Home_card from './Home_card';
 import '../search-page/Card_home.css' 
 import { Range } from 'react-range';
+import House_Card from './House_Card.jsx';
 
 function Card_home() {
 
-    const [Properties, setProperties] = useState([]);
+    const [Properties, setProperties] = useState([]); // array of all properties from Firebase
     const PropertiesCollectionRef = collection(db, "Properties")
-    const [records, setRecords] = useState([])
+    const [records, setRecords] = useState([])   // array of properties from Firebase used to handle filter result
     const [showPriceDropdown, setShowPriceDropdown] = useState(false);
     const [values, setValues] = useState([0, 1000]);
     const [bedrooms, setBedrooms] = useState('');
@@ -38,11 +39,20 @@ function Card_home() {
   
       // get the properties in a clean way
       const getProperties = async () => {
-        const data = await getDocs(PropertiesCollectionRef);
+        //Card home component is connected to a snapshot of Firebase 
+        // and store data of Firebase in the array  "Properties" and "Records"
+        onSnapshot(PropertiesCollectionRef, (snapshot)=>{
+          setProperties(snapshot.docs.map(doc=>doc.data()));
+          setRecords(snapshot.docs.map(doc=>doc.data()));
+
+        })
+       /* 
+       // This read actual Firebase data and will cause a reading quota
+       const data = await getDocs(PropertiesCollectionRef);
         setProperties(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
         setRecords(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
        
-    
+    */
       };
   
       getProperties();
@@ -232,7 +242,7 @@ function Card_home() {
       <div className='properties'>
       {records.map((Property) => (
         
-       <Link to="/propertyPage"><Home_card  Propertylist={Property} /> // Use a unique 'key' prop for each element
+       <Link to="/propertyPage"><Home_card  property={Property} /> 
        </Link> 
       ))}
       </div>

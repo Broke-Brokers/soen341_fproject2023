@@ -81,20 +81,21 @@ setRecords(Clients.filter((c)=>
 
 
   const createOffers = async()=>{
-   const newOfferDocRef = doc(OffersCollectionRef);
-   setOfferID(newOfferDocRef.id);
-   
-   
-    await addDoc(OffersCollectionRef,{
+  
+  
+   const docref= await addDoc(OffersCollectionRef,{
       BrokerID_receiver: getBrokerID_receiver,
       BrokerID_transmitter: getBrokerID_transmitter,
-      ClientID: getClientID,
+      ClientName: getClientID,
       OfferID:getOfferID,
       OfferStatus:"",
       Price:getPrice
       
       
-    });
+    })
+    await updateDoc(docref,{
+      DocumentID: docref.id
+    })
 
     }
 
@@ -120,7 +121,7 @@ const ClientSelect=(event)=>{
      {Clients.filter(client =>
      client.BrokerID === brokerid).map((option)=> (
      
-      <option value={option.ClientID}>{option.ClientName} </option>
+      <option value={option.ClientName}>{option.ClientName} </option>
       ) )}
       </select>
      

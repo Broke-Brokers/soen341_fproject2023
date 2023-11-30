@@ -1,3 +1,96 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`performs snapshot testing 1`] = `<offer_form />`;
+exports[`performs snapshot testing 1`] = `
+<div
+  className="bodyoffer"
+>
+  <div
+    className="containtoffer"
+  >
+    <div
+      className="leftPart"
+    />
+    <div
+      className="rightpart"
+    >
+      <select
+        className="selection"
+        onChange={[Function]}
+      >
+        <option
+          value=""
+        >
+           Select a client 
+        </option>
+      </select>
+      <label
+        className="labelUserEmail"
+      >
+        Your email 
+        <em>
+          *
+        </em>
+      </label>
+      <input
+        className="user_email"
+        onChange={[Function]}
+        placeholder="Email"
+        required={true}
+        type="email"
+      />
+      <label
+        className="labelUserEmail"
+      >
+        Other Broker email 
+        <em>
+          *
+        </em>
+      </label>
+      <input
+        className="otherEmail"
+        name="user_email"
+        onChange={[Function]}
+        placeholder="Other Broker email"
+        required={true}
+        type="email"
+      />
+      <label
+        className="labelPrice"
+      >
+        Price 
+        <em>
+          *
+        </em>
+      </label>
+      <input
+        className="inputPrice"
+        name="user_email"
+        onChange={[Function]}
+        placeholder="Price"
+        required={true}
+        type="price"
+      />
+      <label
+        className="labelComment"
+      >
+        Comment 
+        <em>
+          *
+        </em>
+      </label>
+      <textarea
+        className="textareaComment"
+        name="message"
+        required=""
+        rows="4"
+      />
+      <button
+        className="SubmitButtonBroker"
+        onClick={[Function]}
+      >
+        submit
+      </button>
+    </div>
+  </div>
+</div>
+`;

@@ -8,15 +8,28 @@ Array [
     <input
       id="searchInput1"
       onChange={[Function]}
-      placeholder="Search here..."
+      placeholder="Search Broker name"
       type="text"
     />
-    <input
-      id="searchInput2"
+    <select
       onChange={[Function]}
-      placeholder="Search Language"
-      type="text"
-    />
+    >
+      <option
+        value="all"
+      >
+        Select language
+      </option>
+      <option
+        value="french"
+      >
+        French
+      </option>
+      <option
+        value="english"
+      >
+        English
+      </option>
+    </select>
     <input
       id="searchInput3"
       onChange={[Function]}

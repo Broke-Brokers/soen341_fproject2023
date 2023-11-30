@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../property-page/BrokerCard.css' 
+import { db } from '../../firebase_configuration';
+import { deleteDoc,doc } from '@firebase/firestore';
 
 
-export default function BrokerCard({ brokerList }){
-  let brokerName, email, phoneNumber, yearsOfExperience; // Declare these variables in the parent scope
+let docID_forModify,name_forModify="";
+const setDocID_forModify=(currentBrokerID,currentName) =>
+{
+   docID_forModify = currentBrokerID;
+   name_forModify = currentName;
+};
 
-  if (!brokerList) { // evaluates to true if brokerList is null
+
+export default function BrokerCard({ brokerRecords, onModifyClick }){
+  //With "brokerRecords", Broker card received the brokers in the array of parent that contain a list of broker
+  let brokerName, email, phoneNumber, yearsOfExperience,language,DocumentID; // Declare these variables in the parent scope
+
+
+  if (!brokerRecords) { // evaluates to true if brokerList is null
      //Placeholder name to handle the case where brokerList is empty
      brokerName = "Albus Dumbledore";
      email = "itsleviosa@hogwarts.com";
@@ -14,10 +26,15 @@ export default function BrokerCard({ brokerList }){
   }
   else{
   
-    brokerName = brokerList.BrokerUsername;
-    email = brokerList.BrokerEmail;
-    phoneNumber = brokerList.PhoneNumber;
-    yearsOfExperience = brokerList.BrokerYearsExperience;
+    //Broker Card can now retrieve the field of the actual broker in Firebase
+    // important that the variable corresponds to variable in Firebase
+
+    DocumentID = brokerRecords.DocumentID;
+    brokerName = brokerRecords.BrokerName;
+    email = brokerRecords.BrokerEmail;
+    phoneNumber = brokerRecords.PhoneNumber;
+    yearsOfExperience = brokerRecords.BrokerYearsExperience;
+    language = brokerRecords.BrokerLanguage
    }
    /*The fields:
      Broker_id integer PK
@@ -28,10 +45,9 @@ export default function BrokerCard({ brokerList }){
    */
     
 
-  const modifytest = async(nametest, email,phone)=>
-  {console.log(nametest,email,phone);}
+  
 
-  console.log('Data in broker cards:', brokerList);
+  console.log('Data in broker cards:', brokerRecords);
     const profilePicture = "https://pointrussell.opencities.com/files/content/public/v/5/council/elected-members/albus-dumbledore/albus-dumbledore.jpg?dimension=pageimage&w=480";
 
 
@@ -49,6 +65,7 @@ export default function BrokerCard({ brokerList }){
   <div className="brokerInfo">
    <p>{email}</p>
    <p>{yearsOfExperience} Years of experience</p>
+   <p>Language Spoken: {language}</p>
   </div>
   <div className="social">
     <ul>
@@ -58,13 +75,27 @@ export default function BrokerCard({ brokerList }){
       <li><i class="fas fa-link"></i></li>
     </ul>
   </div>
-  <button onClick={()=>{modifytest(brokerName,email,phoneNumber);}}
-  
-  >Modify</button>
+
+        <div className='modifyButton'>
+            <button onClick={() => onModifyClick(brokerRecords)}>
+                Modify
+            </button>
+        </div>
+        
+<div className='deleteButton'>
+<button onClick={()=>{
+  deleteDoc(doc(db,"Broker",DocumentID))
+}}>
+  Delete
+</button>
 </div>
+</div>
+
 
 </>
         
         );
         }
+
+        export {docID_forModify,name_forModify};
         

@@ -8,7 +8,7 @@ function Search() {
     <div> 
    
 
-     <Search_Filter/>
+     {/* <Search_Filter/> */}
      <Card_home/>
 
     

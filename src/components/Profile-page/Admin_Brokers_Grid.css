@@ -1,12 +1,90 @@
-.title_grid{
-    text-align: center;
-    margin-top: 4%;
-    color:#ee7ea0;
+/* General container styling */
+.Admin_Brokers_Grid {
+    display:flex;
+    flex-direction:column;
+    margin:auto;
+    margin-top:200px;
+    width:600px;
+    background: white;
+    padding-bottom:30px
+    
+    
 }
 
-.myPaper {
-    margin-bottom: 8%; 
-    margin-left: 5%; 
-    margin-right: 5%; 
+/* Input styling */
+.Admin_Brokers_Grid input {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+}
 
-  }
+/* Button styling */
+.Admin_Brokers_Grid button {
+    padding: 10px 25px;
+    background-color: #EE7EA0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Admin_Brokers_Grid button:hover {
+    background-color: #e8d5db;
+}
+
+
+
+
+
+
+/* Modify Broker Form Styling */
+.ModifyBrokerForm {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 30px;
+    width: 600px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-bottom: 30px; /* Add space after the component */
+}
+
+/* Heading Styling */
+.ModifyBrokerForm h3 {
+    text-align: center; /* Center the text */
+    color: #EE7EA0; /* Same pink as the buttons */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Input styling in Modify Broker Form */
+.ModifyBrokerForm input {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+/* Button styling in Modify Broker Form */
+.ModifyBrokerForm button {
+    padding: 10px 25px;
+    background-color: #EE7EA0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ModifyBrokerForm button:hover {
+    background-color: #e8d5db;
+}

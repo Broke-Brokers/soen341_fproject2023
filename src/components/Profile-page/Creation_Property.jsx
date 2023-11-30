@@ -1,19 +1,94 @@
 import React from "react";
 import Add_Button from '../../components/buttons/Add_Button'
 import {useState, useEffect} from "react";
-import {db} from '../../firebase_configuration.js'
-import { collection, getDocs, addDoc, updateDoc} from "firebase/firestore";
+import { collection, doc, getDocs, addDoc, updateDoc, onSnapshot} from "firebase/firestore";
 import './Creation_Property.css';
+import { Link } from 'react-router-dom'; 
+import Home_card from '../search-page/Home_card';
+import House_Grid from "../search-page/House_Grid.jsx";
+import House_Card from "../search-page/House_Card";
+import { db } from "../../firebase_configuration.js";
 
-import { Bathroom } from "@mui/icons-material";
-import { doc } from "firebase/firestore";
+
 
 function Creation_Property()  {
 
+
+
+  //===========================================================
+
+  const [selectedProperty, setSelectedProperty] = useState(null);
+
+  // Function to handle the edit click, sets the selected property for editing
+  const handleEditClick = (property) => {
+      setSelectedProperty(property);
+      // Set form fields with the selected property's data
+      setNewPropertyType(property.PropertyType);
+      setNewListingType(property.ListingType);
+      setNewPrice(property.Price);
+      setNewAdress(property.Adress);
+      setNewCity(property.City);
+      setNewProvince(property.Province);
+      setNewNeighborhood(property.Neighborhood);
+      setNewBedrooms(property.Bedrooms);
+      setNewNBathrooms(property.Bathrooms);
+      setid(property.DocumentID); // Assuming 'id' is used to track the document ID
+  };
+
+
+  const handleUpdateProperty = async () => {
+    if (selectedProperty) {
+        const propertyDocRef = doc(db, "Properties", selectedProperty.DocumentID);
+        const updatedData = {
+            PropertyType: newPropertyType,
+            ListingType: newListingType,
+            Price: newPrice,
+            Adress: newAdress,
+            City: newCity,
+            Province: newProvince,
+            Neighborhood: newNeighborhood,
+            Bedrooms: newBedrooms,
+            Bathrooms: newNBathrooms
+        };
+        await updateDoc(propertyDocRef, updatedData);
+        setSelectedProperty(null); // Clear the selection after updating
+    }
+};
+
+
+
+
+
+  //======================================================
+
     const [editProperties, seteditProperties] = useState(false)
     const [Properties, setProperties] = useState([]);
-    const PropertiesCollectionRef = collection(db, "Properties")
+    const PropertiesCollectionRef = collection(db, "Properties")    
   
+    //READ SNAPSHOF FIREBASE TO ENSURE CRUD WORKS
+    //GET ALL THE PROPERTIES STORE IN FIREBASE
+    async function getProperties()
+    {
+      onSnapshot(PropertiesCollectionRef, (snapshot)=>{
+        setProperties(snapshot.docs.map(doc=>doc.data()));
+      })
+    }
+
+    useEffect(()=>{
+      getProperties()
+    },[])
+
+    console.log("Content of Properties array in creation property: ", Properties)
+
+
+
+
+
+
+
+
+    //FOR CRUD
+    //VARIABLES TO CREATE NEW PROPERTY
     const [newPropertyType, setNewPropertyType] = useState("")
     const [newListingType, setNewListingType] = useState("")
     const [newPrice, setNewPrice] = useState("") 
@@ -28,12 +103,17 @@ function Creation_Property()  {
     const createProperty = async () => {
   
         // To add the fetch values to the database
-      await addDoc( PropertiesCollectionRef, { 
+     const docref= await addDoc( PropertiesCollectionRef, { 
         PropertyType: newPropertyType, 
         ListingType: newListingType,
         Price: newPrice,  Adress: newAdress, City: newCity, 
         Province: newProvince, Neighborhood: newNeighborhood,
-        Bedrooms: newBedrooms, Bathrooms: newNBathrooms   }) ;
+        Bedrooms: newBedrooms, Bathrooms: newNBathrooms   })
+
+
+        await updateDoc(docref,{
+          DocumentID:docref.id
+        })
   
     }
 
@@ -61,7 +141,7 @@ function Creation_Property()  {
   
     return (
 
-    
+ <> 
 
       <div className="container-profile">
     
@@ -176,7 +256,32 @@ function Creation_Property()  {
           
         
         </div>
-        )
+
+        <div className="Property gallery">
+                {Properties.map((property, index) => (
+                    <House_Card key={index} property={property} onEditClick={handleEditClick} />
+                ))}
+            </div>
+            
+        {selectedProperty && (
+                <div className="ModifyBrokerForm">
+                    <h3>Modify Property</h3>
+                    <input type="text" value={newPropertyType} onChange={(e) => setNewPropertyType(e.target.value)} placeholder="Property Type" />
+                    <input type="text" value={newListingType} onChange={(e) => setNewListingType(e.target.value)} placeholder="Listing Type" />
+                    <input type="number" value={newPrice} onChange={(e) => setNewPrice(e.target.value)} placeholder="Price" />
+                    <input type="text" value={newAdress} onChange={(e) => setNewAdress(e.target.value)} placeholder="Adress" />
+                    <input type="text" value={newCity} onChange={(e) => setNewCity(e.target.value)} placeholder="City" />
+                    <input type="text" value={newProvince} onChange={(e) => setNewProvince(e.target.value)} placeholder="Province" />
+                    <input type="text" value={newNeighborhood} onChange={(e) => setNewNeighborhood(e.target.value)} placeholder="Neighborhood" />
+                    <input type="number" value={newBedrooms} onChange={(e) => setNewBedrooms(e.target.value)} placeholder="No of Beds" />
+                    <input type="number" value={newNBathrooms} onChange={(e) => setNewNBathrooms(e.target.value)} placeholder="No of Baths" />
+                    <button onClick={handleUpdateProperty}>Update Property</button>
+                </div>
+            )}
+            
+          
+        </>
+)
 
 }
 
