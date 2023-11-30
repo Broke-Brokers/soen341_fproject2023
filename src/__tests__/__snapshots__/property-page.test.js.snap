@@ -34,6 +34,9 @@ exports[`performs snapshot testing 1`] = `
       150
        Years of experience
     </p>
+    <p>
+      Language Spoken: 
+    </p>
   </div>
   <div
     className="social"
@@ -61,11 +64,24 @@ exports[`performs snapshot testing 1`] = `
       </li>
     </ul>
   </div>
-  <button
-    onClick={[Function]}
+  <div
+    className="modifyButton"
   >
-    Modify
-  </button>
+    <button
+      onClick={[Function]}
+    >
+      Modify
+    </button>
+  </div>
+  <div
+    className="deleteButton"
+  >
+    <button
+      onClick={[Function]}
+    >
+      Delete
+    </button>
+  </div>
 </div>
 `;
 
