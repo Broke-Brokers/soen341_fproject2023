@@ -12,7 +12,7 @@ import Navbar_Brokers from './components/navbars/Navbar_Brokers';
 
 // Components
 import Footer from './components/Footer';
-import Request_visite from './components/Request_visite';
+//import Request_visite from './components/Request_visite';
 
 // Pages
 
@@ -68,14 +68,14 @@ function App() {
         return <Navbar />;
     }
   }
-
+//line 78->  <Route path='/sell' exact element={<Sell />} />
   return (
 
     <Router>
       {navbarChoice()} {/* Render the navbar based on the userType */}
       <Routes>
         <Route path='/' exact element={<Home />} />
-        <Route path='/sell' exact element={<Sell />} />
+       
         <Route path='/sign-in' exact element={<Sign />} />
         <Route path='/buy' exact element={<Buy />} />
         <Route path='/Broker' exact element={<Broker />} />
