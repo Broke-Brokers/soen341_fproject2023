@@ -7,7 +7,7 @@ import { db } from '../../firebase_configuration';
 
 
 
-export default function House_Card({property}){
+export default function House_Card({property, onEditClick}){
   // House Card component will received the property from the Firebase screenshot as "property"
   
 
@@ -86,18 +86,15 @@ export default function House_Card({property}){
       
   
         </ul>
-       <div>
-        <button onClick={()=> {
-          deleteDoc(doc(db, "Properties", DocumentID))
-        }}>
-         Delete
-        </button>
-  </div>
-  <div>
-        <button>
-         Edit
-  </button>
-  </div>
+        <div>
+            <button onClick={() => deleteDoc(doc(db, "Properties", property.DocumentID))}>
+                Delete
+            </button>
+            <button onClick={() => onEditClick(property)}>
+                Edit
+            </button>
+        </div>
+
         </div>
         </div>
        

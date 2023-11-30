@@ -13,6 +13,54 @@ import { db } from "../../firebase_configuration.js";
 
 function Creation_Property()  {
 
+
+
+  //===========================================================
+
+  const [selectedProperty, setSelectedProperty] = useState(null);
+
+  // Function to handle the edit click, sets the selected property for editing
+  const handleEditClick = (property) => {
+      setSelectedProperty(property);
+      // Set form fields with the selected property's data
+      setNewPropertyType(property.PropertyType);
+      setNewListingType(property.ListingType);
+      setNewPrice(property.Price);
+      setNewAdress(property.Adress);
+      setNewCity(property.City);
+      setNewProvince(property.Province);
+      setNewNeighborhood(property.Neighborhood);
+      setNewBedrooms(property.Bedrooms);
+      setNewNBathrooms(property.Bathrooms);
+      setid(property.DocumentID); // Assuming 'id' is used to track the document ID
+  };
+
+
+  const handleUpdateProperty = async () => {
+    if (selectedProperty) {
+        const propertyDocRef = doc(db, "Properties", selectedProperty.DocumentID);
+        const updatedData = {
+            PropertyType: newPropertyType,
+            ListingType: newListingType,
+            Price: newPrice,
+            Adress: newAdress,
+            City: newCity,
+            Province: newProvince,
+            Neighborhood: newNeighborhood,
+            Bedrooms: newBedrooms,
+            Bathrooms: newNBathrooms
+        };
+        await updateDoc(propertyDocRef, updatedData);
+        setSelectedProperty(null); // Clear the selection after updating
+    }
+};
+
+
+
+
+
+  //======================================================
+
     const [editProperties, seteditProperties] = useState(false)
     const [Properties, setProperties] = useState([]);
     const PropertiesCollectionRef = collection(db, "Properties")    
@@ -208,18 +256,31 @@ function Creation_Property()  {
           
         
         </div>
-<div className="Property gallery">
 
-{Properties.map((Property) => (
-        
-  
-    <House_Card property={Property} /> 
-  
- ))}
-        
-        </div>
-
-</>  
+        <div className="Property gallery">
+                {Properties.map((property, index) => (
+                    <House_Card key={index} property={property} onEditClick={handleEditClick} />
+                ))}
+            </div>
+            
+        {selectedProperty && (
+                <div className="ModifyBrokerForm">
+                    <h3>Modify Property</h3>
+                    <input type="text" value={newPropertyType} onChange={(e) => setNewPropertyType(e.target.value)} placeholder="Property Type" />
+                    <input type="text" value={newListingType} onChange={(e) => setNewListingType(e.target.value)} placeholder="Listing Type" />
+                    <input type="number" value={newPrice} onChange={(e) => setNewPrice(e.target.value)} placeholder="Price" />
+                    <input type="text" value={newAdress} onChange={(e) => setNewAdress(e.target.value)} placeholder="Adress" />
+                    <input type="text" value={newCity} onChange={(e) => setNewCity(e.target.value)} placeholder="City" />
+                    <input type="text" value={newProvince} onChange={(e) => setNewProvince(e.target.value)} placeholder="Province" />
+                    <input type="text" value={newNeighborhood} onChange={(e) => setNewNeighborhood(e.target.value)} placeholder="Neighborhood" />
+                    <input type="number" value={newBedrooms} onChange={(e) => setNewBedrooms(e.target.value)} placeholder="No of Beds" />
+                    <input type="number" value={newNBathrooms} onChange={(e) => setNewNBathrooms(e.target.value)} placeholder="No of Baths" />
+                    <button onClick={handleUpdateProperty}>Update Property</button>
+                </div>
+            )}
+            
+          
+        </>
 )
 
 }
