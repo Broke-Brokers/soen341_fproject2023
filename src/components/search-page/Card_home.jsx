@@ -242,7 +242,7 @@ function Card_home() {
       <div className='properties'>
       {records.map((Property) => (
         
-       <Link to="/propertyPage"><House_Card  property={Property} /> 
+       <Link to="/propertyPage"><Home_card  property={Property} /> 
        </Link> 
       ))}
       </div>
