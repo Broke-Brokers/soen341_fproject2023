@@ -83,6 +83,19 @@ const createBroker = async()=>{
   DocumentID: docref.id
  })
 
+ //clear input field
+ setNewBrokerID("")
+ setNewUserTypeID("")
+ setNewBrokerName("")
+ setNewUserName("")
+ setNewEmail("")
+ setNewPassword("")
+ setNewLanguage("Select language")
+ setNewYearsExperience("")
+
+ 
+
+
   }
   /*
   //2.FOR UPDATE
