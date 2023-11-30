@@ -55,12 +55,17 @@ function Creation_Property()  {
     const createProperty = async () => {
   
         // To add the fetch values to the database
-      await addDoc( PropertiesCollectionRef, { 
+     const docref= await addDoc( PropertiesCollectionRef, { 
         PropertyType: newPropertyType, 
         ListingType: newListingType,
         Price: newPrice,  Adress: newAdress, City: newCity, 
         Province: newProvince, Neighborhood: newNeighborhood,
-        Bedrooms: newBedrooms, Bathrooms: newNBathrooms   }) ;
+        Bedrooms: newBedrooms, Bathrooms: newNBathrooms   })
+
+
+        await updateDoc(docref,{
+          DocumentID:docref.id
+        })
   
     }
 

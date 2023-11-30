@@ -4,7 +4,7 @@ import { db } from '../../firebase_configuration';
 import { deleteDoc,doc } from '@firebase/firestore';
 
 
-let docID_forModify,name_forModify="OKOK";
+let docID_forModify,name_forModify="";
 const setDocID_forModify=(currentBrokerID,currentName) =>
 {
    docID_forModify = currentBrokerID;

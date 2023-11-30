@@ -1,7 +1,7 @@
 import React from 'react'
 import'../search-page/House_Card.css';
 import home_photo from '../../Images/property_image_test1.jpg'
-import { doc } from '@firebase/firestore';
+import { deleteDoc, doc } from '@firebase/firestore';
 import { db } from '../../firebase_configuration';
 
 
@@ -47,6 +47,7 @@ export default function House_Card({property}){
     const No_Bedrooms = property.Bedrooms;
    const propertyType = property.PropertyType;
    const listingType = property.ListingType;
+   const DocumentID = property.DocumentID;
  
 
    console.log("Data in house card:", property)
@@ -86,8 +87,9 @@ export default function House_Card({property}){
   
         </ul>
        <div>
-        <button onClick={()=> {deleteProperty(property.id, price)}}>
-                     
+        <button onClick={()=> {
+          deleteDoc(doc(db, "Properties", DocumentID))
+        }}>
          Delete
         </button>
   </div>
