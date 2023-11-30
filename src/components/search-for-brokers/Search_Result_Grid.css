@@ -1,3 +1,14 @@
+.filterContainer select{
+  padding: 10px;
+  border-color: #ee7ea0;
+  border-radius: 4px;
+  background-color: white; 
+  color: grey;
+  cursor: pointer;  
+  margin: 5px;
+    }
+    
+
 .filterContainer input{
     padding: 10px;
     border-color: #ee7ea0;

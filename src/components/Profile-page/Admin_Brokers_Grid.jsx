@@ -29,6 +29,8 @@ function Admin_Brokers_Grid(){
       };
       getBroker();
     }, []); 
+
+    console.log("Data in card: ", records);
   
 
 //MANUAL CRUD: to store in firebase
@@ -84,6 +86,7 @@ const createBroker = async()=>{
     PhoneNumber:newPhoneNumber
   });
   }
+  
   //2.FOR UPDATE
      //2.1 Get id of document in firebase and previous inputs
   const modifyBroker = async(firebaseID, BrokerID, UsertypeID, ClientFileID, 
@@ -204,14 +207,14 @@ const createBroker = async()=>{
 
 
 
-    {brokers.map((broker)=>{
+    {records.map((broker)=>{
       return (
       <div> 
         {""}
         <h2> Broker ID: {broker.BrokerID} </h2>
         <h2> User Type ID: {broker.UsertypeID} </h2>
         <h2> Client File ID: {broker.ClientFileID} </h2>
-        <h2> First name: {broker.FirstName} </h2>
+        <h2> First name: {broker.BrokerName} </h2>
         <h2> Last Name: {broker.LastName} </h2>
         <h2> Username: {broker.Username} </h2>
         <h2> Email: {broker.Email} </h2>

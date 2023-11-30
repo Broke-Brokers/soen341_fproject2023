@@ -1,11 +1,12 @@
 import React from 'react';
 import '../property-page/BrokerCard.css' 
+import { Language } from '@mui/icons-material';
 
 
-export default function BrokerCard({ brokerList }){
-  let brokerName, email, phoneNumber, yearsOfExperience; // Declare these variables in the parent scope
+export default function BrokerCard({ brokerRecords }){
+  let brokerName, email, phoneNumber, yearsOfExperience,language; // Declare these variables in the parent scope
 
-  if (!brokerList) { // evaluates to true if brokerList is null
+  if (!brokerRecords) { // evaluates to true if brokerList is null
      //Placeholder name to handle the case where brokerList is empty
      brokerName = "Albus Dumbledore";
      email = "itsleviosa@hogwarts.com";
@@ -14,10 +15,11 @@ export default function BrokerCard({ brokerList }){
   }
   else{
   
-    brokerName = brokerList.BrokerUsername;
-    email = brokerList.BrokerEmail;
-    phoneNumber = brokerList.PhoneNumber;
-    yearsOfExperience = brokerList.BrokerYearsExperience;
+    brokerName = brokerRecords.BrokerName;
+    email = brokerRecords.BrokerEmail;
+    phoneNumber = brokerRecords.PhoneNumber;
+    yearsOfExperience = brokerRecords.BrokerYearsExperience;
+    language = brokerRecords.BrokerLanguage
    }
    /*The fields:
      Broker_id integer PK
@@ -31,7 +33,7 @@ export default function BrokerCard({ brokerList }){
   const modifytest = async(nametest, email,phone)=>
   {console.log(nametest,email,phone);}
 
-  console.log('Data in broker cards:', brokerList);
+  console.log('Data in broker cards:', brokerRecords);
     const profilePicture = "https://pointrussell.opencities.com/files/content/public/v/5/council/elected-members/albus-dumbledore/albus-dumbledore.jpg?dimension=pageimage&w=480";
 
 
