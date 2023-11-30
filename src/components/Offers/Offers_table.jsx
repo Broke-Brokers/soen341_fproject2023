@@ -52,13 +52,15 @@ const Offers_table = () => {
 
 
 const answerSelect=async (event)=>{
+console.log(event.target.value.DocumentID)
 
-const [offerID, offerStatus] = event.target.value.split('|');
+/*const [offerID, offerStatus] = event.target.value.DocumentID;
     const updateData = doc (db,"Offers",offerID)
 
     await updateDoc(updateData,{
         OfferStatus: offerStatus
     });
+    */
   }
 
 
@@ -100,11 +102,12 @@ const [offerID, offerStatus] = event.target.value.split('|');
                         <tr key={option.ClientName}>
                             <td>{option.ClientName}</td> 
                             <td>{option.Price}</td> 
+                
                             <td>
                                 <select className="selection" onChange={answerSelect}>
                                     <option defaultValue="Pending"> Pending </option>
-                                    <option value = {`${option.ClientName}|Accepted`}>Accepted</option>
-                                    <option value = {`${option.ClientName}|Refused`}>Refused</option>
+                                    <option value = {`Accepted`}>Accepted</option>
+                                    <option value = {`Refused`}>Refused</option>
                                 </select>
                             </td>
                         </tr>
