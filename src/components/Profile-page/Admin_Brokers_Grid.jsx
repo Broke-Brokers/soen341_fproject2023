@@ -11,6 +11,43 @@ import { collection, doc, query, getDocs, addDoc, updateDoc, onSnapshot, Documen
 
 
 function Admin_Brokers_Grid(){
+
+  //====================+ TAYLOR +=================
+
+  const [selectedBroker, setSelectedBroker] = useState(null);
+
+  // States for form inputs
+  const [modifiedName, setModifiedName] = useState('');
+  const [modifiedEmail, setModifiedEmail] = useState('');
+  const [modifiedYearsExperience, setModifiedYearsExperience] = useState('');
+  const [modifiedLanguage, setModifiedLanguage] = useState('');
+
+  const handleModifyClick = (brokerData) => {
+      setSelectedBroker(brokerData);
+      // Pre-fill the form with the selected broker's data
+      setModifiedName(brokerData.BrokerName);
+      setModifiedEmail(brokerData.BrokerEmail);
+      setModifiedYearsExperience(brokerData.BrokerYearsExperience);
+      setModifiedLanguage(brokerData.BrokerLanguage);
+  };
+
+  const updateBroker = async () => {
+      if (selectedBroker) {
+          const brokerDoc = doc(db, "Broker", selectedBroker.DocumentID);
+          const updatedData = {
+              BrokerName: modifiedName,
+              BrokerEmail: modifiedEmail,
+              BrokerYearsExperience: modifiedYearsExperience,
+              BrokerLanguage: modifiedLanguage,
+          };
+          await updateDoc(brokerDoc, updatedData);
+          setSelectedBroker(null); // Clear the selection after updating
+      }
+    };
+
+  //==============================================
+
+  
  console.log("Specific id: ", docID_forModify )
 // Use useState to set a new constanct broker
 const brokerCollectionRef = collection(db,'Broker');
@@ -213,11 +250,41 @@ const createBroker = async()=>{
 </div>
 
 <div className='Broker Grid'>
-     {brokerRecords.map((broker, index) => (
-        <BrokerCard key={index} brokerRecords={broker} /> // Use a unique 'key' prop for each element
-      ))}
-   
-</div>
+                {brokerRecords.map((broker, index) => (
+                    <BrokerCard key={index} brokerRecords={broker} onModifyClick={handleModifyClick} />
+                ))}
+            </div>
+
+            {selectedBroker && (
+            <div className='ModifyBrokerForm'>
+                <h3>Modify Broker</h3>
+                <input
+                    type="text"
+                    value={modifiedName}
+                    onChange={(e) => setModifiedName(e.target.value)}
+                    placeholder="Broker Name"
+                />
+                <input
+                    type="email"
+                    value={modifiedEmail}
+                    onChange={(e) => setModifiedEmail(e.target.value)}
+                    placeholder="Broker Email"
+                />
+                <input
+                    type="text"
+                    value={modifiedYearsExperience}
+                    onChange={(e) => setModifiedYearsExperience(e.target.value)}
+                    placeholder="Years of Experience"
+                />
+                <input
+                    type="text"
+                    value={modifiedLanguage}
+                    onChange={(e) => setModifiedLanguage(e.target.value)}
+                    placeholder="Language"
+                />
+                <button onClick={updateBroker}>Update Broker</button>
+            </div>
+        )}
 </>
     
   

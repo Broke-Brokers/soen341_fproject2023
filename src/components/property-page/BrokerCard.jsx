@@ -12,7 +12,7 @@ const setDocID_forModify=(currentBrokerID,currentName) =>
 };
 
 
-export default function BrokerCard({ brokerRecords}){
+export default function BrokerCard({ brokerRecords, onModifyClick }){
   //With "brokerRecords", Broker card received the brokers in the array of parent that contain a list of broker
   let brokerName, email, phoneNumber, yearsOfExperience,language,DocumentID; // Declare these variables in the parent scope
 
@@ -75,11 +75,13 @@ export default function BrokerCard({ brokerRecords}){
       <li><i class="fas fa-link"></i></li>
     </ul>
   </div>
- <div className='modifyButton'>
-  <button onClick={()=>{setDocID_forModify(DocumentID,brokerName);}}
-  
-  >Modify</button>
-</div>
+
+        <div className='modifyButton'>
+            <button onClick={() => onModifyClick(brokerRecords)}>
+                Modify
+            </button>
+        </div>
+        
 <div className='deleteButton'>
 <button onClick={()=>{
   deleteDoc(doc(db,"Broker",DocumentID))
