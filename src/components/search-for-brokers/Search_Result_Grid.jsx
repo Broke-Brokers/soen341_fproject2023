@@ -67,6 +67,7 @@ export default function Search_Result_Grid() {
 useEffect(() => { 
     const unsubscribe = onSnapshot(brokerCollectionRef, (brokerSnapshot)=> 
     {setBrokerRecords(brokerSnapshot.docs.map(doc=> doc.data()));
+      const brokerList = brokerSnapshot.docs.map(doc=> doc.data());
   });
 
   return () => {
