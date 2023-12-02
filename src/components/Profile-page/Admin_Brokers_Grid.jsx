@@ -96,10 +96,6 @@ const [show,setShow] = useState(false)
 
 
 
-
-
-
-
 //MANUAL CRUD: 
 //1.FOR CREATE: function that create a broker when click on create broker
 const createBroker = async()=>{
@@ -134,50 +130,7 @@ const createBroker = async()=>{
 
 
   }
-  /*
-  //2.FOR UPDATE
-     //2.1 Get id of document in firebase and previous inputs
-  const modifyBroker = async(firebaseID, BrokerID, UsertypeID, ClientFileID, 
-    FirstName, LastName, Username, Email,Password, PhoneNumber )=>{
-  
-      setFirebaseID(firebaseID)
-      setNewBrokerID(BrokerID)
-      setNewUserTypeID(UsertypeID)
-      setNewClientFileID(ClientFileID)
-      setNewFirstName(FirstName)
-      setNewLastName(LastName)
-      setNewUserName(Username)
-      setNewEmail(Email)
-      setNewPassword(Password)
-      setNewPhone(PhoneNumber)
-      setShow(true)
-  }
-
-  const updateBroker = async()=>{
-  const updateData= doc(db,"Broker",firebaseID)
-  await updateDoc(updateData,{
-    BrokerID: newBrokerID,
-    UsertypeID: newUserTypeID,
-    ClientFileID: newClientFileID,
-    FirstName:newFirstName,
-    LastName:newLastName,
-    Username:newUserName,
-    Email:newEmail,
-    Password:newPassword,
-    PhoneNumber:newPhoneNumber
-  })
-  setShow(false)
-  setNewBrokerID(0)
-  setNewUserTypeID(0)
-  setNewClientFileID(0)
-  setNewFirstName("")
-  setNewLastName("")
-  setNewUserName("")
-  setNewEmail("")
-  setNewPassword("")
-  setNewPhone("")
-}
-*/
+ 
 
   return (
 

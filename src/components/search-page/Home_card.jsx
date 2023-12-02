@@ -11,32 +11,6 @@ import { db } from '../../firebase_configuration';
 export default function Home_card({property}){
   // House Card component will received the property from the Firebase screenshot as "property"
   
-
-
-   /* The fields:
-     Price integer
-  Adress Varchar
-  City Varchar
-  Province Varchar
-  Neghborhood Varchar
-  No_bathrooms integer
-  No_Bedrooms integer
-   */     
-
-   /*const price = props.price;
-   const postName = props.postName;
-   const constructionYear = props.constrcutionYear;
-   const price =  props.price;
-    const Adress = props.Adress;
-    const City= props.City;
-    const Province = props.Province;
-    const Neghborhood= props.Neghborhood;
-    const No_bathrooms= props.No_bathroom;
-    const No_Bedrooms = props.No_Bedrooms;
-   const postName = "postName";
-   const constructionYear = 1966;
-    */
-
    //House card extract field from Firebase thanks to property
    // important that the variable match the one from Firebase
     const price = property.Price;
@@ -52,14 +26,11 @@ export default function Home_card({property}){
  
 
    console.log("Data in house card:", property)
+  
    
 
-   const deleteProperty = async(id, price)=>{
-    const PropertyDoc = doc (db, "Properties",doc.id)
-   
-   
  
-    }
+    
 
    
    

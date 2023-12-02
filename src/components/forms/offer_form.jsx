@@ -65,16 +65,7 @@ function OfferForm() {
   getBuyerRenter();
  }, [])
 
-/*
-const FilterClient(client)=>{
-setRecords(Clients.filter((c)=>
-{if(c.BrokerID && brokerid)
-  return c.ClientName}
-))
 
-
-
-}*/
 
 
 
